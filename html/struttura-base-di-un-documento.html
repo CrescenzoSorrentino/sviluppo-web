@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Struttura base di un documento HTML – BitCafé</title>
+  <meta name="description" content="Scopri come costruire correttamente la struttura base di un documento HTML5: dichiarazione DOCTYPE, tag obbligatori, lingua e buone pratiche SEO." />
+  <meta name="keywords" content="HTML, struttura base HTML, doctype, tag HTML obbligatori, guida HTML, BitCafé" />
+  <meta name="author" content="BitCafé" />
+  <link rel="canonical" href="https://www.bitcafe.it/html/struttura-base-di-un-documento.html" />
+  <link rel="stylesheet" href="../assets/css/articles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="article-header">
+  <div class="container">
+    <p class="meta">Autore: <strong>BitCafé</strong> · <time datetime="2025-06-25">25 Giugno 2025</time> · ⏱️ 5 min</p>
+    <h1>Struttura base di un documento HTML</h1>
+    <p class="lead">Ogni pagina web ha bisogno di una struttura chiara e corretta per essere interpretata dai browser e dai motori di ricerca. Vediamo come costruirla nel modo giusto.</p>
+  </div>
+</header>
+
+<nav class="toc container">
+  <h2>Indice</h2>
+  <ul>
+    <li><a href="#doctype">1. La dichiarazione DOCTYPE</a></li>
+    <li><a href="#html-lang">2. L’elemento &lt;html lang="it"&gt;</a></li>
+    <li><a href="#head">3. Il blocco &lt;head&gt;</a></li>
+    <li><a href="#body">4. Il blocco &lt;body&gt;</a></li>
+    <li><a href="#esempio">5. Esempio completo</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <section id="doctype">
+    <h2>1. La dichiarazione DOCTYPE</h2>
+    <p>Ogni documento HTML deve iniziare con la dichiarazione del tipo di documento. In HTML5 è:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+    <p>Questa linea indica al browser che il documento usa lo standard HTML5.</p>
+  </section>
+
+  <section id="html-lang">
+    <h2>2. L’elemento &lt;html lang="it"&gt;</h2>
+    <p>L’elemento <code>&lt;html&gt;</code> racchiude tutto il contenuto HTML della pagina. L’attributo <code>lang="it"</code> specifica che il contenuto è in italiano, utile per l’accessibilità e per i motori di ricerca.</p>
+  </section>
+
+  <section id="head">
+    <h2>3. Il blocco &lt;head&gt;</h2>
+    <p>Contiene le informazioni sulla pagina (metadati) non visibili nel corpo del documento. Include:</p>
+    <ul>
+      <li><code>&lt;meta charset="UTF-8"&gt;</code>: definisce la codifica dei caratteri</li>
+      <li><code>&lt;title&gt;</code>: il titolo della pagina, visibile nella scheda del browser</li>
+      <li><code>&lt;meta name="description"&gt;</code>: una descrizione per la SEO</li>
+      <li><code>&lt;meta name="viewport"&gt;</code>: necessaria per il layout responsive</li>
+      <li><code>&lt;link rel="stylesheet"&gt;</code>: per collegare il foglio di stile</li>
+    </ul>
+  </section>
+
+  <section id="body">
+    <h2>4. Il blocco &lt;body&gt;</h2>
+    <p>Contiene tutti gli elementi visibili della pagina: testi, immagini, pulsanti, form, ecc. È il cuore del contenuto HTML.</p>
+  </section>
+
+  <section id="esempio">
+    <h2>5. Esempio completo</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="it"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Esempio HTML base&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Benvenuto in HTML!&lt;/h1&gt;
+    &lt;p&gt;Questa è una pagina di esempio.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <p>Questa è la base da cui partire per qualsiasi progetto web.</p>
+  </section>
+</main>
+
+<footer class="container">
+  <p>&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+</footer>
+</body>
+</html>

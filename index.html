@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitCafé – Guida moderna allo sviluppo web</title>
+  <meta name="description" content="BitCafé è una guida chiara e moderna per imparare HTML, CSS, JavaScript e oltre. Naviga i contenuti in stile Finder e inizia subito." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/finder.css?v=1.2" />
+  <link rel="stylesheet" href="assets/css/layout.css?v=1.2">
+  <script defer src="assets/js/finder.js"></script>
+  <script defer src="assets/js/layout.js"></script>
+</head>
+<body>
+
+<!-- ✅ Header globale -->
+<header>
+  <div class="container">
+    <h1>BitCafé</h1>
+
+    <!-- Nav desktop -->
+    <nav class="main-nav">
+      <ul class="desktop-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mappa.html">Mappa contenuti</a></li>
+        <li><a href="#">Chi siamo</a></li>
+        <li><a href="#">Contatti</a></li>
+      </ul>
+
+      <!-- Menu mobile -->
+      <button id="menuToggle" aria-label="Apri menu" class="mobile-only">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+        <button id="menuClose" aria-label="Chiudi menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mappa.html">Mappa contenuti</a></li>
+          <li><a href="#">Chi siamo</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ✅ Contenuto principale -->
+<main class="container">
+  <section class="intro">
+    <h2>La tua guida allo sviluppo web</h2>
+    <p>BitCafé è un percorso strutturato per imparare HTML, CSS, JavaScript e tutto quello che serve per diventare uno sviluppatore moderno.</p>
+  </section>
+
+  <!-- ✅ Finder inserito nel layout -->
+  <section class="finder">
+    <div class="finder-header">
+      <input type="text" id="finderSearch" placeholder="Cerca argomenti, tag o file..." />
+    </div>
+
+    <div class="finder-path" id="finderPath">
+      Seleziona una categoria...
+    </div>
+
+    <div class="finder-columns show" id="finderColumns">
+      <ul id="col1" class="finder-col" data-level="1"></ul>
+      <ul id="col2" class="finder-col" data-level="2"></ul>
+      <ul id="col3" class="finder-col" data-level="3"></ul>
+    </div>
+
+    <div id="searchResults" class="search-results" hidden></div>
+  </section>
+</main>
+
+<!-- ✅ Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+    <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
+  </div>
+</footer>
+
+</body>
+</html>

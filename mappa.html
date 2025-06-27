@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mappa dei contenuti – BitCafé</title>
+    <meta name="description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
+
+    <!-- Font & CSS -->
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/mappa.css" />
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>BitCafé</h1>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mappa.html">Mappa contenuti</a></li>
+                <li><a href="#">Chi siamo</a></li>
+                <li><a href="#">Contatti</a></li>
+            </ul>
+            <button id="menuToggle" class="mobile-only">☰</button>
+        </nav>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" hidden>
+        <button id="menuClose">✕</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="idee.html">Mappa contenuti</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Contatti</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container">
+    <section class="intro">
+        <h2>Mappa dei contenuti</h2>
+        <p>Accedi rapidamente a tutte le sezioni di BitCafé: HTML, CSS, JavaScript e oltre.</p>
+    </section>
+
+    <section class="mappa">
+        <h3>HTML</h3>
+        <ul>
+            <li><a href="html/struttura-base-di-un-documento.html">Struttura base di un documento</a></li>
+            <li><a href="html/tag-semantici.html">Tag semantici</a></li>
+            <li><a href="html/header-main-e-footer.html">Header, main e footer</a></li>
+            <li><a href="html/seo-on-page.html">SEO on-page</a></li>
+            <li><a href="html/accessibilita.html">Accessibilità</a></li>
+            <li><a href="html/form-accessibili.html">Form accessibili</a></li>
+            <li><a href="html/tipi-di-input-html5.html">Tipi di input HTML5</a></li>
+            <li><a href="html/validazione-lato-client.html">Validazione lato client</a></li>
+            <li><a href="html/etichette-e-aria-label.html">Etichette e aria-label</a></li>
+            <li><a href="html/usabilita-nei-form.html">Usabilità nei form</a></li>
+            <li><a href="html/immagini-responsive.html">Immagini responsive</a></li>
+            <li><a href="html/video-embedding.html">Video embedding</a></li>
+            <li><a href="html/tabelle-accessibili.html">Tabelle accessibili</a></li>
+        </ul>
+
+        <h3>CSS</h3>
+        <ul>
+            <li><a href="css/box-model.html">Box model</a></li>
+            <li><a href="css/flexbox.html">Flexbox</a></li>
+            <li><a href="css/grid-layout.html">Grid layout</a></li>
+            <li><a href="css/responsive-design.html">Responsive design</a></li>
+            <li><a href="css/media-query.html">Media query</a></li>
+            <li><a href="css/colori-e-variabili-css.html">Colori e variabili CSS</a></li>
+            <li><a href="css/tipografia-e-font.html">Tipografia e font</a></li>
+            <li><a href="css/spacing-e-misure.html">Spacing e misure</a></li>
+            <li><a href="css/stati-hover-focus-active.html">Stati hover / focus / active</a></li>
+            <li><a href="css/transition.html">Transition</a></li>
+            <li><a href="css/animation.html">Animation</a></li>
+            <li><a href="css/keyframes.html">Keyframes</a></li>
+            <li><a href="css/dark-mode.html">Dark mode</a></li>
+        </ul>
+
+        <h3>JavaScript</h3>
+        <ul>
+            <li><a href="js/variabili-e-tipi.html">Variabili e tipi</a></li>
+            <li><a href="js/operatori-e-condizioni.html">Operatori e condizioni</a></li>
+            <li><a href="js/cicli-e-array.html">Cicli e array</a></li>
+            <li><a href="js/funzioni-e-scope.html">Funzioni e scope</a></li>
+            <li><a href="js/manipolazione-dom.html">Manipolazione DOM</a></li>
+            <li><a href="js/eventi.html">Eventi</a></li>
+            <li><a href="js/form-dinamici.html">Form dinamici</a></li>
+            <li><a href="js/fetch-api.html">Fetch API</a></li>
+            <li><a href="js/async-await.html">Async / await</a></li>
+            <li><a href="js/localstorage.html">LocalStorage</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+        <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
+    </div>
+</footer>
+
+<script defer src="assets/js/layout.js"></script>
+</body>
+</html>
