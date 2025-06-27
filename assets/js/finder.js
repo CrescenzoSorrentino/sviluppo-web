@@ -146,7 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
             renderColumn(col2, sub);
             col3.innerHTML = "";
             updatePath(selected);
-            col2.scrollIntoView({ behavior: "smooth", block: "start" });
         });
 
         col2.addEventListener("click", e => {
@@ -164,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             renderColumn(col3, details, true);
             updatePath(parentKey, subKey);
-            col3.scrollIntoView({ behavior: "smooth", block: "start" });
         });
 
         col3.addEventListener("click", e => {
