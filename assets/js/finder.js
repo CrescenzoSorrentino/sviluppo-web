@@ -69,6 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const finderColumns = document.querySelector(".finder-columns");
     const columns = [col1, col2, col3];
 
+    let selectedMacro = "";
+    let selectedMicro = "";
+    let selectedArticle = "";
+
+    function highlightActive(col, value) {
+        col.querySelectorAll("li").forEach(li => {
+            li.classList.toggle("active", li.textContent.trim() === value);
+        });
+    }
+
     function renderColumn(col, items, isLink = false) {
         col.classList.add("fade-in");
         setTimeout(() => col.classList.remove("fade-in"), 300);
@@ -98,8 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updatePath(level1 = "", level2 = "", level3 = "") {
-        const parts = [level1, level2, level3].filter(Boolean);
-        pathDisplay.textContent = parts.length > 0 ? parts.join(" / ") : "Seleziona una categoria...";
+        const pieces = [];
+        if (level1) pieces.push(`<span data-level="1">${level1}</span>`);
+        if (level2) pieces.push(`<span data-level="2">${level2}</span>`);
+        if (level3) pieces.push(`<span data-level="3">${level3}</span>`);
+        pathDisplay.innerHTML = pieces.length > 0 ? pieces.join(" / ") : "Seleziona una categoria...";
     }
 
     function initFinder() {
@@ -140,12 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
             col1.querySelectorAll("li").forEach(el => el.classList.remove("active"));
             li.classList.add("active");
 
-            const selected = li.textContent.trim();
-            const sub = data[selected] ? Object.keys(data[selected]) : [];
+            selectedMacro = li.textContent.trim();
+            selectedMicro = "";
+            selectedArticle = "";
+            const sub = data[selectedMacro] ? Object.keys(data[selectedMacro]) : [];
 
             renderColumn(col2, sub);
             col3.innerHTML = "";
-            updatePath(selected);
+            updatePath(selectedMacro);
             if (window.innerWidth <= 768) {
                 col2.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
             }
@@ -160,12 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const parent = col1.querySelector(".active");
             if (!parent) return;
 
-            const parentKey = parent.textContent.trim();
-            const subKey = li.textContent.trim();
-            const details = (data[parentKey] && data[parentKey][subKey]) || [];
+            selectedMacro = parent.textContent.trim();
+            selectedMicro = li.textContent.trim();
+            selectedArticle = "";
+            const details = (data[selectedMacro] && data[selectedMacro][selectedMicro]) || [];
 
             renderColumn(col3, details, true);
-            updatePath(parentKey, subKey);
+            updatePath(selectedMacro, selectedMicro);
             if (window.innerWidth <= 768) {
                 col3.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
             }
@@ -177,15 +193,43 @@ document.addEventListener("DOMContentLoaded", () => {
             col3.querySelectorAll("li").forEach(el => el.classList.remove("active"));
             li.classList.add("active");
 
-            const level1 = col1.querySelector(".active")?.textContent.trim() || "";
-            const level2 = col2.querySelector(".active")?.textContent.trim() || "";
-            const level3 = li.textContent.trim();
+            selectedMacro = col1.querySelector(".active")?.textContent.trim() || "";
+            selectedMicro = col2.querySelector(".active")?.textContent.trim() || "";
+            selectedArticle = li.textContent.trim();
 
-            updatePath(level1, level2, level3);
+            updatePath(selectedMacro, selectedMicro, selectedArticle);
         });
     }
 
     initFinder();
+
+    pathDisplay.addEventListener("click", e => {
+        const span = e.target.closest("span[data-level]");
+        if (!span) return;
+        const level = parseInt(span.dataset.level, 10);
+
+        if (level === 1 && selectedMacro) {
+            selectedMicro = "";
+            selectedArticle = "";
+            highlightActive(col1, selectedMacro);
+            renderColumn(col2, Object.keys(data[selectedMacro]));
+            col3.innerHTML = "";
+            updatePath(selectedMacro);
+            if (window.innerWidth <= 768) {
+                col2.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+            }
+        } else if (level === 2 && selectedMacro && selectedMicro) {
+            selectedArticle = "";
+            highlightActive(col1, selectedMacro);
+            renderColumn(col2, Object.keys(data[selectedMacro]));
+            highlightActive(col2, selectedMicro);
+            col3.innerHTML = "";
+            updatePath(selectedMacro, selectedMicro);
+            if (window.innerWidth <= 768) {
+                col3.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+            }
+        }
+    });
 
     // ----------------------------
     // Ricerca dinamica
@@ -206,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
             searchResults.classList.remove("show");
             finderColumns.classList.add("show");
             searchResults.innerHTML = "";
-            pathDisplay.textContent = "Seleziona una categoria...";
+            pathDisplay.innerHTML = "Seleziona una categoria...";
         }
     });
 
@@ -218,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
             searchResults.classList.remove("show");
             finderColumns.classList.add("show");
             searchResults.innerHTML = "";
-            pathDisplay.textContent = "Seleziona una categoria...";
+            pathDisplay.innerHTML = "Seleziona una categoria...";
             return;
         }
 

@@ -72,6 +72,14 @@ body {
     overflow-x: auto;
 }
 
+.finder-path span {
+    cursor: pointer;
+    color: var(--accent);
+}
+.finder-path span:hover {
+    text-decoration: underline;
+}
+
 /* Colonne */
 .finder-columns {
     display: none;
@@ -247,6 +255,10 @@ html.dark .finder-path,
 html.dark .search-item {
     background: var(--bg);
     color: var(--text);
+}
+
+html.dark .finder-path span {
+    color: var(--accent);
 }
 
 html.dark .finder-col li:hover {
