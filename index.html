@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BitCafé – Guida moderna allo sviluppo web</title>
+  <title>BitCafé.– Guida moderna allo sviluppo web</title>
   <meta name="description" content="BitCafé è una guida chiara e moderna per imparare HTML, CSS, JavaScript e oltre. Naviga i contenuti in stile Finder e inizia subito." />
   <meta property="og:title" content="BitCafé – Guida moderna allo sviluppo web">
   <meta property="og:description" content="BitCafé è una guida chiara e moderna per imparare HTML, CSS, JavaScript e oltre. Naviga i contenuti in stile Finder e inizia subito.">
@@ -19,7 +19,7 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-  <link rel="stylesheet" href="assets/css/finder.css?v=1.2" />
+  <link rel="stylesheet" href="assets/css/finder.css?v=1.3" />
   <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
   <script defer src="assets/js/finder.js"></script>
   <script defer src="assets/js/layout.js"></script>
@@ -76,8 +76,10 @@
 
   <!-- ✅ Finder inserito nel layout -->
   <section class="finder">
+    <h2>Finder contenuti</h2>
+    <p class="finder-intro">Cerca rapidamente tra tutte le guide di BitCafé.</p>
     <div class="finder-header">
-      <input type="text" id="finderSearch" placeholder="Cerca argomenti, tag o file..." />
+      <input type="text" id="finderSearch" placeholder="Cerca argomenti, tag o file..." aria-label="Cerca nel Finder" />
     </div>
 
     <div class="finder-path" id="finderPath">
@@ -90,7 +92,7 @@
       <ul id="col3" class="finder-col" data-level="3" tabindex="0"></ul>
     </div>
 
-    <div id="searchResults" class="search-results" hidden></div>
+    <div id="searchResults" class="search-results" hidden role="status" aria-live="polite"></div>
   </section>
 
     <section class="featured">
