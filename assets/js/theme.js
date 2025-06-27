@@ -15,11 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     toggle.addEventListener('click', () => {
+        toggle.classList.add('rotating');
         const isDark = html.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         if (icon) {
             icon.classList.toggle('fa-moon', !isDark);
             icon.classList.toggle('fa-sun', isDark);
         }
+    });
+
+    toggle.addEventListener('animationend', () => {
+        toggle.classList.remove('rotating');
     });
 });
