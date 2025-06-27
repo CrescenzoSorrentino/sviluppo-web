@@ -2,14 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const html = document.documentElement;
     const toggle = document.getElementById('themeToggle');
     if (!toggle) return;
+    const icon = toggle.querySelector('i');
 
     const stored = localStorage.getItem('theme');
-    if (stored === 'dark' || (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    const shouldBeDark = stored === 'dark' || (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (shouldBeDark) {
         html.classList.add('dark');
+        if (icon) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
     }
 
     toggle.addEventListener('click', () => {
         const isDark = html.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (icon) {
+            icon.classList.toggle('fa-moon', !isDark);
+            icon.classList.toggle('fa-sun', isDark);
+        }
     });
 });
