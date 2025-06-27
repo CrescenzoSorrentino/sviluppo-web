@@ -34,7 +34,7 @@ body {
    Finder
 ------------------------------------------------- */
 .finder {
-    background: #fff;
+    background: var(--bg);
     border: 1px solid var(--divider);
     border-radius: 8px;
     overflow: hidden;
@@ -64,9 +64,9 @@ body {
 .finder-path {
     padding: 0.65rem 1rem;
     font-size: 0.9rem;
-    background: #fafafa;
+    background: var(--bg);
     border-bottom: 1px solid var(--divider);
-    color: #636366;
+    color: var(--text);
     white-space: nowrap;
     overflow-x: auto;
 }
@@ -170,8 +170,8 @@ body {
 }
 
 .search-item {
-    background: #fff;
-    border: 1px solid #dee2e6;
+    background: var(--bg);
+    border: 1px solid var(--divider);
     border-radius: 6px;
     padding: 1rem;
     font-size: 1rem;
@@ -182,7 +182,7 @@ body {
 }
 
 .search-item:hover {
-    background-color: #f1f5ff;
+    background-color: rgba(10, 132, 255, 0.15);
     transform: translateY(-2px);
 }
 
@@ -213,4 +213,49 @@ body {
     .finder-col:last-child {
         border-bottom: none;
     }
+}
+
+/* -------------------------------------------------
+   Dark mode
+------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    .finder,
+    .finder-header,
+    .finder-path,
+    .search-item {
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    .finder-col li:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .finder-col li.active {
+        background: rgba(10, 132, 255, 0.3);
+    }
+
+    .search-item:hover {
+        background-color: rgba(10, 132, 255, 0.25);
+    }
+}
+
+html.dark .finder,
+html.dark .finder-header,
+html.dark .finder-path,
+html.dark .search-item {
+    background: var(--bg);
+    color: var(--text);
+}
+
+html.dark .finder-col li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .finder-col li.active {
+    background: rgba(10, 132, 255, 0.3);
+}
+
+html.dark .search-item:hover {
+    background-color: rgba(10, 132, 255, 0.25);
 }

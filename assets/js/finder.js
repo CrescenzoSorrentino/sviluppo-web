@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("finderSearch");
     const searchResults = document.getElementById("searchResults");
     const finderColumns = document.querySelector(".finder-columns");
+    const columns = [col1, col2, col3];
 
     function renderColumn(col, items, isLink = false) {
         col.classList.add("fade-in");
@@ -105,6 +106,33 @@ document.addEventListener("DOMContentLoaded", () => {
         renderColumn(col1, Object.keys(data));
         updatePath();
         finderColumns.classList.add("show");
+
+        columns.forEach(col => {
+            col.addEventListener("keydown", e => {
+                const items = Array.from(col.querySelectorAll("li"));
+                if (items.length === 0) return;
+
+                let active = col.querySelector("li.active") || items[0];
+                let index = items.indexOf(active);
+
+                if (["ArrowDown", "ArrowUp"].includes(e.key)) {
+                    e.preventDefault();
+                    if (e.key === "ArrowDown") index = Math.min(index + 1, items.length - 1);
+                    if (e.key === "ArrowUp") index = Math.max(index - 1, 0);
+                    items.forEach(li => li.classList.remove("active"));
+                    items[index].classList.add("active");
+                } else if (e.key === "ArrowRight" || e.key === "Enter") {
+                    e.preventDefault();
+                    items[index].dispatchEvent(new MouseEvent("click", { bubbles: true }));
+                    const next = columns[columns.indexOf(col) + 1];
+                    next && next.focus();
+                } else if (e.key === "ArrowLeft") {
+                    e.preventDefault();
+                    const prev = columns[columns.indexOf(col) - 1];
+                    prev && prev.focus();
+                }
+            });
+        });
 
         col1.addEventListener("click", e => {
             const li = e.target.closest("li");
@@ -167,6 +195,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 }))
             )
         );
+
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && searchResults.classList.contains("show")) {
+            searchInput.value = "";
+            searchResults.classList.remove("show");
+            finderColumns.classList.add("show");
+            searchResults.innerHTML = "";
+            pathDisplay.textContent = "Seleziona una categoria...";
+        }
+    });
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();

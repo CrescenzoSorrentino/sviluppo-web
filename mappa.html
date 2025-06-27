@@ -7,10 +7,23 @@
     <meta name="description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
 
     <!-- Font & CSS -->
+    <meta property="og:title" content="Mappa dei contenuti – BitCafé">
+    <meta property="og:description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mappa dei contenuti – BitCafé">
+    <meta name="twitter:description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
+    <meta name="twitter:image" content="assets/img/social.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/mappa.css" />
 </head>
 <body>
+    <a href="#main" class="skip-link">Salta al contenuto</a>
 
 <header>
     <div class="container">
@@ -22,12 +35,13 @@
                 <li><a href="#">Chi siamo</a></li>
                 <li><a href="#">Contatti</a></li>
             </ul>
-            <button id="menuToggle" class="mobile-only">☰</button>
+            <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">☰</button>
+            <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
         </nav>
     </div>
 
-    <div id="menuOverlay" class="menu-overlay" hidden>
-        <button id="menuClose">✕</button>
+    <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+        <button id="menuClose" aria-label="Chiudi menu">✕</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="idee.html">Mappa contenuti</a></li>
@@ -37,7 +51,7 @@
     </div>
 </header>
 
-<main class="container">
+    <main id="main" class="container">
     <section class="intro">
         <h2>Mappa dei contenuti</h2>
         <p>Accedi rapidamente a tutte le sezioni di BitCafé: HTML, CSS, JavaScript e oltre.</p>
@@ -102,5 +116,6 @@
 </footer>
 
 <script defer src="assets/js/layout.js"></script>
+<script defer src="assets/js/theme.js"></script>
 </body>
 </html>
