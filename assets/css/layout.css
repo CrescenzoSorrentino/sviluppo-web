@@ -60,6 +60,31 @@ p{
     transition:transform .3s;
 }
 
+/* Generic button */
+.btn{
+    display:inline-block;
+    padding:0.75rem 1.5rem;
+    border-radius:999px;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    transition:background .3s,color .3s,transform .2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#fff;
+    color:var(--accent);
+}
+
+.btn-primary:hover{
+    background:var(--accent);
+    color:#fff;
+}
+
 .theme-toggle.rotating{
     animation:spin .6s;
 }
@@ -213,6 +238,10 @@ header h1{
     margin-inline:auto;
 }
 
+.intro .btn{
+    margin-top:1.5rem;
+}
+
 /* -------------------------------------------------
    Articoli in evidenza
 ------------------------------------------------- */
@@ -280,6 +309,56 @@ header h1{
 }
 
 /* -------------------------------------------------
+   Newsletter
+------------------------------------------------- */
+.newsletter{
+    background:var(--gradient);
+    color:#fff;
+    padding:2rem 1rem;
+    border-radius:8px;
+    text-align:center;
+    margin:3rem 0;
+}
+
+.newsletter h2{
+    font-size:1.5rem;
+    margin-bottom:.5rem;
+}
+
+.newsletter p{
+    margin-bottom:1rem;
+    color:#fff;
+}
+
+.newsletter form{
+    display:flex;
+    justify-content:center;
+    gap:.5rem;
+    flex-wrap:wrap;
+}
+
+.newsletter input[type="email"]{
+    padding:.5rem .75rem;
+    border:none;
+    border-radius:4px;
+    min-width:220px;
+}
+
+.newsletter button{
+    padding:.5rem 1rem;
+    border:none;
+    border-radius:4px;
+    background:#fff;
+    color:var(--accent);
+    font-weight:600;
+    cursor:pointer;
+}
+
+.newsletter button:hover{
+    opacity:.9;
+}
+
+/* -------------------------------------------------
    Footer
 ------------------------------------------------- */
 footer{
@@ -289,10 +368,44 @@ footer{
     padding:2rem 1rem;
     font-size:.9rem;
     color:#666;
-    text-align:center;
 }
 
 footer p + p{margin-top:.5rem;}
+
+.footer-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem 2rem;
+    justify-content:space-between;
+    align-items:flex-start;
+    text-align:left;
+}
+
+.footer-nav ul{
+    list-style:none;
+    padding:0;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.footer-nav a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.footer-about .logo{
+    font-weight:600;
+    color:var(--accent);
+    margin-bottom:.25rem;
+}
+
+.footer-copy{
+    flex-basis:100%;
+    text-align:center;
+    margin-top:1rem;
+    color:#888;
+}
 
 /* -------------------------------------------------
    Responsive: breakpoint mobile ≤768 px

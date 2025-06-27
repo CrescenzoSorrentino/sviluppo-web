@@ -123,6 +123,41 @@ footer {
     padding: 2rem 1rem;
     font-size: 0.9rem;
     text-align: center;
+    color: #666;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-about .logo {
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: .25rem;
+}
+
+.footer-copy {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1rem;
     color: #888;
 }
 
