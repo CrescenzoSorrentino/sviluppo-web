@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
             col3.innerHTML = "";
             updatePath(selectedMacro);
             if (window.innerWidth <= 768) {
-                col2.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+                col1.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
             }
         } else if (level === 2 && selectedMacro && selectedMicro) {
             selectedArticle = "";
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
             col3.innerHTML = "";
             updatePath(selectedMacro, selectedMicro);
             if (window.innerWidth <= 768) {
-                col3.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+                col2.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
             }
         }
     });
