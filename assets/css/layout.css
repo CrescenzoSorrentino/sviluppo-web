@@ -311,7 +311,7 @@ footer p + p{margin-top:.5rem;}
 }
 
 @media (prefers-color-scheme: dark){
-    :root{
+    html:not(.light){
         --bg:#1c1c1e;
         --text:#f5f5f7;
         --divider:#3a3a3c;
@@ -319,12 +319,17 @@ footer p + p{margin-top:.5rem;}
         --gradient:linear-gradient(135deg,var(--accent),var(--accent-2));
     }
 
-    header,
-    footer{
+    html:not(.light) header,
+    html:not(.light) footer{
         background:#2c2c2e;
+    }
+
     .menu-overlay{
         background:rgba(0,0,0,0.7);
     }
+
+    html:not(.light) .menu-overlay {
+        background: rgba(0, 0, 0, 0.7);
     }
 }
 

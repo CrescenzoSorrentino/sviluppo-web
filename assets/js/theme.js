@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const icon = toggle.querySelector('i');
 
     const stored = localStorage.getItem('theme');
-    const shouldBeDark = stored === 'dark' || (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    if (shouldBeDark) {
+    if (stored === 'dark') {
         html.classList.add('dark');
+    } else if (stored === 'light') {
+        html.classList.add('light');
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.classList.add('dark');
+    }
+
+    if (html.classList.contains('dark')) {
         if (icon) {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
@@ -16,7 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggle.addEventListener('click', () => {
         toggle.classList.add('rotating');
-        const isDark = html.classList.toggle('dark');
+        let isDark = html.classList.contains('dark');
+        if (isDark) {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            isDark = false;
+        } else {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            isDark = true;
+        }
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         if (icon) {
             icon.classList.toggle('fa-moon', !isDark);
