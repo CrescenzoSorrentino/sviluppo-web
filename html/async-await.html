@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Async / await – BitCafé</title>
+  <meta name="description" content="Guida su Async / await." />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4" />
+</head>
+<body>
+<a href="#main" class="skip-link">Salta al contenuto</a>
+<header>
+  <div class="container">
+    <h1>BitCafé</h1>
+    <nav class="main-nav">
+      <ul class="desktop-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../mappa.html">Mappa contenuti</a></li>
+        <li><a href="../chi-siamo.html">Chi siamo</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+      </ul>
+      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </nav>
+  </div>
+  <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+    <button id="menuClose" aria-label="Chiudi menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../mappa.html">Mappa contenuti</a></li>
+      <li><a href="../chi-siamo.html">Chi siamo</a></li>
+      <li><a href="../contatti.html">Contatti</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="container">
+  <section class="intro">
+    <h2>Async / await</h2>
+    <p>Contenuto in preparazione.</p>
+  </section>
+</main>
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <p class="logo">BitCafé</p>
+      <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
+    </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../mappa.html">Mappa contenuti</a></li>
+        <li><a href="../chi-siamo.html">Chi siamo</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../cookie-policy.html">Cookie policy</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+  </div>
+</footer>
+<script defer src="../assets/js/layout.js"></script>
+<script defer src="../assets/js/theme.js"></script>
+</body>
+</html>
