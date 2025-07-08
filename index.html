@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BitCafé – Guida moderna allo sviluppo web</title>
-  <meta name="description" content="BitCafé è una guida chiara e moderna per imparare HTML, CSS, JavaScript e oltre. Naviga i contenuti in stile Finder e inizia subito." />
-  <meta property="og:title" content="BitCafé – Guida moderna allo sviluppo web">
-  <meta property="og:description" content="BitCafé è una guida chiara e moderna per imparare HTML, CSS, JavaScript e oltre. Naviga i contenuti in stile Finder e inizia subito.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BitCafé – Guida completa e moderna allo sviluppo web | HTML, CSS, JavaScript</title>
+  <meta name="description" content="BitCafé è una guida interattiva e moderna per imparare HTML5, CSS3, JavaScript e sviluppo web front-end. Tutorial strutturati, esempi pratici e risorse per principianti e sviluppatori esperti.">
+  <meta name="keywords" content="sviluppo web, programmazione, HTML5, CSS3, JavaScript, tutorial, guida sviluppatori, front-end, web design">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta property="og:title" content="BitCafé – Guida completa e moderna allo sviluppo web | HTML, CSS, JavaScript">
+  <meta property="og:description" content="BitCafé è una guida interattiva e moderna per imparare HTML5, CSS3, JavaScript e sviluppo web front-end. Tutorial strutturati, esempi pratici e risorse per principianti e sviluppatori esperti.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BitCafé – Guida moderna allo sviluppo web">
-  <meta name="twitter:description" content="BitCafé è una guida chiara e moderna per imparare HTML, CSS, JavaScript e oltre. Naviga i contenuti in stile Finder e inizia subito.">
+  <meta name="twitter:title" content="BitCafé – Guida completa e moderna allo sviluppo web | HTML, CSS, JavaScript">
+  <meta name="twitter:description" content="BitCafé è una guida interattiva e moderna per imparare HTML5, CSS3, JavaScript e sviluppo web front-end. Tutorial strutturati, esempi pratici e risorse per principianti e sviluppatori esperti.">
   <meta name="twitter:image" content="assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-  <link rel="stylesheet" href="assets/css/finder.css?v=1.3" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="stylesheet" href="assets/css/finder.css?v=1.3">
   <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
   <script defer src="assets/js/finder.js"></script>
   <script defer src="assets/js/layout.js"></script>
   <script defer src="assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
+  <link rel="preload" href="assets/css/layout.css" as="style">
+  <link rel="preload" href="assets/css/finder.css" as="style">
+  <meta name="theme-color" content="#0a84ff">
 </head>
 <body>
   <a href="#main" class="skip-link">Salta al contenuto</a>
@@ -31,12 +41,11 @@
 <!-- ✅ Header globale -->
 <header>
   <div class="container">
-    <h1>BitCafé</h1>
+    <a href="index.html" class="logo-link"><div class="logo-text">BitCafé</div></a>
 
     <!-- Nav desktop -->
     <nav class="main-nav">
       <ul class="desktop-menu">
-        <li><a href="index.html">Home</a></li>
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
@@ -56,7 +65,6 @@
           <i class="fa-solid fa-xmark"></i>
         </button>
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="mappa.html">Mappa contenuti</a></li>
           <li><a href="chi-siamo.html">Chi siamo</a></li>
           <li><a href="contatti.html">Contatti</a></li>
@@ -69,13 +77,24 @@
 <!-- ✅ Contenuto principale -->
   <main id="main" class="container">
   <section class="intro">
-    <h2>La tua guida allo sviluppo web</h2>
-    <p>BitCafé è un percorso strutturato per imparare HTML, CSS, JavaScript e tutto quello che serve per diventare uno sviluppatore moderno.</p>
-    <a href="mappa.html" class="btn btn-primary">Inizia ora</a>
+    <h1>La tua guida completa allo sviluppo web moderno</h1>
+    <p>BitCafé è un percorso strutturato e interattivo per imparare <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> e tutte le tecnologie essenziali per diventare uno sviluppatore web competente. Dai fondamenti della struttura HTML alla programmazione avanzata, troverai tutorial dettagliati, esempi pratici e best practices aggiornate.</p>
+    <p>Che tu sia un principiante assoluto o uno sviluppatore che vuole perfezionare le proprie competenze, i nostri contenuti sono organizzati in modo logico e progressivo per facilitare il tuo apprendimento.</p>
+    <a href="mappa.html" class="btn btn-primary">Inizia il tuo percorso</a>
+  </section>
+
+  <section>
+    <h3>Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#finder">Finder contenuti</a></li>
+      <li><a href="#articoli">Articoli in evidenza</a></li>
+      <li><a href="#correlati">Contenuti correlati</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
   </section>
 
   <!-- ✅ Finder inserito nel layout -->
-  <section class="finder">
+  <section id="finder" class="finder">
     <h2>Finder contenuti</h2>
     <p class="finder-intro">Cerca rapidamente tra tutte le guide di BitCafé.</p>
     <div class="finder-header">
@@ -95,33 +114,77 @@
     <div id="searchResults" class="search-results" hidden role="status" aria-live="polite"></div>
   </section>
 
-    <section class="featured">
+    <section id="articoli" class="featured">
       <h2><i class="fa-solid fa-star" aria-hidden="true"></i>Articoli in evidenza</h2>
+      <p>Ecco una selezione dei nostri migliori contenuti per iniziare il tuo percorso di apprendimento nello sviluppo web:</p>
       <ul class="featured-list">
         <li>
-          <i class="fa-solid fa-star" aria-hidden="true"></i>
-          <a href="html/struttura-base-di-un-documento.html">
-            Struttura base di un documento HTML
-          </a>
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          <a href="html/struttura-base-di-un-documento.html">Struttura base <br>di un documento HTML5</a>
+          <p>Scopri come creare un documento HTML5 semantico e ottimizzato per i motori di ricerca. Impara le best practices moderne per una struttura solida e accessibile.</p>
+          <p class="related-links">Articoli correlati: 
+            <a href="html/tag-semantici.html">Tag semantici</a> | 
+            <a href="html/meta-tag-seo.html">Meta tag per SEO</a>
+          </p>
         </li>
         <li>
-          <i class="fa-solid fa-star" aria-hidden="true"></i>
-          <a href="html/tag-semantici.html">Tag semantici</a>
+          <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+          <a href="html/tag-semantici.html">Tag semantici in HTML5</a>
+          <p>Impara a utilizzare i tag semantici come header, nav, main, section, article e footer per migliorare l'accessibilità e il posizionamento SEO del tuo sito web.</p>
+          <p class="related-links">Articoli correlati: 
+            <a href="html/accessibilit.html">Accessibilità web</a> | 
+            <a href="html/struttura-base-di-un-documento.html">Struttura HTML</a>
+          </p>
         </li>
         <li>
-          <i class="fa-solid fa-star" aria-hidden="true"></i>
-          <a href="html/box-model.html">Box model</a>
+          <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+          <a href="html/box-model.html">CSS Box Model: guida completa</a>
+          <p>Comprendi il modello di box CSS e come margin, border, padding e content interagiscono per creare layout responsive e professionali.</p>
+          <p class="related-links">Articoli correlati: 
+            <a href="html/flexbox-layout.html">Flexbox Layout</a> | 
+            <a href="html/css-grid.html">CSS Grid</a>
+          </p>
+        </li>
+        <li>
+          <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+          <a href="html/variabili-e-tipi.html">JavaScript: variabili e tipi di dati</a>
+          <p>Esplora i fondamenti di JavaScript: variabili, costanti, tipi di dati primitivi e complessi, e le best practices per la dichiarazione e l'utilizzo.</p>
+          <p class="related-links">Articoli correlati: 
+            <a href="html/operatori-e-condizioni.html">Operatori e condizioni</a> | 
+            <a href="html/funzioni-javascript.html">Funzioni in JavaScript</a>
+          </p>
         </li>
       </ul>
-      <p class="featured-more"><a href="mappa.html">Scopri tutti gli articoli</a></p>
+      <p class="featured-more"><a href="mappa.html">Scopri tutti i nostri articoli e tutorial</a></p>
     </section>
-    <section class="newsletter">
+
+    <section id="correlati" class="related-content" style="margin-top: 3rem;">
+      <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Contenuti correlati</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+        <a href="chi-siamo.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+          <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-users" style="margin-right: 0.5rem;"></i>Chi siamo</h4>
+          <p>Scopri il team di BitCafé, la nostra missione e i valori che guidano la nostra piattaforma educativa.</p>
+        </a>
+
+        <a href="mappa.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+          <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-map" style="margin-right: 0.5rem;"></i>Mappa dei contenuti</h4>
+          <p>Esplora tutti i contenuti disponibili su BitCafé organizzati per categoria e livello.</p>
+        </a>
+
+        <a href="contatti.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+          <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i>Contattaci</h4>
+          <p>Hai domande o suggerimenti? Scopri come metterti in contatto con l'autore di BitCafé.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
       <h2>Iscriviti alla newsletter</h2>
       <p>Ricevi aggiornamenti e risorse direttamente nella tua inbox.</p>
       <form action="#" method="post">
         <label for="newsletterEmail">Email</label>
-        <input type="email" id="newsletterEmail" placeholder="La tua email" required>
-        <button type="submit">Iscriviti</button>
+        <input type="email" id="newsletterEmail" placeholder="La tua email" aria-label="Inserisci la tua email" required>
+        <button type="submit" aria-label="Iscriviti alla newsletter">Iscriviti</button>
       </form>
     </section>
 </main>
@@ -130,12 +193,11 @@
 <footer>
   <div class="container footer-grid">
     <div class="footer-about">
-      <p class="logo">BitCafé</p>
+      <a href="index.html" class="logo-link"><p class="logo">BitCafé</p></a>
       <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
     </div>
     <nav class="footer-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Tag per SEO | Guida Completa – BitCafé</title>
+  <meta name="description" content="Guida completa ai meta tag per SEO. Scopri come ottimizzare il tuo sito web per i motori di ricerca utilizzando i meta tag HTML corretti e le best practices.">
+  <meta name="keywords" content="SEO, meta tag, ottimizzazione motori di ricerca, HTML, meta description, meta title, Open Graph, Twitter Cards, meta robots">
+  <link rel="icon" href="../assets/img/favicon.ico">
+  <meta property="og:title" content="Meta Tag per SEO | Guida Completa – BitCafé">
+  <meta property="og:description" content="Guida completa ai meta tag per SEO. Scopri come ottimizzare il tuo sito web per i motori di ricerca utilizzando i meta tag HTML corretti e le best practices.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/html/meta-tag-seo.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meta Tag per SEO | Guida Completa – BitCafé">
+  <meta name="twitter:description" content="Guida completa ai meta tag per SEO. Scopri come ottimizzare il tuo sito web per i motori di ricerca utilizzando i meta tag HTML corretti e le best practices.">
+  <meta name="twitter:image" content="../assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="preload" href="../assets/css/layout.css" as="style">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4">
+  <script defer src="../assets/js/layout.js"></script>
+  <script defer src="../assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
+</head>
+<body>
+<a href="#main" class="skip-link">Salta al contenuto</a>
+<header>
+  <div class="container">
+    <h1>BitCafé</h1>
+    <nav class="main-nav">
+      <ul class="desktop-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../mappa.html">Mappa contenuti</a></li>
+        <li><a href="../chi-siamo.html">Chi siamo</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+      </ul>
+      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </nav>
+  </div>
+  <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+    <button id="menuClose" aria-label="Chiudi menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../mappa.html">Mappa contenuti</a></li>
+      <li><a href="../chi-siamo.html">Chi siamo</a></li>
+      <li><a href="../contatti.html">Contatti</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="container">
+  <section class="intro">
+    <h2>Meta Tag per SEO</h2>
+    <p>I meta tag sono elementi HTML che forniscono informazioni sui contenuti di una pagina web ai motori di ricerca e ad altri servizi web. Sebbene non siano visibili agli utenti che visitano il sito, giocano un ruolo cruciale nell'ottimizzazione per i motori di ricerca (SEO) e nella presentazione dei contenuti quando vengono condivisi sui social media. In questa guida completa, esploreremo i meta tag più importanti per il SEO e come implementarli correttamente.</p>
+  </section>
+
+  <section>
+    <h3 class="toc-heading">Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#meta-essenziali">Meta tag essenziali</a></li>
+      <li><a href="#meta-title-description">Meta title e meta description</a></li>
+      <li><a href="#meta-robots">Meta robots</a></li>
+      <li><a href="#open-graph">Meta tag Open Graph</a></li>
+      <li><a href="#twitter-cards">Twitter Cards</a></li>
+      <li><a href="#altri-meta">Altri meta tag utili</a></li>
+      <li><a href="#best-practices">Best practices</a></li>
+    </ul>
+  </section>
+
+  <section id="meta-essenziali">
+    <h3>Meta tag essenziali</h3>
+    <p>Alcuni meta tag sono fondamentali per qualsiasi pagina web moderna. Ecco i più importanti:</p>
+
+    <h4>1. Meta charset</h4>
+    <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+    <p>Questo meta tag specifica la codifica dei caratteri utilizzata nella pagina. UTF-8 è lo standard raccomandato perché supporta praticamente tutti i caratteri e simboli.</p>
+
+    <h4>2. Meta viewport</h4>
+    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    <p>Questo meta tag è essenziale per il responsive design. Indica al browser come gestire le dimensioni e il ridimensionamento della pagina sui dispositivi mobili. È particolarmente importante dal momento che Google utilizza la compatibilità mobile come fattore di ranking.</p>
+
+    <div class="tip">
+      <h5>Consiglio per lo sviluppo</h5>
+      <p>Assicurati sempre di includere questi due meta tag in ogni pagina del tuo sito. Sono fondamentali per la corretta visualizzazione e indicizzazione delle tue pagine.</p>
+    </div>
+  </section>
+
+  <section id="meta-title-description">
+    <h3>Meta title e meta description</h3>
+    <p>Il title e la description sono tra i meta tag più importanti per il SEO:</p>
+
+    <h4>1. Title tag</h4>
+    <pre><code>&lt;title&gt;Titolo della pagina | Nome del sito&lt;/title&gt;</code></pre>
+    <p>Sebbene tecnicamente non sia un meta tag ma un elemento HTML a sé stante, il title è fondamentale per il SEO. Appare come titolo nei risultati di ricerca e nella scheda del browser. Dovrebbe:</p>
+    <ul>
+      <li>Essere unico per ogni pagina</li>
+      <li>Contenere le parole chiave principali</li>
+      <li>Avere una lunghezza ideale di 50-60 caratteri</li>
+      <li>Descrivere accuratamente il contenuto della pagina</li>
+    </ul>
+
+    <h4>2. Meta description</h4>
+    <pre><code>&lt;meta name="description" content="Descrizione concisa e accattivante della pagina che include le parole chiave principali e invita all'azione."&gt;</code></pre>
+    <p>La meta description fornisce un riassunto del contenuto della pagina e spesso appare nei risultati di ricerca sotto il titolo. Dovrebbe:</p>
+    <ul>
+      <li>Essere unica per ogni pagina</li>
+      <li>Contenere le parole chiave rilevanti</li>
+      <li>Avere una lunghezza ideale di 150-160 caratteri</li>
+      <li>Essere convincente e invitare al click</li>
+    </ul>
+
+    <div class="warning">
+      <h5>Attenzione</h5>
+      <p>Google non sempre utilizza la meta description fornita, ma può generarne una propria basata sul contenuto della pagina e sulla query di ricerca. Tuttavia, una buona meta description aumenta le probabilità che venga utilizzata.</p>
+    </div>
+  </section>
+
+  <section id="meta-robots">
+    <h3>Meta robots</h3>
+    <p>Il meta tag robots controlla come i motori di ricerca interagiscono con la tua pagina:</p>
+
+    <pre><code>&lt;meta name="robots" content="index, follow"&gt;</code></pre>
+
+    <p>I valori più comuni per l'attributo content sono:</p>
+    <ul>
+      <li><strong>index</strong>: permette ai motori di ricerca di indicizzare la pagina</li>
+      <li><strong>noindex</strong>: impedisce ai motori di ricerca di indicizzare la pagina</li>
+      <li><strong>follow</strong>: permette ai motori di ricerca di seguire i link nella pagina</li>
+      <li><strong>nofollow</strong>: impedisce ai motori di ricerca di seguire i link nella pagina</li>
+      <li><strong>noarchive</strong>: impedisce ai motori di ricerca di mostrare versioni cache della pagina</li>
+      <li><strong>nosnippet</strong>: impedisce ai motori di ricerca di mostrare snippet o descrizioni nei risultati</li>
+    </ul>
+
+    <p>È possibile combinare più valori, ad esempio:</p>
+    <pre><code>&lt;meta name="robots" content="noindex, follow"&gt;</code></pre>
+
+    <p>Questo dice ai motori di ricerca di non indicizzare la pagina ma di seguire i link in essa contenuti.</p>
+
+    <h4>Meta tag robots specifici per motore di ricerca</h4>
+    <p>È possibile specificare istruzioni per motori di ricerca specifici:</p>
+    <pre><code>&lt;meta name="googlebot" content="noindex, follow"&gt;
+&lt;meta name="bingbot" content="index, follow"&gt;</code></pre>
+  </section>
+
+  <section id="open-graph">
+    <h3>Meta tag Open Graph</h3>
+    <p>I meta tag Open Graph (OG) sono stati sviluppati da Facebook per controllare come appare una pagina quando viene condivisa sui social media. Sono diventati uno standard supportato da molte piattaforme.</p>
+
+    <pre><code>&lt;meta property="og:title" content="Titolo della pagina"&gt;
+&lt;meta property="og:description" content="Descrizione della pagina"&gt;
+&lt;meta property="og:image" content="https://esempio.com/immagine.jpg"&gt;
+&lt;meta property="og:url" content="https://esempio.com/pagina"&gt;
+&lt;meta property="og:type" content="website"&gt;</code></pre>
+
+    <p>I meta tag OG più importanti sono:</p>
+    <ul>
+      <li><strong>og:title</strong>: il titolo della pagina quando condivisa</li>
+      <li><strong>og:description</strong>: la descrizione della pagina quando condivisa</li>
+      <li><strong>og:image</strong>: l'immagine che appare quando la pagina viene condivisa (dovrebbe essere almeno 1200x630 pixel per una visualizzazione ottimale)</li>
+      <li><strong>og:url</strong>: l'URL canonico della pagina</li>
+      <li><strong>og:type</strong>: il tipo di contenuto (website, article, product, ecc.)</li>
+    </ul>
+
+    <p>Per gli articoli, è possibile aggiungere meta tag specifici:</p>
+    <pre><code>&lt;meta property="og:type" content="article"&gt;
+&lt;meta property="article:published_time" content="2025-01-15T08:00:00+00:00"&gt;
+&lt;meta property="article:author" content="Nome Autore"&gt;
+&lt;meta property="article:section" content="Tecnologia"&gt;
+&lt;meta property="article:tag" content="HTML, SEO, Meta Tag"&gt;</code></pre>
+  </section>
+
+  <section id="twitter-cards">
+    <h3>Twitter Cards</h3>
+    <p>Le Twitter Cards sono simili ai meta tag Open Graph, ma specifiche per Twitter. Controllano come appare una pagina quando viene condivisa su Twitter.</p>
+
+    <pre><code>&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Titolo della pagina"&gt;
+&lt;meta name="twitter:description" content="Descrizione della pagina"&gt;
+&lt;meta name="twitter:image" content="https://esempio.com/immagine.jpg"&gt;
+&lt;meta name="twitter:site" content="@nomeutente"&gt;
+&lt;meta name="twitter:creator" content="@autore"&gt;</code></pre>
+
+    <p>I tipi di Twitter Card più comuni sono:</p>
+    <ul>
+      <li><strong>summary</strong>: una card con titolo, descrizione e immagine quadrata</li>
+      <li><strong>summary_large_image</strong>: una card con titolo, descrizione e un'immagine grande</li>
+      <li><strong>app</strong>: una card per promuovere un'applicazione mobile</li>
+      <li><strong>player</strong>: una card per incorporare video, audio o altri media</li>
+    </ul>
+  </section>
+
+  <section id="altri-meta">
+    <h3>Altri meta tag utili</h3>
+    <p>Ci sono altri meta tag che possono essere utili in determinate situazioni:</p>
+
+    <h4>1. Meta keywords</h4>
+    <pre><code>&lt;meta name="keywords" content="parola chiave 1, parola chiave 2, parola chiave 3"&gt;</code></pre>
+    <p>Nota: Google ha dichiarato ufficialmente di non utilizzare più questo meta tag per il ranking, ma potrebbe essere ancora utilizzato da altri motori di ricerca.</p>
+
+    <h4>2. Meta author</h4>
+    <pre><code>&lt;meta name="author" content="Nome Autore"&gt;</code></pre>
+    <p>Specifica l'autore del contenuto della pagina.</p>
+
+    <h4>3. Meta canonical</h4>
+    <pre><code>&lt;link rel="canonical" href="https://esempio.com/pagina-originale"&gt;</code></pre>
+    <p>Indica ai motori di ricerca qual è la versione "canonica" o preferita di una pagina quando esistono URL duplicati o simili.</p>
+
+    <h4>4. Meta refresh</h4>
+    <pre><code>&lt;meta http-equiv="refresh" content="5;url=https://esempio.com/nuova-pagina"&gt;</code></pre>
+    <p>Reindirizza automaticamente a un altro URL dopo un certo numero di secondi (in questo caso 5). Nota: è generalmente preferibile utilizzare reindirizzamenti 301 a livello di server.</p>
+
+    <h4>5. Meta language</h4>
+    <pre><code>&lt;meta http-equiv="content-language" content="it"&gt;</code></pre>
+    <p>Specifica la lingua del contenuto della pagina. Tuttavia, è preferibile utilizzare l'attributo <code>lang</code> nell'elemento <code>html</code>.</p>
+  </section>
+
+  <section id="best-practices">
+    <h3>Best practices per i meta tag SEO</h3>
+    <ol>
+      <li><strong>Crea meta tag unici per ogni pagina</strong>. Evita di duplicare title e description su pagine diverse.</li>
+      <li><strong>Includi le parole chiave principali</strong> nei meta tag title e description, ma evita il keyword stuffing.</li>
+      <li><strong>Mantieni il title entro i 50-60 caratteri</strong> e la description entro i 150-160 caratteri per evitare il troncamento nei risultati di ricerca.</li>
+      <li><strong>Usa meta tag Open Graph e Twitter Cards</strong> per controllare come appare la tua pagina quando viene condivisa sui social media.</li>
+      <li><strong>Utilizza il meta tag canonical</strong> per evitare problemi di contenuto duplicato.</li>
+      <li><strong>Usa il meta tag robots</strong> in modo strategico per controllare l'indicizzazione delle tue pagine.</li>
+      <li><strong>Assicurati che i meta tag siano coerenti con il contenuto della pagina</strong>. I meta tag ingannevoli possono portare a penalizzazioni.</li>
+      <li><strong>Testa regolarmente i tuoi meta tag</strong> con strumenti come il Rich Results Test di Google o il Facebook Sharing Debugger.</li>
+      <li><strong>Aggiorna i meta tag quando aggiorni il contenuto</strong> della pagina per mantenere la coerenza.</li>
+      <li><strong>Monitora le prestazioni</strong> dei tuoi meta tag analizzando il CTR (Click-Through Rate) nei risultati di ricerca.</li>
+    </ol>
+  </section>
+
+  <section class="related-articles">
+    <h3>Articoli correlati</h3>
+    <ul>
+      <li><a href="struttura-base-di-un-documento.html">Struttura base di un documento HTML5</a> - Scopri come creare un documento HTML5 semantico e ottimizzato.</li>
+      <li><a href="seo-on-page.html">SEO On-Page</a> - Approfondisci le tecniche di ottimizzazione on-page oltre ai meta tag.</li>
+      <li><a href="tag-semantici.html">Tag semantici in HTML5</a> - Impara a utilizzare i tag semantici per migliorare il SEO.</li>
+      <li><a href="accessibilit.html">Accessibilità web</a> - Scopri come l'accessibilità e il SEO sono strettamente correlati.</li>
+    </ul>
+  </section>
+
+  <section class="summary">
+    <h3>Riepilogo</h3>
+    <p>In questa guida abbiamo esplorato i meta tag più importanti per il SEO:</p>
+    <ul>
+      <li>Meta tag essenziali come charset e viewport</li>
+      <li>Meta title e meta description per migliorare la visibilità nei risultati di ricerca</li>
+      <li>Meta robots per controllare l'indicizzazione</li>
+      <li>Meta tag Open Graph e Twitter Cards per ottimizzare la condivisione sui social media</li>
+      <li>Altri meta tag utili per situazioni specifiche</li>
+      <li>Best practices per implementare correttamente i meta tag</li>
+    </ul>
+    <p>Implementare correttamente i meta tag è un passo fondamentale per ottimizzare il tuo sito web per i motori di ricerca e migliorare la sua presentazione quando viene condiviso online. Ricorda che i meta tag sono solo una parte di una strategia SEO completa, ma sono un elemento importante che non dovrebbe essere trascurato.</p>
+  </section>
+</main>
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <p class="logo">BitCafé</p>
+      <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
+    </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../mappa.html">Mappa contenuti</a></li>
+        <li><a href="../chi-siamo.html">Chi siamo</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../cookie-policy.html">Cookie policy</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+  </div>
+</footer>
+</body>
+</html>

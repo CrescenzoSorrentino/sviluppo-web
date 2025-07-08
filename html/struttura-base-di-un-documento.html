@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Struttura HTML ottimizzata – BitCafé</title>
-  <meta name="description" content="Un esempio moderno di struttura HTML5 con design ottimizzato e accessibile." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Struttura Base di un Documento HTML5 | Guida Completa – BitCafé</title>
+  <meta name="description" content="Guida completa alla struttura base di un documento HTML5. Scopri come creare pagine web semantiche, accessibili e ottimizzate per i motori di ricerca con esempi pratici e best practices.">
+  <meta name="keywords" content="HTML5, struttura HTML, documento HTML, semantica HTML, head HTML, body HTML, meta tag, SEO HTML, accessibilità HTML">
+  <link rel="icon" href="../assets/img/favicon.ico">
+  <meta property="og:title" content="Struttura Base di un Documento HTML5 | Guida Completa – BitCafé">
+  <meta property="og:description" content="Guida completa alla struttura base di un documento HTML5. Scopri come creare pagine web semantiche, accessibili e ottimizzate per i motori di ricerca con esempi pratici e best practices.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/html/struttura-base-di-un-documento.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Struttura Base di un Documento HTML5 | Guida Completa – BitCafé">
+  <meta name="twitter:description" content="Guida completa alla struttura base di un documento HTML5. Scopri come creare pagine web semantiche, accessibili e ottimizzate per i motori di ricerca con esempi pratici e best practices.">
+  <meta name="twitter:image" content="../assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="preload" href="../assets/css/layout.css" as="style">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4">
+  <script defer src="../assets/js/layout.js"></script>
+  <script defer src="../assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
@@ -47,31 +64,255 @@
 </header>
 <main id="main" class="container">
   <section class="intro">
-    <h2>Struttura HTML semplificata</h2>
-    <p>Questa pagina mostra un modello essenziale di documento HTML5 con una grafica pulita e usabile in ogni contesto.</p>
+    <h2>Struttura Base di un Documento HTML5</h2>
+    <p>La struttura di un documento HTML5 è il fondamento di ogni pagina web moderna. Un documento ben strutturato non solo garantisce una corretta visualizzazione dei contenuti, ma migliora anche l'accessibilità, l'indicizzazione nei motori di ricerca e la manutenibilità del codice. In questa guida completa, esploreremo tutti gli elementi essenziali di un documento HTML5 e le best practices per creare pagine web semantiche e ottimizzate.</p>
   </section>
-  <section class="featured">
-    <h2><i class="fa-solid fa-layer-group"></i> Elementi chiave</h2>
-    <ul class="featured-list">
-      <li><i class="fa-solid fa-bolt"></i> <span>Markup minimale e semantico</span></li>
-      <li><i class="fa-solid fa-mobile-screen"></i> <span>Design responsive pronto all'uso</span></li>
-      <li><i class="fa-solid fa-universal-access"></i> <span>Accessibilità integrata</span></li>
+
+  <section>
+    <h3 class="toc-heading">Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#struttura-base">Struttura base di un documento HTML5</a></li>
+      <li><a href="#doctype">Il DOCTYPE e la dichiarazione HTML</a></li>
+      <li><a href="#head">L'elemento head e i suoi componenti</a></li>
+      <li><a href="#body">L'elemento body e la struttura semantica</a></li>
+      <li><a href="#meta-tags">Meta tag essenziali per SEO</a></li>
+      <li><a href="#accessibilita">Elementi di accessibilità</a></li>
+      <li><a href="#best-practices">Best practices</a></li>
     </ul>
   </section>
-  <section>
-    <h2>Esempio di codice</h2>
+
+  <section id="struttura-base">
+    <h3>Struttura base di un documento HTML5</h3>
+    <p>Ogni documento HTML5 è composto da una struttura di base che include diversi elementi fondamentali. Ecco un esempio di struttura minima:</p>
+
     <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="it"&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Pagina base&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Titolo della pagina&lt;/title&gt;
+    &lt;meta name="description" content="Descrizione della pagina"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Ciao mondo!&lt;/h1&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Intestazione principale&lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;!-- Navigazione principale --&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+      &lt;!-- Contenuto principale --&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;!-- Piè di pagina --&gt;
+    &lt;/footer&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+
+    <p>Questa struttura rappresenta lo scheletro di base di un documento HTML5 semantico. Vediamo in dettaglio ogni componente.</p>
+  </section>
+
+  <section id="doctype">
+    <h3>Il DOCTYPE e la dichiarazione HTML</h3>
+    <p>Il documento inizia con la dichiarazione <code>&lt;!DOCTYPE html&gt;</code>, che indica al browser che il documento è scritto in HTML5. Questa dichiarazione è fondamentale per garantire che il browser interpreti correttamente il codice.</p>
+
+    <p>Subito dopo troviamo l'elemento <code>&lt;html&gt;</code> con l'attributo <code>lang</code> che specifica la lingua del documento. Questo attributo è importante per:</p>
+
+    <ul>
+      <li>Accessibilità: aiuta gli screen reader a pronunciare correttamente il testo</li>
+      <li>SEO: aiuta i motori di ricerca a capire in quale lingua è scritto il contenuto</li>
+      <li>Internazionalizzazione: supporta la corretta visualizzazione di caratteri specifici della lingua</li>
+    </ul>
+
+    <div class="tip">
+      <h5>Consiglio per lo sviluppo</h5>
+      <p>Specifica sempre l'attributo <code>lang</code> nell'elemento <code>&lt;html&gt;</code>. Per l'italiano, usa <code>lang="it"</code>. Per contenuti multilingua, puoi specificare la lingua anche a livello di singoli elementi usando lo stesso attributo.</p>
+    </div>
+  </section>
+
+  <section id="head">
+    <h3>L'elemento head e i suoi componenti</h3>
+    <p>L'elemento <code>&lt;head&gt;</code> contiene metadati e riferimenti a risorse esterne. Non è visibile nella pagina, ma è fondamentale per il corretto funzionamento e l'ottimizzazione del sito. Ecco gli elementi principali che dovrebbero essere inclusi:</p>
+
+    <h4>1. Meta charset</h4>
+    <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+    <p>Specifica la codifica dei caratteri del documento. UTF-8 è lo standard raccomandato perché supporta praticamente tutti i caratteri e simboli.</p>
+
+    <h4>2. Viewport</h4>
+    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    <p>Questo meta tag è essenziale per il responsive design. Indica al browser come gestire le dimensioni e il ridimensionamento della pagina sui dispositivi mobili.</p>
+
+    <h4>3. Titolo</h4>
+    <pre><code>&lt;title&gt;Titolo della pagina&lt;/title&gt;</code></pre>
+    <p>Il titolo della pagina è uno degli elementi più importanti per SEO. Appare nella scheda del browser, nei risultati di ricerca e quando la pagina viene condivisa sui social media.</p>
+
+    <h4>4. Meta description</h4>
+    <pre><code>&lt;meta name="description" content="Descrizione della pagina"&gt;</code></pre>
+    <p>Fornisce una breve descrizione del contenuto della pagina. Viene spesso mostrata nei risultati di ricerca sotto il titolo.</p>
+
+    <h4>5. Collegamenti a risorse esterne</h4>
+    <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
+    <p>L'elemento <code>&lt;link&gt;</code> collega fogli di stile CSS, favicon e altre risorse. L'elemento <code>&lt;script&gt;</code> collega file JavaScript. L'attributo <code>defer</code> fa sì che lo script venga eseguito solo dopo che il documento è stato completamente caricato.</p>
+
+    <div class="warning">
+      <h5>Attenzione</h5>
+      <p>Posiziona sempre i file CSS nell'head e i file JavaScript prima della chiusura del tag body o usa gli attributi <code>defer</code> o <code>async</code> per non bloccare il rendering della pagina.</p>
+    </div>
+  </section>
+
+  <section id="body">
+    <h3>L'elemento body e la struttura semantica</h3>
+    <p>L'elemento <code>&lt;body&gt;</code> contiene tutto il contenuto visibile della pagina. In HTML5, è importante utilizzare elementi semantici per strutturare il contenuto in modo significativo:</p>
+
+    <h4>Elementi semantici principali:</h4>
+    <ul>
+      <li><code>&lt;header&gt;</code>: Intestazione della pagina o di una sezione</li>
+      <li><code>&lt;nav&gt;</code>: Sezione di navigazione</li>
+      <li><code>&lt;main&gt;</code>: Contenuto principale della pagina (unico per pagina)</li>
+      <li><code>&lt;article&gt;</code>: Contenuto autonomo e indipendente</li>
+      <li><code>&lt;section&gt;</code>: Sezione tematica del contenuto</li>
+      <li><code>&lt;aside&gt;</code>: Contenuto correlato ma non essenziale</li>
+      <li><code>&lt;footer&gt;</code>: Piè di pagina</li>
+    </ul>
+
+    <p>Ecco un esempio di struttura semantica completa:</p>
+
+    <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Titolo del sito&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;Chi siamo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/contact"&gt;Contatti&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;header&gt;
+        &lt;h2&gt;Titolo dell'articolo&lt;/h2&gt;
+        &lt;p&gt;Autore: Nome Cognome | Data: 01/01/2025&lt;/p&gt;
+      &lt;/header&gt;
+
+      &lt;section&gt;
+        &lt;h3&gt;Prima sezione&lt;/h3&gt;
+        &lt;p&gt;Contenuto della prima sezione...&lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;section&gt;
+        &lt;h3&gt;Seconda sezione&lt;/h3&gt;
+        &lt;p&gt;Contenuto della seconda sezione...&lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;aside&gt;
+        &lt;h3&gt;Contenuto correlato&lt;/h3&gt;
+        &lt;p&gt;Informazioni aggiuntive...&lt;/p&gt;
+      &lt;/aside&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Nome del sito. Tutti i diritti riservati.&lt;/p&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/privacy"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/terms"&gt;Termini di servizio&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+    <div class="tip">
+      <h5>Vantaggi della semantica HTML5</h5>
+      <p>Utilizzare elementi semantici migliora l'accessibilità, il SEO e la manutenibilità del codice. I motori di ricerca danno più peso al contenuto all'interno di elementi semantici appropriati, e gli screen reader possono navigare più facilmente attraverso la struttura della pagina.</p>
+    </div>
+  </section>
+
+  <section id="meta-tags">
+    <h3>Meta tag essenziali per SEO</h3>
+    <p>Oltre ai meta tag di base, ci sono altri meta tag importanti per l'ottimizzazione SEO:</p>
+
+    <h4>1. Open Graph (per la condivisione sui social media)</h4>
+    <pre><code>&lt;meta property="og:title" content="Titolo della pagina"&gt;
+&lt;meta property="og:description" content="Descrizione della pagina"&gt;
+&lt;meta property="og:image" content="url-dell-immagine.jpg"&gt;
+&lt;meta property="og:url" content="url-della-pagina"&gt;
+&lt;meta property="og:type" content="website"&gt;</code></pre>
+
+    <h4>2. Twitter Card</h4>
+    <pre><code>&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Titolo della pagina"&gt;
+&lt;meta name="twitter:description" content="Descrizione della pagina"&gt;
+&lt;meta name="twitter:image" content="url-dell-immagine.jpg"&gt;</code></pre>
+
+    <h4>3. Altri meta tag utili</h4>
+    <pre><code>&lt;meta name="author" content="Nome Autore"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+&lt;meta name="keywords" content="parola chiave 1, parola chiave 2"&gt;</code></pre>
+
+    <p>Nota: Google non utilizza più il meta tag keywords per il ranking, ma può essere utile per altri motori di ricerca.</p>
+  </section>
+
+  <section id="accessibilita">
+    <h3>Elementi di accessibilità</h3>
+    <p>Un documento HTML accessibile permette a tutti gli utenti, inclusi quelli con disabilità, di accedere ai contenuti. Ecco alcuni elementi chiave:</p>
+
+    <h4>1. Attributi ARIA</h4>
+    <pre><code>&lt;button aria-label="Chiudi" aria-expanded="false"&gt;X&lt;/button&gt;</code></pre>
+    <p>Gli attributi ARIA (Accessible Rich Internet Applications) forniscono informazioni aggiuntive agli screen reader.</p>
+
+    <h4>2. Skip link</h4>
+    <pre><code>&lt;a href="#main" class="skip-link"&gt;Salta al contenuto principale&lt;/a&gt;</code></pre>
+    <p>Permette agli utenti di tastiera di saltare direttamente al contenuto principale, evitando la navigazione ripetitiva.</p>
+
+    <h4>3. Attributi alt per le immagini</h4>
+    <pre><code>&lt;img src="immagine.jpg" alt="Descrizione dell'immagine"&gt;</code></pre>
+    <p>L'attributo alt fornisce un'alternativa testuale per le immagini, essenziale per gli screen reader.</p>
+  </section>
+
+  <section id="best-practices">
+    <h3>Best practices per la struttura HTML</h3>
+    <ol>
+      <li><strong>Usa sempre il DOCTYPE HTML5</strong> all'inizio del documento.</li>
+      <li><strong>Specifica l'attributo lang</strong> nell'elemento html.</li>
+      <li><strong>Utilizza elementi semantici</strong> invece di div generici quando possibile.</li>
+      <li><strong>Mantieni una gerarchia logica dei titoli</strong> (h1, h2, h3, ecc.).</li>
+      <li><strong>Includi meta tag essenziali</strong> per SEO e condivisione sui social.</li>
+      <li><strong>Assicurati che il documento sia accessibile</strong> con attributi ARIA e alt.</li>
+      <li><strong>Carica CSS nell'head</strong> e JavaScript prima della chiusura del body o con defer/async.</li>
+      <li><strong>Valida il tuo HTML</strong> con strumenti come il W3C Validator.</li>
+      <li><strong>Mantieni il codice pulito e indentato</strong> per una migliore manutenibilità.</li>
+      <li><strong>Ottimizza le prestazioni</strong> minimizzando le richieste HTTP e la dimensione dei file.</li>
+    </ol>
+  </section>
+
+  <section class="related-articles">
+    <h3>Articoli correlati</h3>
+    <ul>
+      <li><a href="tag-semantici.html">Tag semantici in HTML5</a> - Approfondisci l'uso degli elementi semantici per migliorare la struttura e l'accessibilità.</li>
+      <li><a href="meta-tag-seo.html">Meta tag per SEO</a> - Scopri tutti i meta tag utili per ottimizzare il tuo sito per i motori di ricerca.</li>
+      <li><a href="accessibilit.html">Accessibilità web</a> - Impara come rendere il tuo sito accessibile a tutti gli utenti.</li>
+      <li><a href="header-main-e-footer.html">Header, main e footer</a> - Guida dettagliata agli elementi strutturali principali di una pagina HTML5.</li>
+    </ul>
+  </section>
+
+  <section class="summary">
+    <h3>Riepilogo</h3>
+    <p>In questa guida abbiamo esplorato la struttura base di un documento HTML5:</p>
+    <ul>
+      <li>La dichiarazione DOCTYPE e l'elemento html</li>
+      <li>L'elemento head e i suoi componenti essenziali</li>
+      <li>L'elemento body e la struttura semantica</li>
+      <li>Meta tag per SEO e condivisione sui social</li>
+      <li>Elementi di accessibilità</li>
+      <li>Best practices per creare documenti HTML ottimizzati</li>
+    </ul>
+    <p>Seguendo queste linee guida, potrai creare documenti HTML5 ben strutturati, semantici, accessibili e ottimizzati per i motori di ricerca. Continua a esplorare gli articoli correlati per approfondire la tua conoscenza di HTML5.</p>
   </section>
 </main>
 <footer>
@@ -93,7 +334,5 @@
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
   </div>
 </footer>
-<script defer src="../assets/js/layout.js"></script>
-<script defer src="../assets/js/theme.js"></script>
 </body>
 </html>

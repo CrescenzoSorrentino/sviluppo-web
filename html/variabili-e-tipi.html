@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Variabili e tipi – BitCafé</title>
-  <meta name="description" content="Guida su Variabili e tipi." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript: Variabili e Tipi di Dati | Guida Completa – BitCafé</title>
+  <meta name="description" content="Guida completa alle variabili JavaScript e ai tipi di dati. Scopri come dichiarare variabili, usare let, const e var, e lavorare con stringhe, numeri, array e oggetti in JavaScript.">
+  <meta name="keywords" content="JavaScript, variabili JavaScript, tipi di dati JavaScript, let, const, var, string, number, boolean, array, object, programmazione JavaScript">
+  <link rel="icon" href="../assets/img/favicon.ico">
+  <meta property="og:title" content="JavaScript: Variabili e Tipi di Dati | Guida Completa – BitCafé">
+  <meta property="og:description" content="Guida completa alle variabili JavaScript e ai tipi di dati. Scopri come dichiarare variabili, usare let, const e var, e lavorare con stringhe, numeri, array e oggetti in JavaScript.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/html/variabili-e-tipi.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JavaScript: Variabili e Tipi di Dati | Guida Completa – BitCafé">
+  <meta name="twitter:description" content="Guida completa alle variabili JavaScript e ai tipi di dati. Scopri come dichiarare variabili, usare let, const e var, e lavorare con stringhe, numeri, array e oggetti in JavaScript.">
+  <meta name="twitter:image" content="../assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="preload" href="../assets/css/layout.css" as="style">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4">
+  <link rel="stylesheet" href="../assets/css/responsive.css?v=1.0">
+  <script defer src="../assets/js/layout.js"></script>
+  <script defer src="../assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
@@ -47,8 +65,292 @@
 </header>
 <main id="main" class="container">
   <section class="intro">
-    <h2>Variabili e tipi</h2>
-    <p>Contenuto in preparazione.</p>
+    <h2>JavaScript: Variabili e Tipi di Dati</h2>
+    <p>Le variabili sono uno dei concetti fondamentali in JavaScript e in qualsiasi linguaggio di programmazione. Rappresentano contenitori per memorizzare dati che possono essere utilizzati e manipolati all'interno del codice. In questa guida completa, esploreremo come dichiarare e utilizzare variabili in JavaScript, i diversi tipi di dati disponibili e le best practices da seguire.</p>
+  </section>
+
+  <section>
+    <h3 class="toc-heading">Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#dichiarazione-variabili">Dichiarazione delle variabili</a></li>
+      <li><a href="#tipi-primitivi">Tipi di dati primitivi</a></li>
+      <li><a href="#tipi-complessi">Tipi di dati complessi</a></li>
+      <li><a href="#type-coercion">Type coercion e conversione dei tipi</a></li>
+      <li><a href="#best-practices">Best practices</a></li>
+    </ul>
+  </section>
+
+  <section id="dichiarazione-variabili">
+    <h3>Dichiarazione delle variabili in JavaScript</h3>
+    <p>In JavaScript moderno (ES6+), esistono tre modi principali per dichiarare variabili:</p>
+
+    <h4>1. <code>let</code> - Variabili con scope di blocco</h4>
+    <p><code>let</code> è il modo consigliato per dichiarare variabili che cambieranno valore durante l'esecuzione del programma. Le variabili dichiarate con <code>let</code> hanno uno scope limitato al blocco in cui sono definite.</p>
+
+    <pre><code>let nome = "Mario";
+let età = 30;
+let isAttivo = true;
+
+// Le variabili let possono essere riassegnate
+nome = "Luigi";</code></pre>
+
+    <h4>2. <code>const</code> - Costanti con scope di blocco</h4>
+    <p><code>const</code> viene utilizzato per dichiarare variabili il cui valore non cambierà dopo l'assegnazione iniziale. Come <code>let</code>, anche <code>const</code> ha uno scope di blocco.</p>
+
+    <pre><code>const PI = 3.14159;
+const NOME_APP = "BitCafé";
+
+// Questo genererà un errore
+// PI = 3.14; // TypeError: Assignment to constant variable</code></pre>
+
+    <p><strong>Nota importante:</strong> Quando si dichiara un oggetto o un array con <code>const</code>, il contenuto dell'oggetto o dell'array può essere modificato, ma non è possibile riassegnare la variabile stessa.</p>
+
+    <pre><code>const persona = { nome: "Mario", età: 30 };
+persona.nome = "Luigi"; // Questo è valido
+// persona = { nome: "Luigi", età: 30 }; // Questo genererà un errore</code></pre>
+
+    <h4>3. <code>var</code> - Variabili con scope di funzione (legacy)</h4>
+    <p><code>var</code> è il modo più vecchio per dichiarare variabili in JavaScript. A differenza di <code>let</code> e <code>const</code>, le variabili dichiarate con <code>var</code> hanno uno scope di funzione anziché di blocco, e possono essere "hoisted" (sollevate) all'inizio della funzione.</p>
+
+    <pre><code>var messaggio = "Ciao mondo";
+
+function esempio() {
+  var x = 10; // scope limitato alla funzione
+  if (true) {
+    var y = 20; // ancora visibile fuori dal blocco if
+    let z = 30; // scope limitato al blocco if
+  }
+  console.log(x); // 10
+  console.log(y); // 20
+  console.log(z); // ReferenceError: z is not defined
+}</code></pre>
+
+    <p>Nei progetti moderni, è consigliabile utilizzare <code>let</code> e <code>const</code> invece di <code>var</code> per evitare comportamenti inaspettati legati allo scope e all'hoisting.</p>
+
+    <div class="tip">
+      <h5>Consiglio per lo sviluppo</h5>
+      <p>Usa <code>const</code> per default e passa a <code>let</code> solo quando sai che il valore della variabile cambierà. Questo rende il codice più prevedibile e facilita l'individuazione di bug.</p>
+    </div>
+  </section>
+
+  <section id="tipi-primitivi">
+    <h3>Tipi di dati primitivi in JavaScript</h3>
+    <p>JavaScript ha sette tipi di dati primitivi:</p>
+
+    <h4>1. String (Stringa)</h4>
+    <p>Le stringhe rappresentano testo e sono racchiuse tra apici singoli, doppi o backtick.</p>
+
+    <pre><code>let nome = "Mario";
+let cognome = 'Rossi';
+let saluto = `Ciao, ${nome} ${cognome}`; // Template string (ES6)</code></pre>
+
+    <p>Le template string (introdotte in ES6) permettono di incorporare espressioni JavaScript all'interno di stringhe usando la sintassi <code>${espressione}</code>.</p>
+
+    <h4>2. Number (Numero)</h4>
+    <p>A differenza di altri linguaggi, JavaScript ha un solo tipo numerico che rappresenta sia interi che numeri a virgola mobile.</p>
+
+    <pre><code>let intero = 42;
+let decimale = 3.14;
+let esponenziale = 2.998e8; // 2.998 × 10^8
+let infinito = Infinity;
+let nonNumero = NaN; // Not a Number</code></pre>
+
+    <h4>3. Boolean (Booleano)</h4>
+    <p>I booleani rappresentano valori di verità e possono essere solo <code>true</code> o <code>false</code>.</p>
+
+    <pre><code>let isAttivo = true;
+let haCompletato = false;</code></pre>
+
+    <h4>4. Undefined</h4>
+    <p><code>undefined</code> rappresenta una variabile che è stata dichiarata ma non ha ancora un valore assegnato.</p>
+
+    <pre><code>let variabile;
+console.log(variabile); // undefined</code></pre>
+
+    <h4>5. Null</h4>
+    <p><code>null</code> rappresenta l'assenza intenzionale di qualsiasi valore o oggetto.</p>
+
+    <pre><code>let utente = null; // l'utente non è ancora stato caricato</code></pre>
+
+    <h4>6. Symbol (ES6)</h4>
+    <p>I Symbol sono un tipo di dato unico e immutabile, spesso utilizzato come identificatori per proprietà di oggetti.</p>
+
+    <pre><code>const id = Symbol('id');
+const oggetto = {
+  [id]: 123
+};</code></pre>
+
+    <h4>7. BigInt (ES2020)</h4>
+    <p>BigInt è un tipo numerico che può rappresentare interi di lunghezza arbitraria.</p>
+
+    <pre><code>const numeroGrande = 9007199254740991n; // la 'n' alla fine indica un BigInt</code></pre>
+
+    <div class="tip">
+      <h5>Verifica del tipo</h5>
+      <p>Puoi utilizzare l'operatore <code>typeof</code> per verificare il tipo di una variabile:</p>
+      <pre><code>console.log(typeof "Ciao"); // "string"
+console.log(typeof 42); // "number"
+console.log(typeof true); // "boolean"</code></pre>
+    </div>
+  </section>
+
+  <section id="tipi-complessi">
+    <h3>Tipi di dati complessi (riferimento)</h3>
+    <p>Oltre ai tipi primitivi, JavaScript ha tipi di dati complessi che sono passati per riferimento anziché per valore.</p>
+
+    <h4>1. Object (Oggetto)</h4>
+    <p>Gli oggetti sono collezioni di coppie chiave-valore e sono fondamentali in JavaScript.</p>
+
+    <pre><code>const persona = {
+  nome: "Mario",
+  cognome: "Rossi",
+  età: 30,
+  indirizzo: {
+    via: "Via Roma",
+    città: "Milano"
+  },
+  saluta: function() {
+    return `Ciao, sono ${this.nome} ${this.cognome}`;
+  }
+};</code></pre>
+
+    <p>Puoi accedere alle proprietà di un oggetto usando la notazione punto o la notazione parentesi quadre:</p>
+
+    <pre><code>console.log(persona.nome); // "Mario"
+console.log(persona["cognome"]); // "Rossi"
+console.log(persona.saluta()); // "Ciao, sono Mario Rossi"</code></pre>
+
+    <h4>2. Array</h4>
+    <p>Gli array sono oggetti speciali utilizzati per memorizzare sequenze ordinate di valori.</p>
+
+    <pre><code>const numeri = [1, 2, 3, 4, 5];
+const misto = [1, "due", true, { chiave: "valore" }, [6, 7, 8]];
+
+console.log(numeri[0]); // 1
+console.log(misto[3].chiave); // "valore"</code></pre>
+
+    <p>Gli array in JavaScript hanno molti metodi utili per la manipolazione dei dati:</p>
+
+    <pre><code>numeri.push(6); // Aggiunge un elemento alla fine
+numeri.pop(); // Rimuove l'ultimo elemento
+numeri.unshift(0); // Aggiunge un elemento all'inizio
+numeri.shift(); // Rimuove il primo elemento
+
+// Metodi funzionali (ES6+)
+const doppi = numeri.map(n => n * 2); // [2, 4, 6, 8, 10]
+const pari = numeri.filter(n => n % 2 === 0); // [2, 4]
+const somma = numeri.reduce((acc, n) => acc + n, 0); // 15</code></pre>
+
+    <h4>3. Function (Funzione)</h4>
+    <p>In JavaScript, le funzioni sono oggetti di prima classe e possono essere assegnate a variabili, passate come argomenti e restituite da altre funzioni.</p>
+
+    <pre><code>// Dichiarazione di funzione
+function somma(a, b) {
+  return a + b;
+}
+
+// Espressione di funzione
+const moltiplica = function(a, b) {
+  return a * b;
+};
+
+// Arrow function (ES6)
+const dividi = (a, b) => a / b;</code></pre>
+
+    <div class="tip">
+      <h5>Differenza tra tipi primitivi e di riferimento</h5>
+      <p>I tipi primitivi sono passati per valore, mentre i tipi complessi sono passati per riferimento:</p>
+      <pre><code>// Primitivi (passati per valore)
+let a = 5;
+let b = a;
+a = 10;
+console.log(b); // 5 (non cambia)
+
+// Oggetti (passati per riferimento)
+let obj1 = { valore: 5 };
+let obj2 = obj1;
+obj1.valore = 10;
+console.log(obj2.valore); // 10 (cambia)</code></pre>
+    </div>
+  </section>
+
+  <section id="type-coercion">
+    <h3>Type Coercion e Conversione dei Tipi</h3>
+    <p>JavaScript è un linguaggio a tipizzazione dinamica, il che significa che le variabili possono cambiare tipo durante l'esecuzione. Inoltre, JavaScript esegue automaticamente la conversione dei tipi (coercion) in determinate operazioni.</p>
+
+    <h4>Coercion implicita</h4>
+    <pre><code>console.log("5" + 2); // "52" (il numero viene convertito in stringa)
+console.log("5" - 2); // 3 (la stringa viene convertita in numero)
+console.log("5" * "2"); // 10 (entrambe le stringhe vengono convertite in numeri)
+console.log(5 + true); // 6 (true viene convertito in 1)
+console.log(5 + false); // 5 (false viene convertito in 0)</code></pre>
+
+    <h4>Conversione esplicita</h4>
+    <p>È possibile convertire esplicitamente i tipi utilizzando funzioni come <code>String()</code>, <code>Number()</code>, <code>Boolean()</code>, ecc.</p>
+
+    <pre><code>// Conversione in stringa
+console.log(String(42)); // "42"
+console.log(String(true)); // "true"
+console.log(42 + ""); // "42"
+
+// Conversione in numero
+console.log(Number("42")); // 42
+console.log(Number("42px")); // NaN
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+console.log(+"42"); // 42 (l'operatore unario + converte in numero)
+
+// Conversione in booleano
+console.log(Boolean(42)); // true
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean("Ciao")); // true
+console.log(Boolean(null)); // false
+console.log(Boolean(undefined)); // false</code></pre>
+
+    <div class="warning">
+      <h5>Attenzione</h5>
+      <p>La coercion implicita può portare a comportamenti inaspettati. Per confronti più sicuri, usa sempre l'operatore di uguaglianza stretta (<code>===</code>) anziché l'uguaglianza semplice (<code>==</code>).</p>
+      <pre><code>console.log("5" == 5); // true (con coercion)
+console.log("5" === 5); // false (senza coercion)</code></pre>
+    </div>
+  </section>
+
+  <section id="best-practices">
+    <h3>Best Practices per l'uso di Variabili e Tipi in JavaScript</h3>
+    <ol>
+      <li><strong>Usa <code>const</code> per default</strong>, passa a <code>let</code> solo quando necessario.</li>
+      <li><strong>Evita <code>var</code></strong> nei progetti moderni.</li>
+      <li><strong>Usa nomi di variabili descrittivi</strong> che spiegano chiaramente lo scopo della variabile.</li>
+      <li><strong>Segui le convenzioni di naming</strong>: camelCase per variabili e funzioni, PascalCase per classi.</li>
+      <li><strong>Usa l'operatore di uguaglianza stretta</strong> (<code>===</code> e <code>!==</code>) per evitare problemi di coercion.</li>
+      <li><strong>Evita variabili globali</strong> quando possibile.</li>
+      <li><strong>Inizializza sempre le variabili</strong> al momento della dichiarazione.</li>
+      <li><strong>Usa le template string</strong> per concatenare stringhe in modo più leggibile.</li>
+    </ol>
+  </section>
+
+  <section class="related-articles">
+    <h3>Articoli correlati</h3>
+    <ul>
+      <li><a href="operatori-e-condizioni.html">Operatori e condizioni in JavaScript</a> - Impara a utilizzare operatori aritmetici, di confronto e logici.</li>
+      <li><a href="funzioni-javascript.html">Funzioni in JavaScript</a> - Scopri come definire e utilizzare funzioni per organizzare il tuo codice.</li>
+      <li><a href="scope-e-closure.html">Scope e Closure</a> - Comprendi come funziona lo scope delle variabili e il concetto di closure.</li>
+      <li><a href="oggetti-e-prototipi.html">Oggetti e Prototipi</a> - Approfondisci il sistema di oggetti e l'ereditarietà prototipale in JavaScript.</li>
+    </ul>
+  </section>
+
+  <section class="summary">
+    <h3>Riepilogo</h3>
+    <p>In questa guida abbiamo esplorato i concetti fondamentali delle variabili e dei tipi di dati in JavaScript:</p>
+    <ul>
+      <li>Come dichiarare variabili con <code>let</code>, <code>const</code> e <code>var</code></li>
+      <li>I tipi di dati primitivi: String, Number, Boolean, Undefined, Null, Symbol e BigInt</li>
+      <li>I tipi di dati complessi: Object, Array e Function</li>
+      <li>Type coercion e conversione dei tipi</li>
+      <li>Best practices per l'uso di variabili e tipi</li>
+    </ul>
+    <p>Comprendere questi concetti è fondamentale per scrivere codice JavaScript efficace e privo di errori. Continua a esplorare gli articoli correlati per approfondire la tua conoscenza di JavaScript.</p>
   </section>
 </main>
 <footer>
@@ -70,7 +372,5 @@
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
   </div>
 </footer>
-<script defer src="../assets/js/layout.js"></script>
-<script defer src="../assets/js/theme.js"></script>
 </body>
 </html>

@@ -3,15 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Operatori e condizioni – BitCafé</title>
-  <meta name="description" content="Guida su Operatori e condizioni." />
+  <title>JavaScript: Operatori e Strutture Condizionali | Guida Completa – BitCafé</title>
+  <meta name="description" content="Guida completa agli operatori JavaScript e alle strutture condizionali. Impara a utilizzare operatori aritmetici, di confronto, logici e le istruzioni if-else, switch e operatore ternario." />
+  <meta name="keywords" content="JavaScript, operatori JavaScript, condizioni JavaScript, if-else, switch, operatore ternario, operatori logici, operatori di confronto, programmazione JavaScript" />
+  <meta property="og:title" content="JavaScript: Operatori e Strutture Condizionali | Guida Completa – BitCafé" />
+  <meta property="og:description" content="Guida completa agli operatori JavaScript e alle strutture condizionali. Impara a utilizzare operatori aritmetici, di confronto, logici e le istruzioni if-else, switch e operatore ternario." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="../assets/img/social.png" />
+  <meta property="og:url" content="https://bitcafe.it/html/operatori-e-condizioni.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JavaScript: Operatori e Strutture Condizionali | Guida Completa – BitCafé" />
+  <meta name="twitter:description" content="Guida completa agli operatori JavaScript e alle strutture condizionali. Impara a utilizzare operatori aritmetici, di confronto, logici e le istruzioni if-else, switch e operatore ternario." />
+  <meta name="twitter:image" content="../assets/img/social.png" />
+  <meta name="author" content="BitCafé Team" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
+  <link rel="preload" href="../assets/css/layout.css" as="style">
   <link rel="stylesheet" href="../assets/css/layout.css?v=1.4" />
+  <link rel="stylesheet" href="../assets/css/responsive.css?v=1.0" />
+  <script defer src="../assets/js/layout.js"></script>
+  <script defer src="../assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
@@ -47,8 +65,567 @@
 </header>
 <main id="main" class="container">
   <section class="intro">
-    <h2>Operatori e condizioni</h2>
-    <p>Contenuto in preparazione.</p>
+    <h2>JavaScript: Operatori e Strutture Condizionali</h2>
+    <p>Gli operatori e le strutture condizionali sono elementi fondamentali di JavaScript che permettono di manipolare dati e controllare il flusso di esecuzione del codice. In questa guida completa, esploreremo i diversi tipi di operatori disponibili in JavaScript e come utilizzare le strutture condizionali per creare logica decisionale nei tuoi programmi.</p>
+  </section>
+
+  <section>
+    <h3 class="toc-heading">Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#operatori-aritmetici">Operatori aritmetici</a></li>
+      <li><a href="#operatori-assegnazione">Operatori di assegnazione</a></li>
+      <li><a href="#operatori-confronto">Operatori di confronto</a></li>
+      <li><a href="#operatori-logici">Operatori logici</a></li>
+      <li><a href="#if-else">Strutture condizionali if-else</a></li>
+      <li><a href="#switch">Istruzione switch</a></li>
+      <li><a href="#operatore-ternario">Operatore ternario</a></li>
+      <li><a href="#best-practices">Best practices</a></li>
+    </ul>
+  </section>
+
+  <section id="operatori-aritmetici">
+    <h3>Operatori aritmetici in JavaScript</h3>
+    <p>Gli operatori aritmetici eseguono operazioni matematiche su numeri, come l'addizione, la sottrazione, la moltiplicazione e la divisione.</p>
+
+    <table class="operators-table">
+      <thead>
+        <tr>
+          <th>Operatore</th>
+          <th>Descrizione</th>
+          <th>Esempio</th>
+          <th>Risultato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>+</code></td>
+          <td>Addizione</td>
+          <td><code>5 + 2</code></td>
+          <td><code>7</code></td>
+        </tr>
+        <tr>
+          <td><code>-</code></td>
+          <td>Sottrazione</td>
+          <td><code>5 - 2</code></td>
+          <td><code>3</code></td>
+        </tr>
+        <tr>
+          <td><code>*</code></td>
+          <td>Moltiplicazione</td>
+          <td><code>5 * 2</code></td>
+          <td><code>10</code></td>
+        </tr>
+        <tr>
+          <td><code>/</code></td>
+          <td>Divisione</td>
+          <td><code>5 / 2</code></td>
+          <td><code>2.5</code></td>
+        </tr>
+        <tr>
+          <td><code>%</code></td>
+          <td>Modulo (resto)</td>
+          <td><code>5 % 2</code></td>
+          <td><code>1</code></td>
+        </tr>
+        <tr>
+          <td><code>**</code></td>
+          <td>Esponente (ES2016)</td>
+          <td><code>5 ** 2</code></td>
+          <td><code>25</code></td>
+        </tr>
+        <tr>
+          <td><code>++</code></td>
+          <td>Incremento</td>
+          <td><code>let x = 5; x++;</code></td>
+          <td><code>x</code> diventa <code>6</code></td>
+        </tr>
+        <tr>
+          <td><code>--</code></td>
+          <td>Decremento</td>
+          <td><code>let x = 5; x--;</code></td>
+          <td><code>x</code> diventa <code>4</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Esempi di operatori aritmetici</h4>
+    <pre><code>// Operazioni di base
+let somma = 10 + 5;      // 15
+let differenza = 10 - 5;  // 5
+let prodotto = 10 * 5;    // 50
+let quoziente = 10 / 5;   // 2
+let resto = 10 % 3;       // 1 (il resto di 10 diviso 3)
+let potenza = 10 ** 2;    // 100 (10 elevato alla 2)
+
+// Incremento e decremento
+let contatore = 0;
+contatore++;              // contatore è ora 1 (post-incremento)
+++contatore;              // contatore è ora 2 (pre-incremento)
+contatore--;              // contatore è ora 1 (post-decremento)
+--contatore;              // contatore è ora 0 (pre-decremento)</code></pre>
+
+    <div class="tip">
+      <h5>Differenza tra pre e post incremento/decremento</h5>
+      <p>Con il pre-incremento (<code>++x</code>), la variabile viene incrementata prima di essere utilizzata nell'espressione. Con il post-incremento (<code>x++</code>), la variabile viene incrementata dopo essere stata utilizzata nell'espressione.</p>
+      <pre><code>let a = 5;
+let b = ++a;  // a viene incrementato a 6, poi b diventa 6
+console.log(a, b);  // 6, 6
+
+let c = 5;
+let d = c++;  // d diventa 5, poi c viene incrementato a 6
+console.log(c, d);  // 6, 5</code></pre>
+    </div>
+  </section>
+
+  <section id="operatori-assegnazione">
+    <h3>Operatori di assegnazione</h3>
+    <p>Gli operatori di assegnazione assegnano valori alle variabili JavaScript. L'operatore di assegnazione base è <code>=</code>, ma esistono anche operatori composti che combinano un'operazione aritmetica con l'assegnazione.</p>
+
+    <table class="operators-table">
+      <thead>
+        <tr>
+          <th>Operatore</th>
+          <th>Descrizione</th>
+          <th>Esempio</th>
+          <th>Equivalente a</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>=</code></td>
+          <td>Assegnazione</td>
+          <td><code>x = y</code></td>
+          <td><code>x = y</code></td>
+        </tr>
+        <tr>
+          <td><code>+=</code></td>
+          <td>Addizione e assegnazione</td>
+          <td><code>x += y</code></td>
+          <td><code>x = x + y</code></td>
+        </tr>
+        <tr>
+          <td><code>-=</code></td>
+          <td>Sottrazione e assegnazione</td>
+          <td><code>x -= y</code></td>
+          <td><code>x = x - y</code></td>
+        </tr>
+        <tr>
+          <td><code>*=</code></td>
+          <td>Moltiplicazione e assegnazione</td>
+          <td><code>x *= y</code></td>
+          <td><code>x = x * y</code></td>
+        </tr>
+        <tr>
+          <td><code>/=</code></td>
+          <td>Divisione e assegnazione</td>
+          <td><code>x /= y</code></td>
+          <td><code>x = x / y</code></td>
+        </tr>
+        <tr>
+          <td><code>%=</code></td>
+          <td>Modulo e assegnazione</td>
+          <td><code>x %= y</code></td>
+          <td><code>x = x % y</code></td>
+        </tr>
+        <tr>
+          <td><code>**=</code></td>
+          <td>Esponente e assegnazione</td>
+          <td><code>x **= y</code></td>
+          <td><code>x = x ** y</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Esempi di operatori di assegnazione</h4>
+    <pre><code>let x = 10;
+x += 5;  // x = x + 5, ora x è 15
+x -= 3;  // x = x - 3, ora x è 12
+x *= 2;  // x = x * 2, ora x è 24
+x /= 4;  // x = x / 4, ora x è 6
+x %= 4;  // x = x % 4, ora x è 2
+x **= 3; // x = x ** 3, ora x è 8 (2 elevato alla 3)</code></pre>
+  </section>
+
+  <section id="operatori-confronto">
+    <h3>Operatori di confronto</h3>
+    <p>Gli operatori di confronto confrontano i loro operandi e restituiscono un valore booleano (<code>true</code> o <code>false</code>) in base al risultato del confronto.</p>
+
+    <table class="operators-table">
+      <thead>
+        <tr>
+          <th>Operatore</th>
+          <th>Descrizione</th>
+          <th>Esempio</th>
+          <th>Risultato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>==</code></td>
+          <td>Uguale (con coercion)</td>
+          <td><code>5 == "5"</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code>===</code></td>
+          <td>Strettamente uguale (senza coercion)</td>
+          <td><code>5 === "5"</code></td>
+          <td><code>false</code></td>
+        </tr>
+        <tr>
+          <td><code>!=</code></td>
+          <td>Diverso (con coercion)</td>
+          <td><code>5 != "6"</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code>!==</code></td>
+          <td>Strettamente diverso (senza coercion)</td>
+          <td><code>5 !== "5"</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code>></code></td>
+          <td>Maggiore di</td>
+          <td><code>5 > 3</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code><</code></td>
+          <td>Minore di</td>
+          <td><code>5 < 3</code></td>
+          <td><code>false</code></td>
+        </tr>
+        <tr>
+          <td><code>>=</code></td>
+          <td>Maggiore o uguale a</td>
+          <td><code>5 >= 5</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code><=</code></td>
+          <td>Minore o uguale a</td>
+          <td><code>5 <= 3</code></td>
+          <td><code>false</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Uguaglianza stretta vs uguaglianza semplice</h4>
+    <p>È importante comprendere la differenza tra gli operatori di uguaglianza stretta (<code>===</code>, <code>!==</code>) e gli operatori di uguaglianza semplice (<code>==</code>, <code>!=</code>):</p>
+
+    <pre><code>// Uguaglianza semplice (con coercion)
+console.log(5 == "5");     // true (il tipo viene convertito)
+console.log(0 == false);   // true (il tipo viene convertito)
+console.log(null == undefined); // true
+
+// Uguaglianza stretta (senza coercion)
+console.log(5 === "5");    // false (tipi diversi)
+console.log(0 === false);  // false (tipi diversi)
+console.log(null === undefined); // false</code></pre>
+
+    <div class="warning">
+      <h5>Best Practice</h5>
+      <p>È generalmente consigliato utilizzare gli operatori di uguaglianza stretta (<code>===</code> e <code>!==</code>) per evitare comportamenti inaspettati dovuti alla coercion dei tipi.</p>
+    </div>
+  </section>
+
+  <section id="operatori-logici">
+    <h3>Operatori logici</h3>
+    <p>Gli operatori logici sono utilizzati per determinare la logica tra variabili o valori e restituiscono un valore booleano.</p>
+
+    <table class="operators-table">
+      <thead>
+        <tr>
+          <th>Operatore</th>
+          <th>Descrizione</th>
+          <th>Esempio</th>
+          <th>Risultato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&&</code></td>
+          <td>AND logico</td>
+          <td><code>true && true</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code>||</code></td>
+          <td>OR logico</td>
+          <td><code>true || false</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><code>!</code></td>
+          <td>NOT logico</td>
+          <td><code>!true</code></td>
+          <td><code>false</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Esempi di operatori logici</h4>
+    <pre><code>// AND logico (&&)
+console.log(true && true);   // true
+console.log(true && false);  // false
+console.log(false && true);  // false
+console.log(false && false); // false
+
+// OR logico (||)
+console.log(true || true);   // true
+console.log(true || false);  // true
+console.log(false || true);  // true
+console.log(false || false); // false
+
+// NOT logico (!)
+console.log(!true);  // false
+console.log(!false); // true</code></pre>
+
+    <h4>Short-circuit evaluation (valutazione a corto circuito)</h4>
+    <p>Gli operatori logici <code>&&</code> e <code>||</code> utilizzano la valutazione a corto circuito, il che significa che il secondo operando viene valutato solo se necessario:</p>
+
+    <pre><code>// AND (&&): se il primo operando è falsy, restituisce il primo operando senza valutare il secondo
+console.log(false && qualcosaCheCausaErrore); // false (il secondo operando non viene valutato)
+
+// OR (||): se il primo operando è truthy, restituisce il primo operando senza valutare il secondo
+console.log(true || qualcosaCheCausaErrore); // true (il secondo operando non viene valutato)
+
+// Utilizzo comune: impostare valori di default
+const nome = inputUtente || "Utente anonimo";
+
+// Utilizzo comune: eseguire una funzione solo se una condizione è vera
+isAdmin && eseguiFunzioneAdmin();</code></pre>
+
+    <h4>Operatore di coalescenza nulla (??)</h4>
+    <p>L'operatore di coalescenza nulla (<code>??</code>) è un operatore logico che restituisce il suo operando di destra quando l'operando di sinistra è <code>null</code> o <code>undefined</code>, altrimenti restituisce l'operando di sinistra.</p>
+
+    <pre><code>const nome = null;
+const nomeVisualizzato = nome ?? "Utente anonimo"; // "Utente anonimo"
+
+const età = 0;
+const etàVisualizzata = età ?? 18; // 0 (poiché 0 non è null o undefined)</code></pre>
+
+    <div class="tip">
+      <h5>Differenza tra ?? e ||</h5>
+      <p>L'operatore <code>??</code> considera solo <code>null</code> e <code>undefined</code> come valori falsy, mentre <code>||</code> considera anche <code>0</code>, <code>""</code>, <code>false</code>, <code>NaN</code> come falsy.</p>
+    </div>
+  </section>
+
+  <section id="if-else">
+    <h3>Strutture condizionali if-else</h3>
+    <p>Le strutture condizionali <code>if-else</code> permettono di eseguire blocchi di codice diversi in base a condizioni specifiche.</p>
+
+    <h4>Sintassi di base if-else</h4>
+    <pre><code>// Struttura if semplice
+if (condizione) {
+  // Codice eseguito se la condizione è vera
+}
+
+// Struttura if-else
+if (condizione) {
+  // Codice eseguito se la condizione è vera
+} else {
+  // Codice eseguito se la condizione è falsa
+}
+
+// Struttura if-else if-else
+if (condizione1) {
+  // Codice eseguito se condizione1 è vera
+} else if (condizione2) {
+  // Codice eseguito se condizione1 è falsa e condizione2 è vera
+} else {
+  // Codice eseguito se entrambe le condizioni sono false
+}</code></pre>
+
+    <h4>Esempi pratici</h4>
+    <pre><code>// Esempio 1: Controllo dell'età
+const età = 18;
+
+if (età >= 18) {
+  console.log("Sei maggiorenne");
+} else {
+  console.log("Sei minorenne");
+}
+
+// Esempio 2: Valutazione di un voto
+const voto = 85;
+
+if (voto >= 90) {
+  console.log("Eccellente");
+} else if (voto >= 80) {
+  console.log("Molto buono");
+} else if (voto >= 70) {
+  console.log("Buono");
+} else if (voto >= 60) {
+  console.log("Sufficiente");
+} else {
+  console.log("Insufficiente");
+}</code></pre>
+
+    <h4>Condizioni multiple</h4>
+    <p>Puoi combinare più condizioni utilizzando gli operatori logici:</p>
+
+    <pre><code>// Esempio: Controllo di accesso
+const isAdmin = true;
+const isLoggedIn = true;
+const hasPermission = false;
+
+if (isLoggedIn && (isAdmin || hasPermission)) {
+  console.log("Accesso consentito");
+} else {
+  console.log("Accesso negato");
+}</code></pre>
+  </section>
+
+  <section id="switch">
+    <h3>Istruzione switch</h3>
+    <p>L'istruzione <code>switch</code> è un'alternativa a più istruzioni <code>if-else</code> quando si vuole confrontare una variabile con più valori possibili.</p>
+
+    <h4>Sintassi di base</h4>
+    <pre><code>switch (espressione) {
+  case valore1:
+    // Codice eseguito se espressione === valore1
+    break;
+  case valore2:
+    // Codice eseguito se espressione === valore2
+    break;
+  // Altri casi...
+  default:
+    // Codice eseguito se nessun caso corrisponde
+}</code></pre>
+
+    <div class="warning">
+      <h5>Importante: l'istruzione break</h5>
+      <p>L'istruzione <code>break</code> è fondamentale in uno <code>switch</code>. Senza di essa, l'esecuzione continuerebbe nei casi successivi anche dopo aver trovato una corrispondenza (comportamento noto come "fall-through").</p>
+    </div>
+
+    <h4>Esempio di switch</h4>
+    <pre><code>const giorno = new Date().getDay(); // 0-6 (0 è Domenica)
+
+switch (giorno) {
+  case 0:
+    console.log("Domenica");
+    break;
+  case 1:
+    console.log("Lunedì");
+    break;
+  case 2:
+    console.log("Martedì");
+    break;
+  case 3:
+    console.log("Mercoledì");
+    break;
+  case 4:
+    console.log("Giovedì");
+    break;
+  case 5:
+    console.log("Venerdì");
+    break;
+  case 6:
+    console.log("Sabato");
+    break;
+  default:
+    console.log("Giorno non valido");
+}</code></pre>
+
+    <h4>Fall-through intenzionale</h4>
+    <p>A volte, il comportamento di fall-through può essere utile quando si vuole che più casi eseguano lo stesso codice:</p>
+
+    <pre><code>const mese = new Date().getMonth(); // 0-11
+
+switch (mese) {
+  case 11:
+  case 0:
+  case 1:
+    console.log("Inverno");
+    break;
+  case 2:
+  case 3:
+  case 4:
+    console.log("Primavera");
+    break;
+  case 5:
+  case 6:
+  case 7:
+    console.log("Estate");
+    break;
+  case 8:
+  case 9:
+  case 10:
+    console.log("Autunno");
+    break;
+  default:
+    console.log("Mese non valido");
+}</code></pre>
+  </section>
+
+  <section id="operatore-ternario">
+    <h3>Operatore ternario</h3>
+    <p>L'operatore ternario (<code>? :</code>) è un'espressione condizionale concisa che può sostituire semplici istruzioni <code>if-else</code>.</p>
+
+    <h4>Sintassi</h4>
+    <pre><code>condizione ? espressioneSeVera : espressioneSeFalsa</code></pre>
+
+    <h4>Esempi di operatore ternario</h4>
+    <pre><code>// Esempio 1: Assegnazione condizionale
+const età = 20;
+const stato = età >= 18 ? "maggiorenne" : "minorenne";
+console.log(stato); // "maggiorenne"
+
+// Esempio 2: Restituzione condizionale in una funzione
+function saluta(nome, ora) {
+  return ora < 12 ? `Buongiorno, ${nome}!` : `Buonasera, ${nome}!`;
+}
+console.log(saluta("Mario", 10)); // "Buongiorno, Mario!"
+
+// Esempio 3: Operatori ternari annidati (da usare con cautela)
+const voto = 85;
+const risultato = voto >= 90 ? "A" : voto >= 80 ? "B" : voto >= 70 ? "C" : voto >= 60 ? "D" : "F";
+console.log(risultato); // "B"</code></pre>
+
+    <div class="tip">
+      <h5>Best Practice</h5>
+      <p>L'operatore ternario è ottimo per assegnazioni condizionali semplici, ma per logica più complessa è preferibile utilizzare <code>if-else</code> per mantenere il codice leggibile. Evita di annidare troppi operatori ternari.</p>
+    </div>
+  </section>
+
+  <section id="best-practices">
+    <h3>Best Practices per Operatori e Condizioni</h3>
+    <ol>
+      <li><strong>Usa l'uguaglianza stretta</strong> (<code>===</code> e <code>!==</code>) invece dell'uguaglianza semplice per evitare problemi di coercion dei tipi.</li>
+      <li><strong>Mantieni le condizioni semplici</strong>. Se una condizione diventa troppo complessa, considera di suddividerla in variabili con nomi significativi.</li>
+      <li><strong>Usa le parentesi</strong> per chiarire l'ordine di valutazione nelle espressioni complesse.</li>
+      <li><strong>Sfrutta la valutazione a corto circuito</strong> degli operatori logici per scrivere codice più conciso.</li>
+      <li><strong>Usa l'operatore ternario</strong> per assegnazioni condizionali semplici, ma preferisci <code>if-else</code> per logica più complessa.</li>
+      <li><strong>Non dimenticare il <code>break</code></strong> nelle istruzioni <code>switch</code>, a meno che il fall-through non sia intenzionale.</li>
+      <li><strong>Considera l'operatore di coalescenza nulla</strong> (<code>??</code>) per valori di default quando lavori con <code>null</code> o <code>undefined</code>.</li>
+    </ol>
+  </section>
+
+  <section class="related-articles">
+    <h3>Articoli correlati</h3>
+    <ul>
+      <li><a href="variabili-e-tipi.html">JavaScript: Variabili e Tipi di Dati</a> - Comprendi i fondamenti delle variabili e dei tipi in JavaScript.</li>
+      <li><a href="funzioni-javascript.html">Funzioni in JavaScript</a> - Scopri come definire e utilizzare funzioni per organizzare il tuo codice.</li>
+      <li><a href="loop-e-iterazioni.html">Loop e Iterazioni</a> - Impara a utilizzare i cicli for, while e do-while per iterare su dati.</li>
+      <li><a href="gestione-errori.html">Gestione degli Errori</a> - Scopri come gestire gli errori con try-catch e throw.</li>
+    </ul>
+  </section>
+
+  <section class="summary">
+    <h3>Riepilogo</h3>
+    <p>In questa guida abbiamo esplorato i concetti fondamentali degli operatori e delle strutture condizionali in JavaScript:</p>
+    <ul>
+      <li>Operatori aritmetici per eseguire calcoli matematici</li>
+      <li>Operatori di assegnazione per assegnare valori alle variabili</li>
+      <li>Operatori di confronto per confrontare valori</li>
+      <li>Operatori logici per combinare condizioni</li>
+      <li>Strutture condizionali if-else per eseguire codice in base a condizioni</li>
+      <li>Istruzione switch per gestire più casi basati su un'espressione</li>
+      <li>Operatore ternario per espressioni condizionali concise</li>
+    </ul>
+    <p>Padroneggiare questi concetti è essenziale per scrivere codice JavaScript efficace e controllare il flusso di esecuzione dei tuoi programmi. Continua a esplorare gli articoli correlati per approfondire la tua conoscenza di JavaScript.</p>
   </section>
 </main>
 <footer>
@@ -70,7 +647,5 @@
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
   </div>
 </footer>
-<script defer src="../assets/js/layout.js"></script>
-<script defer src="../assets/js/theme.js"></script>
 </body>
 </html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funzioni in JavaScript | Guida Completa – BitCafé</title>
+  <meta name="description" content="Guida completa alle funzioni in JavaScript. Scopri come definire, utilizzare e ottimizzare le funzioni per organizzare il tuo codice in modo efficiente.">
+  <meta name="keywords" content="JavaScript, funzioni JavaScript, function, arrow function, parametri, return, callback, programmazione JavaScript">
+  <link rel="icon" href="../assets/img/favicon.ico">
+  <meta property="og:title" content="Funzioni in JavaScript | Guida Completa – BitCafé">
+  <meta property="og:description" content="Guida completa alle funzioni in JavaScript. Scopri come definire, utilizzare e ottimizzare le funzioni per organizzare il tuo codice in modo efficiente.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/html/funzioni-javascript.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Funzioni in JavaScript | Guida Completa – BitCafé">
+  <meta name="twitter:description" content="Guida completa alle funzioni in JavaScript. Scopri come definire, utilizzare e ottimizzare le funzioni per organizzare il tuo codice in modo efficiente.">
+  <meta name="twitter:image" content="../assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="preload" href="../assets/css/layout.css" as="style">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1.4">
+  <script defer src="../assets/js/layout.js"></script>
+  <script defer src="../assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
+</head>
+<body>
+<a href="#main" class="skip-link">Salta al contenuto</a>
+<header>
+  <div class="container">
+    <h1>BitCafé</h1>
+    <nav class="main-nav">
+      <ul class="desktop-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../mappa.html">Mappa contenuti</a></li>
+        <li><a href="../chi-siamo.html">Chi siamo</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+      </ul>
+      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </nav>
+  </div>
+  <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+    <button id="menuClose" aria-label="Chiudi menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../mappa.html">Mappa contenuti</a></li>
+      <li><a href="../chi-siamo.html">Chi siamo</a></li>
+      <li><a href="../contatti.html">Contatti</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="container">
+  <section class="intro">
+    <h2>Funzioni in JavaScript</h2>
+    <p>Le funzioni sono uno dei concetti fondamentali in JavaScript e in qualsiasi linguaggio di programmazione. Permettono di organizzare il codice in blocchi riutilizzabili, migliorando la leggibilità, la manutenibilità e l'efficienza del programma. In questa guida completa, esploreremo come definire, utilizzare e ottimizzare le funzioni in JavaScript.</p>
+  </section>
+
+  <section>
+    <h3 class="toc-heading">Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#definizione">Definizione di funzioni</a></li>
+      <li><a href="#parametri">Parametri e argomenti</a></li>
+      <li><a href="#return">Valore di ritorno</a></li>
+      <li><a href="#arrow-functions">Arrow functions</a></li>
+      <li><a href="#scope">Scope e closure</a></li>
+      <li><a href="#callback">Funzioni di callback</a></li>
+      <li><a href="#best-practices">Best practices</a></li>
+    </ul>
+  </section>
+
+  <section id="definizione">
+    <h3>Definizione di funzioni in JavaScript</h3>
+    <p>In JavaScript, esistono diversi modi per definire una funzione:</p>
+
+    <h4>1. Dichiarazione di funzione</h4>
+    <pre><code>function saluta(nome) {
+  return "Ciao, " + nome + "!";
+}
+
+// Chiamata della funzione
+console.log(saluta("Mario")); // "Ciao, Mario!"</code></pre>
+
+    <h4>2. Espressione di funzione</h4>
+    <pre><code>const saluta = function(nome) {
+  return "Ciao, " + nome + "!";
+};
+
+// Chiamata della funzione
+console.log(saluta("Luigi")); // "Ciao, Luigi!"</code></pre>
+
+    <h4>3. Arrow function (ES6)</h4>
+    <pre><code>const saluta = (nome) => {
+  return "Ciao, " + nome + "!";
+};
+
+// Versione più concisa per funzioni semplici
+const salutaBreve = nome => "Ciao, " + nome + "!";
+
+console.log(salutaBreve("Peach")); // "Ciao, Peach!"</code></pre>
+
+    <div class="tip">
+      <h5>Hoisting</h5>
+      <p>Le dichiarazioni di funzione sono "hoisted" (sollevate) all'inizio del loro contesto di esecuzione, il che significa che possono essere chiamate prima della loro definizione nel codice. Le espressioni di funzione e le arrow function, invece, non sono hoisted.</p>
+    </div>
+  </section>
+
+  <section id="parametri">
+    <h3>Parametri e argomenti</h3>
+    <p>I parametri sono le variabili elencate nella definizione della funzione, mentre gli argomenti sono i valori effettivamente passati alla funzione quando viene chiamata.</p>
+
+    <h4>Parametri di base</h4>
+    <pre><code>function somma(a, b) {
+  return a + b;
+}
+
+console.log(somma(5, 3)); // 8</code></pre>
+
+    <h4>Parametri di default (ES6)</h4>
+    <pre><code>function saluta(nome = "Utente") {
+  return "Ciao, " + nome + "!";
+}
+
+console.log(saluta()); // "Ciao, Utente!"
+console.log(saluta("Mario")); // "Ciao, Mario!"</code></pre>
+
+    <h4>Rest parameters (ES6)</h4>
+    <pre><code>function somma(...numeri) {
+  return numeri.reduce((totale, numero) => totale + numero, 0);
+}
+
+console.log(somma(1, 2, 3, 4, 5)); // 15</code></pre>
+
+    <h4>Destructuring nei parametri (ES6)</h4>
+    <pre><code>function presentaPersona({ nome, età, professione = "Non specificata" }) {
+  return `${nome}, ${età} anni, ${professione}`;
+}
+
+const persona = {
+  nome: "Mario",
+  età: 30,
+  professione: "Sviluppatore"
+};
+
+console.log(presentaPersona(persona)); // "Mario, 30 anni, Sviluppatore"</code></pre>
+  </section>
+
+  <section id="return">
+    <h3>Valore di ritorno</h3>
+    <p>Le funzioni in JavaScript possono restituire un valore utilizzando l'istruzione <code>return</code>. Se non è specificato un valore di ritorno, la funzione restituisce <code>undefined</code>.</p>
+
+    <pre><code>function quadrato(numero) {
+  return numero * numero;
+}
+
+const risultato = quadrato(4);
+console.log(risultato); // 16
+
+function saluta(nome) {
+  console.log("Ciao, " + nome + "!");
+  // Nessun return esplicito, quindi restituisce undefined
+}
+
+const valore = saluta("Mario");
+console.log(valore); // undefined</code></pre>
+
+    <h4>Return anticipato</h4>
+    <p>L'istruzione <code>return</code> termina immediatamente l'esecuzione della funzione e restituisce il valore specificato.</p>
+
+    <pre><code>function verificaEtà(età) {
+  if (età < 0) {
+    return "Età non valida";
+  }
+
+  if (età < 18) {
+    return "Minorenne";
+  }
+
+  return "Maggiorenne";
+}
+
+console.log(verificaEtà(-5)); // "Età non valida"
+console.log(verificaEtà(15)); // "Minorenne"
+console.log(verificaEtà(25)); // "Maggiorenne"</code></pre>
+  </section>
+
+  <section id="arrow-functions">
+    <h3>Arrow functions</h3>
+    <p>Le arrow functions, introdotte in ES6, offrono una sintassi più concisa per definire funzioni e hanno un comportamento diverso riguardo al binding di <code>this</code>.</p>
+
+    <h4>Sintassi di base</h4>
+    <pre><code>// Funzione tradizionale
+const somma = function(a, b) {
+  return a + b;
+};
+
+// Arrow function equivalente
+const sommaArrow = (a, b) => a + b;
+
+console.log(sommaArrow(5, 3)); // 8</code></pre>
+
+    <h4>Variazioni di sintassi</h4>
+    <pre><code>// Con un solo parametro, le parentesi sono opzionali
+const quadrato = x => x * x;
+
+// Senza parametri, le parentesi sono obbligatorie
+const saluta = () => "Ciao!";
+
+// Con corpo di funzione su più righe, le parentesi graffe e return sono obbligatori
+const sommaQuadrati = (a, b) => {
+  const quadratoA = a * a;
+  const quadratoB = b * b;
+  return quadratoA + quadratoB;
+};</code></pre>
+
+    <h4>Binding di this</h4>
+    <p>Nelle arrow functions, <code>this</code> è ereditato dal contesto circostante (lexical this), a differenza delle funzioni tradizionali dove <code>this</code> dipende da come la funzione viene chiamata.</p>
+
+    <pre><code>function Persona() {
+  this.età = 0;
+
+  // Con funzione tradizionale, this si riferisce all'oggetto che chiama la funzione
+  setInterval(function() {
+    this.età++; // this non si riferisce all'istanza di Persona
+    console.log(this.età); // NaN
+  }, 1000);
+}
+
+function PersonaCorretta() {
+  this.età = 0;
+
+  // Con arrow function, this si riferisce al contesto in cui la funzione è definita
+  setInterval(() => {
+    this.età++; // this si riferisce all'istanza di PersonaCorretta
+    console.log(this.età); // 1, 2, 3, ...
+  }, 1000);
+}</code></pre>
+
+    <div class="warning">
+      <h5>Limitazioni delle arrow functions</h5>
+      <p>Le arrow functions non possono essere utilizzate come costruttori (con <code>new</code>), non hanno l'oggetto <code>arguments</code> e non possono essere utilizzate come metodi di oggetti se è necessario accedere all'oggetto tramite <code>this</code>.</p>
+    </div>
+  </section>
+
+  <section id="scope">
+    <h3>Scope e closure</h3>
+    <p>Lo scope determina la visibilità e l'accessibilità delle variabili all'interno del codice.</p>
+
+    <h4>Scope globale e locale</h4>
+    <pre><code>// Variabile globale
+const globale = "Sono visibile ovunque";
+
+function esempio() {
+  // Variabile locale
+  const locale = "Sono visibile solo all'interno della funzione";
+  console.log(globale); // Accessibile
+  console.log(locale); // Accessibile
+}
+
+console.log(globale); // Accessibile
+console.log(locale); // ReferenceError: locale is not defined</code></pre>
+
+    <h4>Closure</h4>
+    <p>Una closure è una funzione che ha accesso alle variabili del suo contesto esterno, anche dopo che il contesto esterno è terminato.</p>
+
+    <pre><code>function creaContatore() {
+  let conteggio = 0;
+
+  return function() {
+    conteggio++;
+    return conteggio;
+  };
+}
+
+const contatore = creaContatore();
+console.log(contatore()); // 1
+console.log(contatore()); // 2
+console.log(contatore()); // 3</code></pre>
+
+    <p>In questo esempio, la funzione restituita da <code>creaContatore</code> mantiene l'accesso alla variabile <code>conteggio</code> anche dopo che <code>creaContatore</code> è terminata.</p>
+  </section>
+
+  <section id="callback">
+    <h3>Funzioni di callback</h3>
+    <p>Una funzione di callback è una funzione passata come argomento ad un'altra funzione, che viene poi invocata all'interno della funzione esterna.</p>
+
+    <h4>Esempio di base</h4>
+    <pre><code>function eseguiOperazione(a, b, callback) {
+  const risultato = a + b;
+  callback(risultato);
+}
+
+eseguiOperazione(5, 3, function(risultato) {
+  console.log("Il risultato è: " + risultato); // "Il risultato è: 8"
+});
+
+// Con arrow function
+eseguiOperazione(10, 20, risultato => {
+  console.log("Il risultato è: " + risultato); // "Il risultato è: 30"
+});</code></pre>
+
+    <h4>Callback in funzioni asincrone</h4>
+    <pre><code>function caricaDati(url, callback) {
+  // Simulazione di una richiesta asincrona
+  setTimeout(() => {
+    const dati = { id: 1, nome: "Esempio" };
+    callback(dati);
+  }, 1000);
+}
+
+caricaDati("https://api.esempio.com/dati", function(dati) {
+  console.log("Dati caricati:", dati);
+});</code></pre>
+
+    <div class="tip">
+      <h5>Callback hell</h5>
+      <p>L'uso eccessivo di callback annidate può portare al "callback hell", rendendo il codice difficile da leggere e mantenere. Le moderne alternative includono Promises e async/await.</p>
+    </div>
+  </section>
+
+  <section id="best-practices">
+    <h3>Best practices per l'uso delle funzioni</h3>
+    <ol>
+      <li><strong>Nomi descrittivi</strong>: Usa nomi che descrivono chiaramente lo scopo della funzione.</li>
+      <li><strong>Funzioni piccole e focalizzate</strong>: Ogni funzione dovrebbe fare una cosa sola e farla bene.</li>
+      <li><strong>Limita il numero di parametri</strong>: Troppe parametri rendono la funzione difficile da usare.</li>
+      <li><strong>Usa valori di default</strong> per i parametri opzionali.</li>
+      <li><strong>Documenta le funzioni</strong> con commenti che spiegano lo scopo, i parametri e il valore di ritorno.</li>
+      <li><strong>Gestisci gli errori</strong> in modo appropriato, usando try/catch o restituendo valori di errore.</li>
+      <li><strong>Evita effetti collaterali</strong>: Le funzioni dovrebbero essere prevedibili e non modificare variabili esterne.</li>
+      <li><strong>Preferisci funzioni pure</strong>: Funzioni che, dato lo stesso input, restituiscono sempre lo stesso output senza effetti collaterali.</li>
+    </ol>
+  </section>
+
+  <section class="related-articles">
+    <h3>Articoli correlati</h3>
+    <ul>
+      <li><a href="variabili-e-tipi.html">JavaScript: Variabili e Tipi di Dati</a> - Comprendi i fondamenti delle variabili e dei tipi in JavaScript.</li>
+      <li><a href="operatori-e-condizioni.html">Operatori e condizioni in JavaScript</a> - Impara a utilizzare operatori e strutture condizionali.</li>
+      <li><a href="scope-e-closure.html">Scope e Closure</a> - Approfondisci i concetti di scope e closure in JavaScript.</li>
+      <li><a href="oggetti-e-prototipi.html">Oggetti e Prototipi</a> - Scopri come funzionano gli oggetti e l'ereditarietà in JavaScript.</li>
+    </ul>
+  </section>
+
+  <section class="summary">
+    <h3>Riepilogo</h3>
+    <p>In questa guida abbiamo esplorato i concetti fondamentali delle funzioni in JavaScript:</p>
+    <ul>
+      <li>Come definire funzioni con dichiarazioni, espressioni e arrow functions</li>
+      <li>Come utilizzare parametri e argomenti</li>
+      <li>Come restituire valori dalle funzioni</li>
+      <li>Le caratteristiche speciali delle arrow functions</li>
+      <li>I concetti di scope e closure</li>
+      <li>L'uso delle funzioni di callback</li>
+      <li>Best practices per scrivere funzioni efficaci</li>
+    </ul>
+    <p>Le funzioni sono uno strumento potente in JavaScript che ti permette di organizzare il codice in modo modulare e riutilizzabile. Padroneggiare questi concetti è fondamentale per diventare un programmatore JavaScript efficace.</p>
+  </section>
+</main>
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <p class="logo">BitCafé</p>
+      <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
+    </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../mappa.html">Mappa contenuti</a></li>
+        <li><a href="../chi-siamo.html">Chi siamo</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../cookie-policy.html">Cookie policy</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+  </div>
+</footer>
+</body>
+</html>

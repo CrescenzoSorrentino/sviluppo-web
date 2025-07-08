@@ -1,0 +1,175 @@
+/* -------------------------------------------------
+   Responsive Design Enhancements
+   This file adds responsive design improvements to make all pages
+   fully responsive on all devices.
+------------------------------------------------- */
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Make embedded content responsive */
+iframe, embed, object, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make code blocks responsive */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+code {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Make tables responsive */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Additional responsive improvements for small screens */
+@media (max-width: 576px) {
+    /* Adjust font sizes for better readability on small screens */
+    body {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust padding for better space usage */
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    /* Adjust intro section padding */
+    .intro {
+        padding: 2rem 1rem;
+    }
+
+    /* Adjust featured list for better mobile display */
+    .featured-list {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-list li {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featured-list li i {
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .featured-list a {
+        margin-bottom: 0.5rem;
+        display: block;
+        width: 100%;
+    }
+
+    .featured-list .related-links {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    /* Adjust newsletter form for better mobile display */
+    .newsletter {
+        padding: 2rem 1rem;
+    }
+
+    /* Adjust footer for better mobile display */
+    footer {
+        padding: 2rem 0.75rem;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Adjust padding for better space usage */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjust intro section padding */
+    .intro {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Adjust featured list for better tablet display */
+    .featured-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featured-list li i {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .featured-list a {
+        margin-bottom: 0.5rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Dark mode adjustments for code blocks */
+@media (prefers-color-scheme: dark) {
+    html:not(.light) pre {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    html:not(.light) code {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+html.dark pre {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark code {
+    background-color: rgba(255, 255, 255, 0.1);
+}

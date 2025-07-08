@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chi siamo – BitCafé</title>
-  <meta name="description" content="Scopri chi c'è dietro BitCafé e la nostra missione." />
-  <meta property="og:title" content="Chi siamo – BitCafé">
-  <meta property="og:description" content="Scopri chi c'è dietro BitCafé e la nostra missione." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Siamo | Il Team e la Missione di BitCafé</title>
+  <meta name="description" content="Scopri il team di BitCafé, la nostra missione e i valori che guidano la nostra piattaforma educativa dedicata allo sviluppo web. Conosciamo la storia del progetto e la nostra visione per il futuro dell'educazione tecnologica.">
+  <meta name="keywords" content="BitCafé, team BitCafé, missione BitCafé, chi siamo, sviluppo web, educazione tecnologica, piattaforma educativa">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta property="og:title" content="Chi Siamo | Il Team e la Missione di BitCafé">
+  <meta property="og:description" content="Scopri il team di BitCafé, la nostra missione e i valori che guidano la nostra piattaforma educativa dedicata allo sviluppo web. Conosciamo la storia del progetto e la nostra visione per il futuro dell'educazione tecnologica.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/chi-siamo.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chi siamo – BitCafé">
-  <meta name="twitter:description" content="Scopri chi c'è dietro BitCafé e la nostra missione." />
+  <meta name="twitter:title" content="Chi Siamo | Il Team e la Missione di BitCafé">
+  <meta name="twitter:description" content="Scopri il team di BitCafé, la nostra missione e i valori che guidano la nostra piattaforma educativa dedicata allo sviluppo web. Conosciamo la storia del progetto e la nostra visione per il futuro dell'educazione tecnologica.">
   <meta name="twitter:image" content="assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-  <link rel="stylesheet" href="assets/css/layout.css?v=1.4" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
+  <script defer src="assets/js/layout.js"></script>
+  <script defer src="assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
 <header>
   <div class="container">
-    <h1>BitCafé</h1>
+    <a href="index.html" class="logo-link"><div class="logo-text">BitCafé</div></a>
     <nav class="main-nav">
       <ul class="desktop-menu">
-        <li><a href="index.html">Home</a></li>
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
       </ul>
-      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">☰</button>
+      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
     </nav>
   </div>
   <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
-    <button id="menuClose" aria-label="Chiudi menu">✕</button>
+    <button id="menuClose" aria-label="Chiudi menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
     <ul>
-      <li><a href="index.html">Home</a></li>
       <li><a href="mappa.html">Mappa contenuti</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="contatti.html">Contatti</a></li>
@@ -49,19 +60,188 @@
 </header>
 <main id="main" class="container">
   <section class="intro">
-    <h2>Chi siamo</h2>
-    <p>Questa pagina è in costruzione. Presto troverai maggiori informazioni sul progetto BitCafé.</p>
+    <h1>Chi Siamo</h1>
+    <p>BitCafé è un progetto educativo nato dalla passione per lo sviluppo web e dalla volontà di condividere conoscenze in modo chiaro, accessibile e strutturato. Siamo un team di professionisti del settore tech uniti dalla missione di rendere l'apprendimento delle tecnologie web alla portata di tutti.</p>
+  </section>
+
+  <section>
+    <h3>Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#team">Il nostro team</a></li>
+      <li><a href="#missione">La nostra missione</a></li>
+      <li><a href="#valori">I nostri valori</a></li>
+      <li><a href="#storia">La storia di BitCafé</a></li>
+      <li><a href="#approccio">Il nostro approccio didattico</a></li>
+      <li><a href="#futuro">Visione e progetti futuri</a></li>
+    </ul>
+  </section>
+
+  <section id="team" class="featured">
+    <h2><i class="fa-solid fa-user" aria-hidden="true"></i> Il nostro team</h2>
+    <p>BitCafé è curato da un professionista con esperienza nel settore tech e una forte passione per l'educazione tecnologica di qualità, con particolare attenzione all'accessibilità e alle performance web.</p>
+
+    <div class="featured-list" style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Crescenzo Sorrentino</h3>
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Front-End Developer</p>
+        <p>Sviluppatore front-end appassionato di accessibilità web e performance. Esperto in HTML semantico, CSS moderno e JavaScript. Specializzato nell'ottimizzazione dell'esperienza utente e nella creazione di interfacce responsive e inclusive. Sostenitore delle best practices per un web più veloce e accessibile a tutti.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.5rem;">BitCafé è un progetto personale nato dalla passione per la condivisione di conoscenze e l'educazione tecnologica di qualità.</p>
+  </section>
+
+  <section id="missione" class="featured">
+    <h2><i class="fa-solid fa-bullseye" aria-hidden="true"></i> La mia missione</h2>
+    <p>La missione di BitCafé è democratizzare l'accesso alla conoscenza tecnologica, abbattendo le barriere che spesso rendono difficile l'ingresso nel mondo dello sviluppo web.</p>
+
+    <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); margin-top: 1.5rem;">
+      <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Cosa voglio realizzare</h3>
+      <p>Credo che l'educazione tecnologica debba essere:</p>
+      <ul style="margin-top: 0.75rem; margin-left: 1.5rem;">
+        <li><strong>Accessibile a tutti</strong>, indipendentemente dal background o dalle risorse economiche</li>
+        <li><strong>Chiara e comprensibile</strong>, evitando il gergo tecnico non necessario</li>
+        <li><strong>Aggiornata e rilevante</strong>, riflettendo le pratiche moderne del settore</li>
+        <li><strong>Pratica e applicabile</strong>, con esempi reali e casi d'uso concreti</li>
+        <li><strong>Strutturata in modo logico</strong>, con un percorso di apprendimento progressivo</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 1.5rem;">BitCafé nasce per offrire guide pratiche e risorse di qualità per imparare HTML, CSS, JavaScript e le tecnologie web moderne, seguendo un percorso strutturato che accompagna l'utente dal livello principiante fino a competenze avanzate.</p>
+  </section>
+
+  <section id="valori" class="featured">
+    <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> I miei valori</h2>
+    <p>I valori fondamentali che guidano ogni aspetto di BitCafé, dalla creazione dei contenuti all'interazione con la comunità:</p>
+
+    <div class="featured-list" style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-lightbulb" style="margin-right: 0.5rem;"></i>Semplicità</h3>
+        <p>Rendo semplici i concetti complessi, utilizzando un linguaggio chiaro e diretto. Credo che la semplicità sia la chiave per un apprendimento efficace.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-universal-access" style="margin-right: 0.5rem;"></i>Inclusività</h3>
+        <p>Creo contenuti accessibili a tutti, indipendentemente dalle capacità o disabilità. L'accessibilità non è un'aggiunta, ma parte integrante del mio approccio.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-code" style="margin-right: 0.5rem;"></i>Qualità</h3>
+        <p>Mi impegno a mantenere standard elevati in tutti i miei contenuti, con esempi di codice ben scritti, spiegazioni accurate e best practice aggiornate.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-people-group" style="margin-right: 0.5rem;"></i>Comunità</h3>
+        <p>Valorizzo la collaborazione e il feedback della comunità. BitCafé è un progetto in continua evoluzione grazie al contributo di tutti gli utenti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="storia" class="featured">
+    <h2><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> La storia di BitCafé</h2>
+    <p>BitCafé è nato nel 2023 come risposta alla frammentazione delle risorse educative per lo sviluppo web. Essendo nel suo primo anno di vita, il progetto è ancora agli inizi ma con grandi ambizioni:</p>
+
+    <div style="margin-top: 1.5rem; display: grid; gap: 1.5rem;">
+      <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;">
+        <div style="background-color: var(--accent); color: white; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); font-weight: 600; text-align: center;">2025</div>
+        <div>
+          <h3 style="margin-bottom: 0.5rem;">La nascita dell'idea</h3>
+          <p>Crescenzo Sorrentino concepisce BitCafé come piattaforma educativa strutturata per lo sviluppo web, ispirata dalla sua esperienza come sviluppatore front-end e dalla passione per l'accessibilità e le performance web.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;">
+        <div style="background-color: var(--accent); color: white; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); font-weight: 600; text-align: center;">2025</div>
+        <div>
+          <h3 style="margin-bottom: 0.5rem;">Sviluppo della piattaforma</h3>
+          <p>Inizia lo sviluppo della piattaforma con un focus particolare sull'accessibilità, la performance e l'esperienza utente. L'obiettivo è creare una risorsa educativa che rispetti gli standard web moderni.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;">
+        <div style="background-color: var(--accent); color: white; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); font-weight: 600; text-align: center;">2025</div>
+        <div>
+          <h3 style="margin-bottom: 0.5rem;">Lancio ufficiale</h3>
+          <p>BitCafé viene lanciato con i primi articoli su HTML, CSS e JavaScript. L'interfaccia ispirata al Finder di macOS è progettata per essere intuitiva e facile da navigare.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approccio" class="featured">
+    <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Il mio approccio didattico</h2>
+    <p>BitCafé si distingue per un approccio didattico strutturato e orientato alla pratica. Ecco i principi che guidano la creazione dei miei contenuti:</p>
+
+    <h3 style="color: var(--accent); margin: 1.5rem 0 1rem;">Cosa mi rende diverso</h3>
+    <ul style="list-style-position: inside; margin-bottom: 1.5rem;">
+      <li><strong>Percorso progressivo</strong>: contenuti organizzati in modo logico, dal livello base a quello avanzato</li>
+      <li><strong>Esempi pratici</strong>: ogni concetto è illustrato con esempi reali e casi studio</li>
+      <li><strong>Codice commentato</strong>: spiegazioni dettagliate di ogni riga di codice</li>
+      <li><strong>Contenuti interconnessi</strong>: collegamenti tra argomenti correlati per una comprensione più profonda</li>
+      <li><strong>Aggiornamenti costanti</strong>: contenuti sempre al passo con le ultime tecnologie e best practice</li>
+      <li><strong>Interfaccia intuitiva</strong>: navigazione ispirata al Finder di macOS per trovare facilmente i contenuti</li>
+      <li><strong>Accessibilità integrata</strong>: tutti i contenuti sono progettati per essere accessibili a tutti gli utenti</li>
+    </ul>
+
+    <p>Ogni articolo su BitCafé segue una struttura coerente che include introduzione, spiegazione teorica, esempi pratici, best practice e risorse correlate, facilitando l'apprendimento e la consultazione.</p>
+  </section>
+
+  <section id="futuro" class="featured">
+    <h2><i class="fa-solid fa-rocket" aria-hidden="true"></i> Visione e progetti futuri</h2>
+    <p>BitCafé è un progetto appena nato ma con una chiara visione di crescita. Ecco alcuni dei miei obiettivi iniziali:</p>
+
+    <div style="margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+      <h3 style="color: var(--accent); margin-bottom: 1rem;">Roadmap 2025-2026</h3>
+      <ul style="margin-left: 1.5rem;">
+        <li><strong>Creazione di contenuti base</strong>: completare le guide fondamentali su HTML, CSS e JavaScript</li>
+        <li><strong>Miglioramento dell'interfaccia</strong>: ottimizzare l'esperienza utente e l'accessibilità del sito</li>
+        <li><strong>Esempi pratici</strong>: aggiungere più esempi di codice e mini-progetti per applicare le conoscenze</li>
+        <li><strong>Raccolta feedback</strong>: creare un sistema per raccogliere opinioni e suggerimenti dagli utenti</li>
+        <li><strong>Espansione graduale</strong>: introdurre nuovi argomenti in base alle richieste degli utenti</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 1.5rem;">Sono costantemente al lavoro per migliorare BitCafé e aggiungere nuovi contenuti. La tua opinione è importante: se hai suggerimenti, feedback o vuoi collaborare al progetto, non esitare a <a href="contatti.html" style="color: var(--accent); text-decoration: none; font-weight: 600;">contattarmi</a>.</p>
+  </section>
+
+  <section class="related-content" style="margin-top: 3rem;">
+    <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Contenuti correlati</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+      <a href="contatti.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i>Contattaci</h4>
+        <p>Hai domande o suggerimenti? Scopri come metterti in contatto con l'autore di BitCafé.</p>
+      </a>
+
+      <a href="mappa.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-map" style="margin-right: 0.5rem;"></i>Mappa dei contenuti</h4>
+        <p>Esplora tutti i contenuti disponibili su BitCafé organizzati per categoria e livello.</p>
+      </a>
+
+      <a href="html/accessibilit.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-universal-access" style="margin-right: 0.5rem;"></i>Accessibilità web</h4>
+        <p>Scopri come rendiamo i nostri contenuti accessibili e come puoi fare lo stesso nei tuoi progetti.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Iscriviti alla newsletter</h2>
+    <p>Ricevi aggiornamenti sui nuovi contenuti, tutorial esclusivi e risorse selezionate direttamente nella tua inbox.</p>
+    <form action="#" method="post">
+      <label for="newsletterEmail">Email</label>
+      <input type="email" id="newsletterEmail" placeholder="La tua email" aria-label="Inserisci la tua email" required>
+      <button type="submit" aria-label="Iscriviti alla newsletter">Iscriviti</button>
+    </form>
   </section>
 </main>
 <footer>
   <div class="container footer-grid">
     <div class="footer-about">
-      <p class="logo">BitCafé</p>
+      <a href="index.html" class="logo-link"><p class="logo">BitCafé</p></a>
       <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
     </div>
     <nav class="footer-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
@@ -72,7 +252,5 @@
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
   </div>
 </footer>
-<script defer src="assets/js/layout.js"></script>
-<script defer src="assets/js/theme.js"></script>
 </body>
 </html>

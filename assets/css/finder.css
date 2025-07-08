@@ -16,6 +16,8 @@
     --bg: #f5f5f7;
     --text: #1c1c1e;
     --divider: #d1d1d6;
+    --card-bg: #fff;
+    --finder-path-bg: #f8f8f8;
 }
 
 body {
@@ -36,20 +38,21 @@ body {
    Finder
 ------------------------------------------------- */
 .finder {
-    background: var(--bg);
+    background: var(--card-bg);
     border: 1px solid var(--divider);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-md);
     margin: 3rem 0;
-    padding: 1.5rem 1rem;
+    padding: 2rem;
 }
 
 .finder h2 {
     font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--accent);
     text-align: center;
+    font-weight: 700;
 }
 
 .finder h2::after {
@@ -57,52 +60,76 @@ body {
     display: block;
     width: 80px;
     height: 3px;
-    margin: 0.5rem auto 0;
+    margin: 0.75rem auto 0;
     background: var(--gradient);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
 }
 
 .finder-intro {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-inline: auto;
 }
 
 .finder-header {
-    padding: 1rem;
+    padding: 0 1rem 1.25rem;
     border-bottom: 1px solid var(--divider);
+    position: relative;
 }
+
 
 .finder-header input {
     width: 100%;
-    padding: 0.7rem 1rem;
+    padding: 1rem;
     font-size: 1rem;
     border: 1px solid var(--divider);
-    border-radius: 6px;
-    transition: border-color 0.25s;
+    border-radius: var(--radius-full);
+    transition: all var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
 .finder-header input:focus {
     outline: none;
     border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.2), var(--shadow-sm);
+    transform: translateY(-1px);
 }
 
 /* Breadcrumb / path */
 .finder-path {
-    padding: 0.65rem 1rem;
-    font-size: 0.9rem;
-    background: var(--bg);
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+    background: var(--finder-path-bg);
     border-bottom: 1px solid var(--divider);
-    color: var(--text);
+    color: var(--text-secondary);
     white-space: nowrap;
     overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--divider) transparent;
+}
+
+.finder-path::-webkit-scrollbar {
+    height: 4px;
+}
+
+.finder-path::-webkit-scrollbar-thumb {
+    background-color: var(--divider);
+    border-radius: var(--radius-full);
 }
 
 .finder-path span {
     cursor: pointer;
     color: var(--accent);
+    transition: all var(--transition);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
 }
+
 .finder-path span:hover {
     text-decoration: underline;
+    background-color: rgba(10, 132, 255, 0.08);
 }
 
 /* Colonne */
@@ -110,6 +137,18 @@ body {
     display: none;
     flex-direction: row;
     overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--divider) transparent;
+    background: var(--card-bg);
+}
+
+.finder-columns::-webkit-scrollbar {
+    height: 6px;
+}
+
+.finder-columns::-webkit-scrollbar-thumb {
+    background-color: var(--divider);
+    border-radius: var(--radius-full);
 }
 
 .finder-columns.show {
@@ -123,6 +162,18 @@ body {
     overflow-y: auto;
     border-right: 1px solid var(--divider);
     align-self: flex-start;
+    scrollbar-width: thin;
+    scrollbar-color: var(--divider) transparent;
+    background: var(--card-bg);
+}
+
+.finder-col::-webkit-scrollbar {
+    width: 6px;
+}
+
+.finder-col::-webkit-scrollbar-thumb {
+    background-color: var(--divider);
+    border-radius: var(--radius-full);
 }
 
 .finder-col:last-child {
@@ -147,32 +198,37 @@ body {
 
 /* Liste */
 .finder-col li {
-    padding: 0.7rem 1rem;
+    padding: 0.85rem 1.25rem;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    transition: background-color 0.15s ease, font-weight 0.2s;
+    gap: 0.75rem;
+    transition: all var(--transition);
     color: inherit;
     text-decoration: none;
     list-style: none;
     white-space: nowrap;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
 }
 
 .finder-col li:hover {
-    background: rgba(0, 0, 0, 0.05);
-    font-weight: 500;
+    background: rgba(0, 0, 0, 0.03);
+    transform: translateX(3px);
 }
 
 .finder-col li.active {
-    background: rgba(10, 132, 255, 0.18);
+    background: rgba(10, 132, 255, 0.12);
     font-weight: 600;
+    border-left: 3px solid var(--accent);
+    padding-left: calc(1.25rem - 3px);
 }
 
 .finder-col li i {
     width: 1.2rem;
     text-align: center;
     opacity: 0.7;
+    font-size: 1.1rem;
+    color: var(--accent);
 }
 
 /* Link nella colonna 3 */
@@ -180,10 +236,12 @@ body {
     text-decoration: none;
     color: inherit;
     flex: 1;
+    padding: 0.25rem 0;
+    transition: all var(--transition);
 }
 
 .finder-col[data-level="3"] li a:hover {
-    text-decoration: underline;
+    color: var(--accent);
 }
 
 /* -------------------------------------------------
@@ -191,10 +249,10 @@ body {
 ------------------------------------------------- */
 .search-results {
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-    padding: 0 1rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem 2.5rem;
     max-width: 1200px;
     margin-inline: auto;
 }
@@ -203,49 +261,81 @@ body {
     display: grid;
 }
 
+.search-results p {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
 .search-item {
-    background: var(--bg);
+    background: var(--card-bg);
     border: 1px solid var(--divider);
-    border-radius: 6px;
-    padding: 1rem;
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
     font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    transition: background 0.2s, transform 0.15s;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
 .search-item:hover {
-    background-color: rgba(10, 132, 255, 0.15);
-    transform: translateY(-2px);
+    background-color: rgba(10, 132, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
 }
 
 .search-item i {
-    color: var(--accent);
+    color: var(--accent-2);
     flex-shrink: 0;
+    font-size: 1.1rem;
 }
 
 .search-item a {
     text-decoration: none;
     color: inherit;
     flex-grow: 1;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* -------------------------------------------------
    Responsive
 ------------------------------------------------- */
 @media (max-width: 768px) {
+    .finder-columns {
+        flex-direction: column;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
     .finder-col {
-        flex: 1 0 100%;
+        flex: 1 0 auto;
         min-width: 100%;
         max-height: none;
         border-right: none;
         border-bottom: 1px solid var(--divider);
         position: static;
+        overflow-y: visible;
     }
 
     .finder-col:last-child {
         border-bottom: none;
+    }
+
+    .finder-path {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .search-results {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem 1rem 2rem;
     }
 }
 
@@ -253,44 +343,32 @@ body {
    Dark mode
 ------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
-    :root {
+    html:not(.light) {
         --accent-2: #ff5aa5;
         --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
-    }
-    .finder,
-    .finder-header,
-    .finder-path,
-    .search-item {
-        background: var(--bg);
-        color: var(--text);
+        --card-bg: #2c2c2e;
+        --finder-path-bg: #2c2c2e;
     }
 
-    .finder-col li:hover {
+    html:not(.light) .finder-col li:hover {
         background: rgba(255, 255, 255, 0.1);
     }
 
-    .finder-col li.active {
+    html:not(.light) .finder-col li.active {
         background: rgba(10, 132, 255, 0.3);
     }
 
-    .search-item:hover {
+    html:not(.light) .search-item:hover {
         background-color: rgba(10, 132, 255, 0.25);
     }
-}
-
-html.dark .finder,
-html.dark .finder-header,
-html.dark .finder-path,
-html.dark .search-item {
-    background: var(--bg);
-    color: var(--text);
 }
 
 html.dark {
     --accent-2: #ff5aa5;
     --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
+    --card-bg: #2c2c2e;
+    --finder-path-bg: #2c2c2e;
 }
-
 
 html.dark .finder-path span {
     color: var(--accent);

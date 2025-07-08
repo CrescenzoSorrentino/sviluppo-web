@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contatti – BitCafé</title>
-  <meta name="description" content="Come mettersi in contatto con il team di BitCafé." />
-  <meta property="og:title" content="Contatti – BitCafé">
-  <meta property="og:description" content="Come mettersi in contatto con il team di BitCafé." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti | Assistenza e Supporto BitCafé</title>
+  <meta name="description" content="Contatta il team di BitCafé per domande, suggerimenti o collaborazioni. Scopri i nostri canali di supporto, tempi di risposta e le risposte alle domande frequenti sulla nostra piattaforma educativa.">
+  <meta name="keywords" content="contatti BitCafé, supporto BitCafé, assistenza BitCafé, email BitCafé, collaborare BitCafé, domande frequenti BitCafé">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta property="og:title" content="Contatti | Assistenza e Supporto BitCafé">
+  <meta property="og:description" content="Contatta il team di BitCafé per domande, suggerimenti o collaborazioni. Scopri i nostri canali di supporto, tempi di risposta e le risposte alle domande frequenti sulla nostra piattaforma educativa.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/contatti.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contatti – BitCafé">
-  <meta name="twitter:description" content="Come mettersi in contatto con il team di BitCafé." />
+  <meta name="twitter:title" content="Contatti | Assistenza e Supporto BitCafé">
+  <meta name="twitter:description" content="Contatta il team di BitCafé per domande, suggerimenti o collaborazioni. Scopri i nostri canali di supporto, tempi di risposta e le risposte alle domande frequenti sulla nostra piattaforma educativa.">
   <meta name="twitter:image" content="assets/img/social.png">
+  <meta name="author" content="BitCafé Team">
+  <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-  <link rel="stylesheet" href="assets/css/layout.css?v=1.4" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
+  <script defer src="assets/js/layout.js"></script>
+  <script defer src="assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
 <header>
   <div class="container">
-    <h1>BitCafé</h1>
+    <a href="index.html" class="logo-link"><div class="logo-text">BitCafé</div></a>
     <nav class="main-nav">
       <ul class="desktop-menu">
-        <li><a href="index.html">Home</a></li>
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
       </ul>
-      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">☰</button>
+      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
     </nav>
   </div>
   <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
-    <button id="menuClose" aria-label="Chiudi menu">✕</button>
+    <button id="menuClose" aria-label="Chiudi menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
     <ul>
-      <li><a href="index.html">Home</a></li>
       <li><a href="mappa.html">Mappa contenuti</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="contatti.html">Contatti</a></li>
@@ -49,19 +60,262 @@
 </header>
 <main id="main" class="container">
   <section class="intro">
-    <h2>Contatti</h2>
-    <p>Per ora puoi scriverci a <a href="mailto:info@bitcafe.it">info@bitcafe.it</a>.</p>
+    <h1>Contatti e Supporto</h1>
+    <p>Hai domande, suggerimenti o vuoi collaborare con noi? Il team di BitCafé è qui per aiutarti. Abbiamo diversi canali di comunicazione per soddisfare le tue esigenze e garantirti una risposta rapida ed efficace.</p>
+  </section>
+
+  <section>
+    <h3>Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#form-contatto">Modulo di contatto</a></li>
+      <li><a href="#info-contatto">Informazioni di contatto</a></li>
+      <li><a href="#tempi-risposta">Tempi di risposta</a></li>
+      <li><a href="#faq">Domande frequenti</a></li>
+      <li><a href="#collaborazioni">Opportunità di collaborazione</a></li>
+      <li><a href="#supporto-tecnico">Supporto tecnico</a></li>
+    </ul>
+  </section>
+
+  <section id="form-contatto" class="featured">
+    <h2><i class="fa-solid fa-envelope" aria-hidden="true"></i> Modulo di contatto</h2>
+    <p>Compila il modulo sottostante per inviarci un messaggio. Questo è il metodo più efficace per ricevere assistenza personalizzata. Ti risponderemo all'indirizzo email fornito, generalmente entro 1-2 giorni lavorativi.</p>
+
+    <form style="margin-top: 2rem; display: grid; gap: 1.5rem; max-width: 700px;">
+      <div style="display: grid; gap: 0.5rem;">
+        <label for="nome" style="font-weight: 600;">Nome <span style="color: var(--accent);">*</span></label>
+        <input type="text" id="nome" placeholder="Il tuo nome" required style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--divider); background: var(--bg);">
+      </div>
+
+      <div style="display: grid; gap: 0.5rem;">
+        <label for="email" style="font-weight: 600;">Email <span style="color: var(--accent);">*</span></label>
+        <input type="email" id="email" placeholder="La tua email" required style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--divider); background: var(--bg);">
+      </div>
+
+      <div style="display: grid; gap: 0.5rem;">
+        <label for="categoria" style="font-weight: 600;">Categoria <span style="color: var(--accent);">*</span></label>
+        <select id="categoria" required style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--divider); background: var(--bg);">
+          <option value="" disabled selected>Seleziona una categoria</option>
+          <option value="domanda">Domanda sui contenuti</option>
+          <option value="suggerimento">Suggerimento o feedback</option>
+          <option value="segnalazione">Segnalazione di un errore</option>
+          <option value="collaborazione">Proposta di collaborazione</option>
+          <option value="altro">Altro</option>
+        </select>
+      </div>
+
+      <div style="display: grid; gap: 0.5rem;">
+        <label for="oggetto" style="font-weight: 600;">Oggetto <span style="color: var(--accent);">*</span></label>
+        <input type="text" id="oggetto" placeholder="Oggetto del messaggio" required style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--divider); background: var(--bg);">
+      </div>
+
+      <div style="display: grid; gap: 0.5rem;">
+        <label for="messaggio" style="font-weight: 600;">Messaggio <span style="color: var(--accent);">*</span></label>
+        <textarea id="messaggio" placeholder="Il tuo messaggio" rows="5" required style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--divider); background: var(--bg); resize: vertical;"></textarea>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <input type="checkbox" id="privacy" required style="margin: 0;">
+        <label for="privacy" style="margin: 0; font-size: 0.9rem;">Ho letto e accetto la <a href="privacy.html" style="color: var(--accent); text-decoration: none;">Privacy Policy</a> <span style="color: var(--accent);">*</span></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="justify-self: start;">Invia messaggio</button>
+    </form>
+
+    <div class="tip" style="margin-top: 1.5rem; padding: 1rem; background-color: rgba(var(--accent-rgb), 0.1); border-radius: var(--radius-sm);">
+      <h5 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-lightbulb" style="margin-right: 0.5rem;"></i>Suggerimento</h5>
+      <p style="margin: 0;">Per ricevere una risposta più rapida e precisa, fornisci quanti più dettagli possibili nel tuo messaggio. Se stai segnalando un problema tecnico, includi il browser che stai utilizzando e i passaggi per riprodurre l'errore.</p>
+    </div>
+  </section>
+
+  <section id="info-contatto" class="featured">
+    <h2><i class="fa-solid fa-address-card" aria-hidden="true"></i> Informazioni di contatto</h2>
+    <p>Oltre al modulo di contatto, puoi raggiungerci direttamente attraverso i seguenti canali:</p>
+
+    <div style="margin-top: 2rem; display: grid; gap: 1.5rem; max-width: 700px;">
+      <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <i class="fa-solid fa-envelope" style="font-size: 1.5rem; color: var(--accent);"></i>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Email generale</h3>
+          <a href="mailto:info@bitcafe.it" style="color: var(--accent); text-decoration: none;">info@bitcafe.it</a>
+          <p style="margin-top: 0.25rem; font-size: 0.9rem;">Per domande generali, feedback e suggerimenti</p>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <i class="fa-solid fa-bug" style="font-size: 1.5rem; color: var(--accent);"></i>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Segnalazione errori</h3>
+          <a href="mailto:support@bitcafe.it" style="color: var(--accent); text-decoration: none;">support@bitcafe.it</a>
+          <p style="margin-top: 0.25rem; font-size: 0.9rem;">Per segnalare errori nei contenuti o problemi tecnici</p>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <i class="fa-solid fa-handshake" style="font-size: 1.5rem; color: var(--accent);"></i>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Collaborazioni</h3>
+          <a href="mailto:partnerships@bitcafe.it" style="color: var(--accent); text-decoration: none;">partnerships@bitcafe.it</a>
+          <p style="margin-top: 0.25rem; font-size: 0.9rem;">Per proposte di collaborazione e contributi ai contenuti</p>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <i class="fa-brands fa-github" style="font-size: 1.5rem; color: var(--accent);"></i>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">GitHub</h3>
+          <a href="https://github.com/bitcafe" style="color: var(--accent); text-decoration: none;">github.com/bitcafe</a>
+          <p style="margin-top: 0.25rem; font-size: 0.9rem;">Contribuisci al codice o segnala problemi tramite GitHub</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tempi-risposta" class="featured">
+    <h2><i class="fa-solid fa-clock" aria-hidden="true"></i> Tempi di risposta</h2>
+    <p>Ci impegniamo a rispondere a tutte le richieste nel minor tempo possibile. Ecco i nostri tempi di risposta medi:</p>
+
+    <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem;">
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Domande generali</h3>
+        <p style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">24-48h</p>
+        <p>Rispondiamo alle domande generali entro 1-2 giorni lavorativi.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Segnalazioni di errori</h3>
+        <p style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">24h</p>
+        <p>Le segnalazioni di errori vengono gestite con priorità entro 24 ore.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Proposte di collaborazione</h3>
+        <p style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">3-5 giorni</p>
+        <p>Valutiamo le proposte di collaborazione entro 3-5 giorni lavorativi.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.5rem;">Nota: durante i periodi di alta affluenza o festività, i tempi di risposta potrebbero essere leggermente più lunghi. Apprezziamo la tua pazienza.</p>
+  </section>
+
+  <section id="faq" class="featured">
+    <h2><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Domande frequenti</h2>
+    <p>Ecco le risposte alle domande più comuni che riceviamo. Se non trovi la risposta che cerchi, non esitare a contattarci.</p>
+
+    <div style="margin-top: 2rem; display: grid; gap: 1.5rem;">
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">I contenuti di BitCafé sono gratuiti?</h3>
+        <p>Sì, tutti i contenuti di BitCafé sono completamente gratuiti e accessibili a chiunque. Crediamo che l'educazione tecnologica debba essere accessibile a tutti, indipendentemente dalle risorse economiche.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Posso utilizzare i vostri contenuti per scopi didattici?</h3>
+        <p>Sì, i nostri contenuti possono essere utilizzati per scopi didattici non commerciali, a condizione che venga citata la fonte. Per utilizzi commerciali o pubblicazioni, contattaci per ottenere l'autorizzazione.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Come posso segnalare un errore nei contenuti?</h3>
+        <p>Puoi segnalare errori nei contenuti utilizzando il modulo di contatto e selezionando la categoria "Segnalazione di un errore", oppure inviando un'email a support@bitcafe.it specificando l'URL della pagina e descrivendo l'errore riscontrato.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Con quale frequenza aggiornate i contenuti?</h3>
+        <p>Aggiorniamo regolarmente i contenuti esistenti per mantenerli al passo con le ultime tecnologie e best practice. Inoltre, pubblichiamo nuovi articoli settimanalmente. Iscriviti alla newsletter per ricevere notifiche sui nuovi contenuti.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem;">Posso suggerire un argomento da trattare?</h3>
+        <p>Assolutamente sì! Accogliamo con piacere i suggerimenti degli utenti. Utilizza il modulo di contatto e seleziona la categoria "Suggerimento o feedback" per proporci nuovi argomenti da trattare.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="collaborazioni" class="featured">
+    <h2><i class="fa-solid fa-handshake" aria-hidden="true"></i> Opportunità di collaborazione</h2>
+    <p>BitCafé è un progetto collaborativo e siamo sempre aperti a nuove partnership e contributi. Ecco come puoi collaborare con noi:</p>
+
+    <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-pen-to-square" style="margin-right: 0.5rem;"></i>Contribuire ai contenuti</h3>
+        <p>Sei un esperto in un'area dello sviluppo web? Puoi contribuire scrivendo articoli, tutorial o guide pratiche. Contattaci per discutere delle tue idee e del processo di pubblicazione.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-code" style="margin-right: 0.5rem;"></i>Sviluppo della piattaforma</h3>
+        <p>Sviluppatori e designer possono contribuire al miglioramento della piattaforma BitCafé. Visita il nostro repository GitHub per vedere i progetti in corso e come puoi partecipare.</p>
+      </div>
+
+      <div style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+        <h3 style="color: var(--accent); margin-bottom: 0.75rem;"><i class="fa-solid fa-language" style="margin-right: 0.5rem;"></i>Traduzioni</h3>
+        <p>Aiutaci a rendere BitCafé accessibile a un pubblico internazionale contribuendo con traduzioni dei contenuti nella tua lingua madre.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.5rem;">Per discutere di opportunità di collaborazione, invia un'email a <a href="mailto:partnerships@bitcafe.it" style="color: var(--accent); text-decoration: none;">partnerships@bitcafe.it</a> con una breve descrizione della tua proposta e delle tue competenze.</p>
+  </section>
+
+  <section id="supporto-tecnico" class="featured">
+    <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Supporto tecnico</h2>
+    <p>Stai riscontrando problemi tecnici con la piattaforma BitCafé? Ecco come ottenere supporto:</p>
+
+    <div style="margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); background-color: var(--bg-alt);">
+      <h3 style="color: var(--accent); margin-bottom: 1rem;">Passaggi per la risoluzione dei problemi</h3>
+      <ol style="margin-left: 1.5rem;">
+        <li><strong>Aggiorna il browser</strong> - Assicurati di utilizzare la versione più recente del tuo browser.</li>
+        <li><strong>Cancella la cache</strong> - A volte, i problemi possono essere risolti cancellando la cache del browser.</li>
+        <li><strong>Prova un altro browser</strong> - Se il problema persiste, prova ad accedere con un browser diverso.</li>
+        <li><strong>Verifica la connessione</strong> - Assicurati che la tua connessione internet sia stabile.</li>
+        <li><strong>Contattaci</strong> - Se i passaggi precedenti non risolvono il problema, contattaci fornendo:
+          <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li>Il browser e la versione che stai utilizzando</li>
+            <li>Il sistema operativo (Windows, macOS, iOS, Android, ecc.)</li>
+            <li>Una descrizione dettagliata del problema</li>
+            <li>Screenshot o registrazioni dello schermo, se possibile</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <p style="margin-top: 1.5rem;">Per problemi tecnici urgenti, invia un'email a <a href="mailto:support@bitcafe.it" style="color: var(--accent); text-decoration: none;">support@bitcafe.it</a> con oggetto "URGENTE: [breve descrizione del problema]".</p>
+  </section>
+
+  <section class="related-content" style="margin-top: 3rem;">
+    <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Contenuti correlati</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+      <a href="chi-siamo.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-users" style="margin-right: 0.5rem;"></i>Chi siamo</h4>
+        <p>Scopri di più sul team di BitCafé, la nostra missione e i valori che guidano il progetto.</p>
+      </a>
+
+      <a href="mappa.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-map" style="margin-right: 0.5rem;"></i>Mappa dei contenuti</h4>
+        <p>Esplora tutti i contenuti disponibili su BitCafé organizzati per categoria e livello.</p>
+      </a>
+
+      <a href="privacy.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-shield-halved" style="margin-right: 0.5rem;"></i>Privacy Policy</h4>
+        <p>Informazioni su come trattiamo i tuoi dati personali e come proteggiamo la tua privacy.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Iscriviti alla newsletter</h2>
+    <p>Ricevi aggiornamenti sui nuovi contenuti, tutorial esclusivi e risorse selezionate direttamente nella tua inbox. Non inviamo spam e puoi annullare l'iscrizione in qualsiasi momento.</p>
+    <form action="#" method="post">
+      <label for="newsletterEmail">Email</label>
+      <input type="email" id="newsletterEmail" placeholder="La tua email" aria-label="Inserisci la tua email" required>
+      <button type="submit" aria-label="Iscriviti alla newsletter">Iscriviti</button>
+    </form>
   </section>
 </main>
 <footer>
   <div class="container footer-grid">
     <div class="footer-about">
-      <p class="logo">BitCafé</p>
+      <a href="index.html" class="logo-link"><p class="logo">BitCafé</p></a>
       <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
     </div>
     <nav class="footer-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
@@ -72,7 +326,5 @@
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
   </div>
 </footer>
-<script defer src="assets/js/layout.js"></script>
-<script defer src="assets/js/theme.js"></script>
 </body>
 </html>

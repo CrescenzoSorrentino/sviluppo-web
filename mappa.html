@@ -1,145 +1,183 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mappa dei contenuti – BitCafé</title>
-    <meta name="description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
-
-    <!-- Font & CSS -->
-    <meta property="og:title" content="Mappa dei contenuti – BitCafé">
-    <meta property="og:description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/img/social.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mappa dei contenuti – BitCafé">
-    <meta name="twitter:description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
-    <meta name="twitter:image" content="assets/img/social.png">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin />
-    <link rel="stylesheet" href="assets/css/layout.css?v=1.4" />
-    <link rel="stylesheet" href="assets/css/mappa.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mappa dei contenuti – BitCafé</title>
+  <meta name="description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta property="og:title" content="Mappa dei contenuti – BitCafé">
+  <meta property="og:description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/social.png">
+  <meta property="og:url" content="https://bitcafe.it/mappa.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mappa dei contenuti – BitCafé">
+  <meta name="twitter:description" content="Consulta la mappa completa dei contenuti di BitCafé e accedi rapidamente a ogni guida e argomento sullo sviluppo web.">
+  <meta name="twitter:image" content="assets/img/social.png">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
+  <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
+  <link rel="stylesheet" href="assets/css/mappa.css">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
+  <script defer src="assets/js/layout.js"></script>
+  <script defer src="assets/js/theme.js"></script>
+  <meta http-equiv="Cache-Control" content="max-age=86400">
+  <meta name="theme-color" content="#0a84ff">
 </head>
 <body>
     <a href="#main" class="skip-link">Salta al contenuto</a>
 
 <header>
     <div class="container">
-        <h1>BitCafé</h1>
+        <a href="index.html" class="logo-link"><div class="logo-text">BitCafé</div></a>
         <nav class="main-nav">
             <ul class="desktop-menu">
-                <li><a href="index.html">Home</a></li>
                 <li><a href="mappa.html">Mappa contenuti</a></li>
                 <li><a href="chi-siamo.html">Chi siamo</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
-            <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">☰</button>
-            <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
-        </nav>
-    </div>
+      <button id="menuToggle" class="mobile-only" aria-label="Apri menu" aria-controls="menuOverlay" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </nav>
+  </div>
 
-    <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
-        <button id="menuClose" aria-label="Chiudi menu">✕</button>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mappa.html">Mappa contenuti</a></li>
-            <li><a href="chi-siamo.html">Chi siamo</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-    </div>
+  <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+    <button id="menuClose" aria-label="Chiudi menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul>
+      <li><a href="mappa.html">Mappa contenuti</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </div>
 </header>
 
-    <main id="main" class="container">
-    <section class="intro">
-        <h2>Mappa dei contenuti</h2>
-        <p>Accedi rapidamente a tutte le sezioni di BitCafé: HTML, CSS, JavaScript e oltre.</p>
-    </section>
+<main id="main" class="container">
+  <section class="intro">
+    <h1>Mappa dei contenuti</h1>
+    <p>Accedi rapidamente a tutte le sezioni di BitCafé: HTML, CSS, JavaScript e oltre.</p>
+  </section>
 
-    <section class="mappa">
-        <h3>HTML</h3>
-        <ul>
-            <li><a href="html/struttura-base-di-un-documento.html">Struttura base di un documento</a></li>
-            <li><a href="html/tag-semantici.html">Tag semantici</a></li>
-            <li><a href="html/header-main-e-footer.html">Header, main e footer</a></li>
-            <li><a href="html/seo-on-page.html">SEO on-page</a></li>
-            <li><a href="html/accessibilita.html">Accessibilità</a></li>
-            <li><a href="html/form-accessibili.html">Form accessibili</a></li>
-            <li><a href="html/tipi-di-input-html5.html">Tipi di input HTML5</a></li>
-            <li><a href="html/validazione-lato-client.html">Validazione lato client</a></li>
-            <li><a href="html/etichette-e-aria-label.html">Etichette e aria-label</a></li>
-            <li><a href="html/usabilit-nei-form.html">Usabilità nei form</a></li>
-            <li><a href="html/immagini-responsive.html">Immagini responsive</a></li>
-            <li><a href="html/video-embedding.html">Video embedding</a></li>
-            <li><a href="html/tabelle-accessibili.html">Tabelle accessibili</a></li>
-        </ul>
+  <section>
+    <h3>Indice dei contenuti</h3>
+    <ul class="toc">
+      <li><a href="#html">HTML</a></li>
+      <li><a href="#css">CSS</a></li>
+      <li><a href="#javascript">JavaScript</a></li>
+      <li><a href="#related-content">Contenuti correlati</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+  </section>
 
-        <h3>CSS</h3>
-        <ul>
-            <li><a href="css/box-model.html">Box model</a></li>
-            <li><a href="css/flexbox.html">Flexbox</a></li>
-            <li><a href="css/grid-layout.html">Grid layout</a></li>
-            <li><a href="css/responsive-design.html">Responsive design</a></li>
-            <li><a href="css/media-query.html">Media query</a></li>
-            <li><a href="css/colori-e-variabili-css.html">Colori e variabili CSS</a></li>
-            <li><a href="css/tipografia-e-font.html">Tipografia e font</a></li>
-            <li><a href="css/spacing-e-misure.html">Spacing e misure</a></li>
-            <li><a href="css/stati-hover-focus-active.html">Stati hover / focus / active</a></li>
-            <li><a href="css/transition.html">Transition</a></li>
-            <li><a href="css/animation.html">Animation</a></li>
-            <li><a href="css/keyframes.html">Keyframes</a></li>
-            <li><a href="css/dark-mode.html">Dark mode</a></li>
-        </ul>
+  <section class="mappa" id="html">
+    <h3>HTML</h3>
+    <ul>
+      <li><a href="html/struttura-base-di-un-documento.html">Struttura base di un documento</a></li>
+      <li><a href="html/tag-semantici.html">Tag semantici</a></li>
+      <li><a href="html/header-main-e-footer.html">Header, main e footer</a></li>
+      <li><a href="html/seo-on-page.html">SEO on-page</a></li>
+      <li><a href="html/accessibilita.html">Accessibilità</a></li>
+      <li><a href="html/form-accessibili.html">Form accessibili</a></li>
+      <li><a href="html/tipi-di-input-html5.html">Tipi di input HTML5</a></li>
+      <li><a href="html/validazione-lato-client.html">Validazione lato client</a></li>
+      <li><a href="html/etichette-e-aria-label.html">Etichette e aria-label</a></li>
+      <li><a href="html/usabilit-nei-form.html">Usabilità nei form</a></li>
+      <li><a href="html/immagini-responsive.html">Immagini responsive</a></li>
+      <li><a href="html/video-embedding.html">Video embedding</a></li>
+      <li><a href="html/tabelle-accessibili.html">Tabelle accessibili</a></li>
+    </ul>
 
-        <h3>JavaScript</h3>
-        <ul>
-            <li><a href="js/variabili-e-tipi.html">Variabili e tipi</a></li>
-            <li><a href="js/operatori-e-condizioni.html">Operatori e condizioni</a></li>
-            <li><a href="js/cicli-e-array.html">Cicli e array</a></li>
-            <li><a href="js/funzioni-e-scope.html">Funzioni e scope</a></li>
-            <li><a href="js/manipolazione-dom.html">Manipolazione DOM</a></li>
-            <li><a href="js/eventi.html">Eventi</a></li>
-            <li><a href="js/form-dinamici.html">Form dinamici</a></li>
-            <li><a href="js/fetch-api.html">Fetch API</a></li>
-            <li><a href="js/async-await.html">Async / await</a></li>
-            <li><a href="js/localstorage.html">LocalStorage</a></li>
-        </ul>
-    </section>
-    <section class="newsletter">
-        <h2>Iscriviti alla newsletter</h2>
-        <p>Ricevi aggiornamenti e risorse direttamente nella tua inbox.</p>
-        <form action="#" method="post">
-            <label for="newsletterEmail">Email</label>
-            <input type="email" id="newsletterEmail" placeholder="La tua email" required>
-            <button type="submit">Iscriviti</button>
-        </form>
-    </section>
+    <h3 id="css">CSS</h3>
+    <ul>
+      <li><a href="css/box-model.html">Box model</a></li>
+      <li><a href="css/flexbox.html">Flexbox</a></li>
+      <li><a href="css/grid-layout.html">Grid layout</a></li>
+      <li><a href="css/responsive-design.html">Responsive design</a></li>
+      <li><a href="css/media-query.html">Media query</a></li>
+      <li><a href="css/colori-e-variabili-css.html">Colori e variabili CSS</a></li>
+      <li><a href="css/tipografia-e-font.html">Tipografia e font</a></li>
+      <li><a href="css/spacing-e-misure.html">Spacing e misure</a></li>
+      <li><a href="css/stati-hover-focus-active.html">Stati hover / focus / active</a></li>
+      <li><a href="css/transition.html">Transition</a></li>
+      <li><a href="css/animation.html">Animation</a></li>
+      <li><a href="css/keyframes.html">Keyframes</a></li>
+      <li><a href="css/dark-mode.html">Dark mode</a></li>
+    </ul>
+
+    <h3 id="javascript">JavaScript</h3>
+    <ul>
+      <li><a href="js/variabili-e-tipi.html">Variabili e tipi</a></li>
+      <li><a href="js/operatori-e-condizioni.html">Operatori e condizioni</a></li>
+      <li><a href="js/cicli-e-array.html">Cicli e array</a></li>
+      <li><a href="js/funzioni-e-scope.html">Funzioni e scope</a></li>
+      <li><a href="js/manipolazione-dom.html">Manipolazione DOM</a></li>
+      <li><a href="js/eventi.html">Eventi</a></li>
+      <li><a href="js/form-dinamici.html">Form dinamici</a></li>
+      <li><a href="js/fetch-api.html">Fetch API</a></li>
+      <li><a href="js/async-await.html">Async / await</a></li>
+      <li><a href="js/localstorage.html">LocalStorage</a></li>
+    </ul>
+  </section>
+
+  <section id="related-content" class="related-content" style="margin-top: 3rem;">
+    <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Contenuti correlati</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+      <a href="chi-siamo.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-users" style="margin-right: 0.5rem;"></i>Chi siamo</h4>
+        <p>Scopri la storia e la missione di BitCafé e il team che lavora per creare contenuti di qualità.</p>
+      </a>
+
+      <a href="contatti.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i>Contattaci</h4>
+        <p>Hai domande o suggerimenti? Scopri come metterti in contatto con il team di BitCafé.</p>
+      </a>
+
+      <a href="html/accessibilit.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-universal-access" style="margin-right: 0.5rem;"></i>Accessibilità web</h4>
+        <p>Scopri come rendiamo i nostri contenuti accessibili e come puoi fare lo stesso nei tuoi progetti.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <h2>Iscriviti alla newsletter</h2>
+    <p>Ricevi aggiornamenti e risorse direttamente nella tua inbox.</p>
+    <form action="#" method="post">
+      <label for="newsletterEmail">Email</label>
+      <input type="email" id="newsletterEmail" placeholder="La tua email" required>
+      <button type="submit">Iscriviti</button>
+    </form>
+  </section>
 </main>
 
 <footer>
-    <div class="container footer-grid">
-        <div class="footer-about">
-            <p class="logo">BitCafé</p>
-            <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
-        </div>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mappa.html">Mappa contenuti</a></li>
-                <li><a href="chi-siamo.html">Chi siamo</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="cookie-policy.html">Cookie policy</a></li>
-            </ul>
-        </nav>
-        <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a href="index.html" class="logo-link"><p class="logo">BitCafé</p></a>
+      <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
     </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="mappa.html">Mappa contenuti</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="cookie-policy.html">Cookie policy</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
+  </div>
 </footer>
 
-<script defer src="assets/js/layout.js"></script>
-<script defer src="assets/js/theme.js"></script>
 </body>
 </html>
