@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ----------------------------
-    // Ricerca dinamica
+    // Ricerca dinamica con debounce per migliorare le prestazioni
     // ----------------------------
     const allArticles = Object.entries(data)
         .flatMap(([macro, sub]) =>
@@ -243,6 +243,70 @@ document.addEventListener("DOMContentLoaded", () => {
                 }))
             )
         );
+
+    // Funzione di debounce per limitare la frequenza di esecuzione
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
+    // Funzione per mostrare i risultati della ricerca
+    function showSearchResults(query) {
+        if (query === "") {
+            // Mostra le colonne
+            searchResults.classList.remove("show");
+            finderColumns.classList.add("show");
+            searchResults.innerHTML = "";
+            pathDisplay.innerHTML = "Seleziona una categoria...";
+            return;
+        }
+
+        // Mostra risultati
+        finderColumns.classList.remove("show");
+        searchResults.classList.add("show");
+        searchResults.setAttribute('aria-label', `Risultati per ${query}`);
+
+        // Crea un fragment per migliorare le prestazioni
+        const fragment = document.createDocumentFragment();
+        searchResults.innerHTML = "";
+
+        const filtered = allArticles.filter(item =>
+            item.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+            const noResults = document.createElement('p');
+            noResults.innerHTML = `Nessun file trovato per "<strong>${query}</strong>"`;
+            fragment.appendChild(noResults);
+            searchResults.appendChild(fragment);
+            return;
+        }
+
+        filtered.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "search-item";
+
+            const icon = document.createElement("i");
+            icon.className = "fa-regular fa-file";
+            icon.setAttribute('aria-hidden', 'true');
+
+            const link = document.createElement("a");
+            link.href = item.href;
+            link.textContent = item.title;
+
+            div.appendChild(icon);
+            div.appendChild(link);
+            fragment.appendChild(div);
+        });
+
+        searchResults.appendChild(fragment);
+    }
+
+    // Applica debounce alla funzione di ricerca
+    const debouncedSearch = debounce(showSearchResults, 300);
 
     document.addEventListener("keydown", e => {
         if (e.key === "Escape" && searchResults.classList.contains("show")) {
@@ -256,44 +320,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
-
-        if (query === "") {
-            // Mostra le colonne
-            searchResults.classList.remove("show");
-            finderColumns.classList.add("show");
-            searchResults.innerHTML = "";
-            pathDisplay.innerHTML = "Seleziona una categoria...";
-            return;
-        }
-
-        // Mostra risultati
-        finderColumns.classList.remove("show");
-        searchResults.classList.add("show");
-        searchResults.innerHTML = "";
-
-        const filtered = allArticles.filter(item =>
-            item.title.toLowerCase().includes(query)
-        );
-
-        if (filtered.length === 0) {
-            searchResults.innerHTML = `<p>Nessun file trovato per "<strong>${query}</strong>"</p>`;
-            return;
-        }
-
-        filtered.forEach(item => {
-            const div = document.createElement("div");
-            div.className = "search-item";
-
-            const icon = document.createElement("i");
-            icon.className = "fa-regular fa-file";
-
-            const link = document.createElement("a");
-            link.href = item.href;
-            link.textContent = item.title;
-
-            div.appendChild(icon);
-            div.appendChild(link);
-            searchResults.appendChild(div);
-        });
+        debouncedSearch(query);
     });
 });

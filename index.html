@@ -27,12 +27,11 @@
   <link rel="stylesheet" href="assets/css/finder.css?v=1.3">
   <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
   <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/related-content.css?v=1.0">
   <script defer src="assets/js/finder.js"></script>
   <script defer src="assets/js/layout.js"></script>
   <script defer src="assets/js/theme.js"></script>
   <meta http-equiv="Cache-Control" content="max-age=86400">
-  <link rel="preload" href="assets/css/layout.css" as="style">
-  <link rel="preload" href="assets/css/finder.css" as="style">
   <meta name="theme-color" content="#0a84ff">
 </head>
 <body>
@@ -95,7 +94,7 @@
 
   <!-- ✅ Finder inserito nel layout -->
   <section id="finder" class="finder">
-    <h2><i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="color: var(--accent-2);"></i> Finder contenuti</h2>
+    <h2><i class="fa-solid fa-magnifying-glass accent-icon" aria-hidden="true"></i> Finder contenuti</h2>
     <p class="finder-intro">Cerca rapidamente tra tutte le guide di BitCafé.</p>
     <div class="finder-header">
       <input type="text" id="finderSearch" placeholder="Cerca argomenti, tag o file..." aria-label="Cerca nel Finder" />
@@ -158,21 +157,21 @@
       <p class="featured-more"><a href="mappa.html">Scopri tutti i nostri articoli e tutorial</a></p>
     </section>
 
-    <section id="correlati" class="related-content" style="margin-top: 3rem;">
+    <section id="correlati" class="related-content">
       <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Contenuti correlati</h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-        <a href="chi-siamo.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
-          <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-users" style="margin-right: 0.5rem;"></i>Chi siamo</h4>
+      <div class="related-content-grid">
+        <a href="chi-siamo.html" class="related-card">
+          <h4><i class="fa-solid fa-users" aria-hidden="true"></i>Chi siamo</h4>
           <p>Scopri il team di BitCafé, la nostra missione e i valori che guidano la nostra piattaforma educativa.</p>
         </a>
 
-        <a href="mappa.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
-          <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-map" style="margin-right: 0.5rem;"></i>Mappa dei contenuti</h4>
+        <a href="mappa.html" class="related-card">
+          <h4><i class="fa-solid fa-map" aria-hidden="true"></i>Mappa dei contenuti</h4>
           <p>Esplora tutti i contenuti disponibili su BitCafé organizzati per categoria e livello.</p>
         </a>
 
-        <a href="contatti.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
-          <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i>Contattaci</h4>
+        <a href="contatti.html" class="related-card">
+          <h4><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contattaci</h4>
           <p>Hai domande o suggerimenti? Scopri come metterti in contatto con l'autore di BitCafé.</p>
         </a>
       </div>
