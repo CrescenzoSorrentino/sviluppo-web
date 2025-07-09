@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
   <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
   <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/related-content.css?v=1.0">
   <script defer src="assets/js/layout.js"></script>
   <script defer src="assets/js/theme.js"></script>
   <meta http-equiv="Cache-Control" content="max-age=86400">
@@ -34,7 +35,7 @@
 <a href="#main" class="skip-link">Salta al contenuto</a>
 <header>
   <div class="container">
-    <a href="index.html" class="logo-link"><div class="logo-text">BitCafé</div></a>
+    <a href="index.html" class="logo-link"><span class="logo-text">BitCafé</span></a>
     <nav class="main-nav">
       <ul class="desktop-menu">
         <li><a href="mappa.html">Mappa contenuti</a></li>
@@ -73,6 +74,8 @@
       <li><a href="#faq">Domande frequenti</a></li>
       <li><a href="#collaborazioni">Opportunità di collaborazione</a></li>
       <li><a href="#supporto-tecnico">Supporto tecnico</a></li>
+      <li><a href="#correlati">Contenuti correlati</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
     </ul>
   </section>
 
@@ -80,7 +83,7 @@
     <h2><i class="fa-solid fa-envelope" aria-hidden="true"></i> Modulo di contatto</h2>
     <p>Compila il modulo sottostante per inviarci un messaggio. Questo è il metodo più efficace per ricevere assistenza personalizzata. Ti risponderemo all'indirizzo email fornito, generalmente entro 1-2 giorni lavorativi.</p>
 
-    <form style="margin-top: 2rem; display: grid; gap: 1.5rem; max-width: 700px;">
+    <form action="#" method="post" style="margin-top: 2rem; display: grid; gap: 1.5rem; max-width: 700px;">
       <div style="display: grid; gap: 0.5rem;">
         <label for="nome" style="font-weight: 600;">Nome <span style="color: var(--accent);">*</span></label>
         <input type="text" id="nome" placeholder="Il tuo nome" required style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--divider); background: var(--bg);">
@@ -115,7 +118,7 @@
 
       <div style="display: flex; align-items: center; gap: 0.5rem;">
         <input type="checkbox" id="privacy" required style="margin: 0;">
-        <label for="privacy" style="margin: 0; font-size: 0.9rem;">Ho letto e accetto la <a href="privacy.html" style="color: var(--accent); text-decoration: none;">Privacy Policy</a> <span style="color: var(--accent);">*</span></label>
+        <label for="privacy" style="margin: 0; font-size: 0.9rem;">Ho letto e accetto la <a href="index.html" style="color: var(--accent); text-decoration: none;">Privacy Policy</a> <span style="color: var(--accent);">*</span></label>
       </div>
 
       <button type="submit" class="btn btn-primary" style="justify-self: start;">Invia messaggio</button>
@@ -278,27 +281,27 @@
     <p style="margin-top: 1.5rem;">Per problemi tecnici urgenti, invia un'email a <a href="mailto:support@bitcafe.it" style="color: var(--accent); text-decoration: none;">support@bitcafe.it</a> con oggetto "URGENTE: [breve descrizione del problema]".</p>
   </section>
 
-  <section class="related-content" style="margin-top: 3rem;">
+  <section id="correlati" class="related-content">
     <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Contenuti correlati</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-      <a href="chi-siamo.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
-        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-users" style="margin-right: 0.5rem;"></i>Chi siamo</h4>
+    <div class="related-content-grid">
+      <a href="chi-siamo.html" class="related-card">
+        <h4><i class="fa-solid fa-users" aria-hidden="true"></i>Chi siamo</h4>
         <p>Scopri di più sul team di BitCafé, la nostra missione e i valori che guidano il progetto.</p>
       </a>
 
-      <a href="mappa.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
-        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-map" style="margin-right: 0.5rem;"></i>Mappa dei contenuti</h4>
+      <a href="mappa.html" class="related-card">
+        <h4><i class="fa-solid fa-map" aria-hidden="true"></i>Mappa dei contenuti</h4>
         <p>Esplora tutti i contenuti disponibili su BitCafé organizzati per categoria e livello.</p>
       </a>
 
-      <a href="privacy.html" style="padding: 1.5rem; border: 1px solid var(--divider); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--text); display: block;">
-        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-shield-halved" style="margin-right: 0.5rem;"></i>Privacy Policy</h4>
+      <a href="index.html" class="related-card">
+        <h4><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Privacy Policy</h4>
         <p>Informazioni su come trattiamo i tuoi dati personali e come proteggiamo la tua privacy.</p>
       </a>
     </div>
   </section>
 
-  <section class="newsletter">
+  <section id="newsletter" class="newsletter">
     <h2>Iscriviti alla newsletter</h2>
     <p>Ricevi aggiornamenti sui nuovi contenuti, tutorial esclusivi e risorse selezionate direttamente nella tua inbox. Non inviamo spam e puoi annullare l'iscrizione in qualsiasi momento.</p>
     <form action="#" method="post">
@@ -311,7 +314,7 @@
 <footer>
   <div class="container footer-grid">
     <div class="footer-about">
-      <a href="index.html" class="logo-link"><p class="logo">BitCafé</p></a>
+      <a href="index.html" class="logo-link"><span class="logo">BitCafé</span></a>
       <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
     </div>
     <nav class="footer-nav">
@@ -319,8 +322,8 @@
         <li><a href="mappa.html">Mappa contenuti</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="cookie-policy.html">Cookie policy</a></li>
+        <li><a href="index.html">Privacy</a></li>
+        <li><a href="index.html">Cookie policy</a></li>
       </ul>
     </nav>
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>

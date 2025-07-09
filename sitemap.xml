@@ -25,10 +25,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <!-- HTML directory pages -->
   <url>
-    <loc>https://bitcafe.it/html/accessibilit.html</loc>
+    <loc>https://bitcafe.it/html/accessibilita.html</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -232,7 +232,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bitcafe.it/html/usabilit-nei-form.html</loc>
+    <loc>https://bitcafe.it/html/usabilita-nei-form.html</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -741,6 +741,12 @@ footer p + p{margin-top:.75rem;}
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(10px);
     }
+
+    html:not(.light) select,
+    html:not(.light) input,
+    html:not(.light) textarea {
+        color: var(--text);
+    }
 }
 
 html.dark{
@@ -762,6 +768,12 @@ html.dark{
 html.dark .menu-overlay{
     background:rgba(0,0,0,0.8);
     backdrop-filter: blur(10px);
+}
+
+html.dark select,
+html.dark input,
+html.dark textarea {
+    color: var(--text);
 }
 
 /* -------------------------------------------------
