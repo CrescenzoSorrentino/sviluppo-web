@@ -664,6 +664,21 @@ footer p + p{margin-top:.75rem;}
     transform:translateX(3px);
 }
 
+.footer-nav .donate-link {
+    color: var(--accent-2);
+    font-weight: 600;
+    background-color: rgba(255, 43, 117, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    transition: all var(--transition);
+}
+
+.footer-nav .donate-link:hover {
+    background-color: var(--accent-2);
+    color: white;
+    transform: translateX(0) scale(1.05);
+}
+
 .footer-about{
     max-width:350px;
 }
