@@ -413,6 +413,11 @@ header .container{
     border-radius:var(--radius-sm);
 }
 
+/* Class to remove underline from h2 elements */
+.no-underline::after {
+    display: none !important;
+}
+
 .featured h2 i{
     font-size:1.2rem;
     color:var(--accent-2);
