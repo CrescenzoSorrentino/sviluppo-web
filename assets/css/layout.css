@@ -335,8 +335,8 @@ header .container{
     margin-bottom:3rem;
     padding:4rem 2rem;
     text-align:center;
-    background:var(--gradient);
-    color:#fff;
+    background:#fff;
+    color:var(--text);
     border-radius:var(--radius-md);
     box-shadow:var(--shadow-lg);
     position:relative;
@@ -350,14 +350,14 @@ header .container{
     left:-50%;
     width:200%;
     height:200%;
-    background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    background:none;
     pointer-events:none;
 }
 
 .intro h1{
     font-size:clamp(2rem, 5vw, 3rem);
     margin-bottom:1.25rem;
-    color:#fff;
+    color:var(--text);
     line-height:1.2;
     font-weight:700;
 }
@@ -367,7 +367,7 @@ header .container{
     max-width:700px;
     margin-inline:auto;
     margin-bottom:2rem;
-    opacity:0.9;
+    opacity:1;
 }
 
 .intro .btn{
