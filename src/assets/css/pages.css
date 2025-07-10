@@ -1,41 +1,10 @@
 /* -------------------------------------------------
-   Reset & base
+   Pages CSS
+   This file contains page-specific styles for different page types.
 ------------------------------------------------- */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --accent: #0a84ff;
-    --accent-2: #ff2b75;
-    --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
-    --bg: #f5f5f7;
-    --text: #1c1c1e;
-    --divider: #d1d1d6;
-    --card-bg: #fff;
-    --finder-path-bg: #f8f8f8;
-}
-
-body {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.5;
-    font-size: 16px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
 
 /* -------------------------------------------------
-   Finder
+   Finder Page
 ------------------------------------------------- */
 .finder {
     background: var(--card-bg);
@@ -79,7 +48,6 @@ body {
     position: relative;
 }
 
-
 .finder-header input {
     width: 100%;
     padding: 1rem;
@@ -93,7 +61,7 @@ body {
 .finder-header input:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.2), var(--shadow-sm);
+    box-shadow: 0 0 0 3px var(--accent-20), var(--shadow-sm);
     transform: translateY(-1px);
 }
 
@@ -129,7 +97,7 @@ body {
 
 .finder-path span:hover {
     text-decoration: underline;
-    background-color: rgba(10, 132, 255, 0.08);
+    background-color: var(--accent-08);
 }
 
 /* Colonne */
@@ -217,7 +185,7 @@ body {
 }
 
 .finder-col li.active {
-    background: rgba(10, 132, 255, 0.12);
+    background: var(--accent-12);
     font-weight: 600;
     border-left: 3px solid var(--accent);
     padding-left: calc(1.25rem - 3px);
@@ -283,7 +251,7 @@ body {
 }
 
 .search-item:hover {
-    background-color: rgba(10, 132, 255, 0.08);
+    background-color: var(--accent-08);
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--accent);
@@ -304,7 +272,128 @@ body {
 }
 
 /* -------------------------------------------------
-   Responsive
+   Mappa contenuti
+------------------------------------------------- */
+.mappa {
+    padding: 2.5rem;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
+}
+
+.mappa h3 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.mappa h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: var(--radius-sm);
+}
+
+.mappa h3:first-of-type {
+    margin-top: 0;
+}
+
+.mappa ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2.5rem;
+    columns: 1;
+    column-gap: 3rem;
+}
+
+.mappa li {
+    margin-bottom: 0.75rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.mappa a {
+    text-decoration: none;
+    color: var(--text);
+    transition: all var(--transition);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.mappa a::before {
+    content: '\f15c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 400;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--accent);
+    opacity: 0.7;
+}
+
+.mappa a:hover {
+    color: var(--accent);
+    background-color: var(--accent-08);
+    transform: translateX(3px);
+}
+
+/* -------------------------------------------------
+   Article Pages
+------------------------------------------------- */
+/* Header dell'articolo */
+.article-header {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--divider);
+    padding: 2rem 1rem;
+}
+
+.article-header h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.article-header .lead {
+    font-size: 1.2rem;
+    max-width: 650px;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* Contenuto principale */
+main h2 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    color: var(--accent);
+}
+
+main p,
+main li {
+    margin: 0.8rem 0;
+}
+
+main ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* -------------------------------------------------
+   Responsive: Finder
 ------------------------------------------------- */
 @media (max-width: 768px) {
     .finder-columns {
@@ -340,48 +429,29 @@ body {
 }
 
 /* -------------------------------------------------
-   Dark mode
+   Responsive: Mappa
 ------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-    html:not(.light) {
-        --accent-2: #ff5aa5;
-        --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
-        --card-bg: #2c2c2e;
-        --finder-path-bg: #2c2c2e;
-    }
-
-    html:not(.light) .finder-col li:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    html:not(.light) .finder-col li.active {
-        background: rgba(10, 132, 255, 0.3);
-    }
-
-    html:not(.light) .search-item:hover {
-        background-color: rgba(10, 132, 255, 0.25);
+@media (min-width: 768px) {
+    .mappa ul {
+        columns: 2;
     }
 }
 
-html.dark {
-    --accent-2: #ff5aa5;
-    --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
-    --card-bg: #2c2c2e;
-    --finder-path-bg: #2c2c2e;
+@media (min-width: 1024px) {
+    .mappa ul {
+        columns: 3;
+    }
 }
 
-html.dark .finder-path span {
-    color: var(--accent);
-}
+/* -------------------------------------------------
+   Responsive: Articles
+------------------------------------------------- */
+@media (max-width: 600px) {
+    .article-header h1 {
+        font-size: 1.6rem;
+    }
 
-html.dark .finder-col li:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-html.dark .finder-col li.active {
-    background: rgba(10, 132, 255, 0.3);
-}
-
-html.dark .search-item:hover {
-    background-color: rgba(10, 132, 255, 0.25);
+    main h2 {
+        font-size: 1.3rem;
+    }
 }

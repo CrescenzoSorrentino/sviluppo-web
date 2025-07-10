@@ -1,0 +1,117 @@
+/* -------------------------------------------------
+   Mobile Optimizations CSS
+   This file contains optimizations for mobile devices, including disabling unnecessary hover animations.
+------------------------------------------------- */
+
+/* Only apply hover effects on devices that support hover */
+@media (hover: hover) {
+  /* Keep all the existing hover effects for devices that support hover */
+  .btn:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-outline:hover,
+  .toc li:hover,
+  .toc li:hover::before,
+  .toc a:hover,
+  .intro .btn:hover,
+  .featured-list li:hover,
+  .featured-more a:hover,
+  .newsletter button:hover,
+  .related-card:hover,
+  .logo-text:hover,
+  .desktop-menu a:hover,
+  .mobile-only:hover,
+  .menu-overlay a:hover,
+  .menu-overlay button:hover,
+  .footer-nav a:hover,
+  .footer-nav .donate-link:hover,
+  .footer-about .logo:hover,
+  .finder-path span:hover,
+  .finder-col li:hover,
+  .finder-col[data-level="3"] li a:hover,
+  .search-item:hover,
+  .mappa a:hover {
+    /* These selectors will match the original hover styles */
+  }
+}
+
+/* For devices that don't support hover (touch devices) */
+@media (hover: none) {
+  /* Disable transform effects on hover for touch devices */
+  .btn:hover,
+  .intro .btn:hover,
+  .featured-list li:hover,
+  .featured-more a:hover,
+  .newsletter button:hover,
+  .related-card:hover,
+  .menu-overlay a:hover,
+  .menu-overlay button:hover,
+  .footer-nav a:hover,
+  .footer-nav .donate-link:hover,
+  .finder-col li:hover,
+  .search-item:hover,
+  .mappa a:hover {
+    transform: none;
+  }
+  
+  /* Add active state styles for touch feedback */
+  .btn:active,
+  .featured-list li:active,
+  .related-card:active,
+  .search-item:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+  
+  /* Improve touch targets for better mobile usability */
+  .toc li,
+  .featured-list li,
+  .desktop-menu a,
+  .footer-nav a,
+  .finder-col li,
+  .mappa a {
+    padding: 0.75rem;
+  }
+  
+  /* Add subtle transition for touch feedback */
+  .finder-col li:active,
+  .mappa a:active {
+    background-color: var(--accent-08);
+  }
+}
+
+/* Additional mobile embellishments */
+@media (max-width: 768px) {
+  /* Improve spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Enhance readability */
+  body {
+    line-height: 1.6;
+  }
+  
+  /* Improve button touch targets */
+  .btn {
+    padding: 0.9rem 1.8rem;
+  }
+  
+  /* Add subtle transitions for touch feedback */
+  .featured-list li,
+  .related-card,
+  .search-item {
+    transition: transform 0.1s, box-shadow 0.2s;
+  }
+  
+  /* Optimize newsletter form for mobile */
+  .newsletter form {
+    gap: 0.75rem;
+  }
+  
+  /* Improve mobile menu usability */
+  .menu-overlay a {
+    padding: 1rem 1.5rem;
+  }
+}

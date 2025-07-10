@@ -24,18 +24,20 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin>
-  <link rel="stylesheet" href="assets/css/layout.css?v=1.4">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0">
-  <link rel="stylesheet" href="assets/css/related-content.css?v=1.0">
-  <script defer src="assets/js/layout.js"></script>
-  <script defer src="assets/js/theme.js"></script>
+  <link rel="stylesheet" href="assets/css/base.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/layout.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/components.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/pages.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/mobile-optimizations.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/device-optimizations.css?v=1.0">
+  <script defer src="assets/js/global.js"></script>
   <meta http-equiv="Cache-Control" content="max-age=86400">
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
 <header>
   <div class="container">
-    <a href="index.html" class="logo-link"><span class="logo-text">BitCafé</span></a>
+    <a href="index.html" class="logo-link"><div class="logo-text">BitCafé</div></a>
     <nav class="main-nav">
       <ul class="desktop-menu">
         <li><a href="mappa.html">Mappa contenuti</a></li>
@@ -46,17 +48,18 @@
         <i class="fa-solid fa-bars"></i>
       </button>
       <button id="themeToggle" aria-label="Cambia tema" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+
+      <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
+        <button id="menuClose" aria-label="Chiudi menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul>
+          <li><a href="mappa.html">Mappa contenuti</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
     </nav>
-  </div>
-  <div id="menuOverlay" class="menu-overlay" hidden role="dialog" aria-label="Menu principale">
-    <button id="menuClose" aria-label="Chiudi menu">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <ul>
-      <li><a href="mappa.html">Mappa contenuti</a></li>
-      <li><a href="chi-siamo.html">Chi siamo</a></li>
-      <li><a href="contatti.html">Contatti</a></li>
-    </ul>
   </div>
 </header>
 <main id="main" class="container">
@@ -66,7 +69,7 @@
   </section>
 
   <section>
-    <h3>Indice dei contenuti</h3>
+    <h3><i class="fa-solid fa-table-list" aria-hidden="true"></i> Indice dei contenuti</h3>
     <ul class="toc">
       <li><a href="#form-contatto">Modulo di contatto</a></li>
       <li><a href="#info-contatto">Informazioni di contatto</a></li>
@@ -118,7 +121,7 @@
 
       <div style="display: flex; align-items: center; gap: 0.5rem;">
         <input type="checkbox" id="privacy" required style="margin: 0;">
-        <label for="privacy" style="margin: 0; font-size: 0.9rem;">Ho letto e accetto la <a href="index.html" style="color: var(--accent); text-decoration: none;">Privacy Policy</a> <span style="color: var(--accent);">*</span></label>
+        <label for="privacy" style="margin: 0; font-size: 0.9rem;">Ho letto e accetto la <a href="privacy.html" style="color: var(--accent); text-decoration: none;">Privacy Policy</a> <span style="color: var(--accent);">*</span></label>
       </div>
 
       <button type="submit" class="btn btn-primary" style="justify-self: start;">Invia messaggio</button>
@@ -300,7 +303,7 @@
         <p>Esplora tutti i contenuti disponibili su BitCafé organizzati per categoria e livello.</p>
       </a>
 
-      <a href="index.html" class="related-card">
+      <a href="privacy.html" class="related-card">
         <h4><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Privacy Policy</h4>
         <p>Informazioni su come trattiamo i tuoi dati personali e come proteggiamo la tua privacy.</p>
       </a>
@@ -320,7 +323,7 @@
 <footer>
   <div class="container footer-grid">
     <div class="footer-about">
-      <a href="index.html" class="logo-link"><span class="logo">BitCafé</span></a>
+      <a href="index.html" class="logo-link"><p class="logo">BitCafé</p></a>
       <p>Creato con passione per aiutarti a imparare lo sviluppo web.</p>
     </div>
     <nav class="footer-nav">
@@ -329,8 +332,8 @@
         <li><a href="chi-siamo.html">Chi siamo</a></li>
         <li><a href="contatti.html">Contatti</a></li>
         <li><a href="chi-siamo.html#sostienici" class="donate-link"><i class="fa-solid fa-heart" style="margin-right: 0.3rem;"></i>Sostienici</a></li>
-        <li><a href="index.html">Privacy</a></li>
-        <li><a href="index.html">Cookie policy</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="cookie-policy.html">Cookie policy</a></li>
       </ul>
     </nav>
     <p class="footer-copy">&copy; 2025 BitCafé – Tutti i diritti riservati.</p>
