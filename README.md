@@ -10,6 +10,10 @@ Tutti i file ridondanti sono stati rimossi dal repository per mantenere una stru
 
 Per maggiori dettagli sulla struttura del progetto, consultare il [README nella directory src](src/README.md).
 
+## Struttura per GitHub Pages
+
+Per garantire la compatibilità con GitHub Pages, è stato aggiunto un file `index.html` nella root del repository che reindirizza automaticamente alla homepage nella directory `src/`. Questo permette a GitHub Pages di servire correttamente il sito mantenendo la struttura organizzata del progetto.
+
 ## Caratteristiche Principali
 
 - Tutorial strutturati per HTML, CSS e JavaScript

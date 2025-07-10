@@ -54,6 +54,7 @@ src/
 6. **Pulizia**: Tutti i file ridondanti sono stati rimossi, mantenendo solo quelli necessari
 7. **CSS e JS Ottimizzati**: Organizzazione dei file CSS e JS in globali, componenti e specifici per pagina, migliorando la manutenibilità e le prestazioni
 8. **Sviluppo Agile**: Struttura che facilita lo sviluppo parallelo su diverse parti del sito
+9. **Compatibilità con GitHub Pages**: Un file index.html nella root del repository reindirizza a src/index.html, permettendo a GitHub Pages di servire correttamente il sito
 
 Per maggiori dettagli sulla struttura ottimizzata di CSS e JS, consultare il [README nella directory assets](assets/README.md).
 

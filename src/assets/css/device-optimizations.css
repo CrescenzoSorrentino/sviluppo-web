@@ -13,32 +13,38 @@
     font-size: 18px;
     line-height: 1.65;
   }
-  
+
   /* Enhance spacing for better tablet experience */
   .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  
+
   /* Optimize intro section for tablets */
   .intro {
     padding: 3.5rem 2.5rem;
   }
-  
+
   /* Improve card layouts for tablets */
   .featured-list {
     gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .featured-list li {
     padding: 1.5rem;
   }
-  
+
+  .featured-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   /* Enhance newsletter section for tablets */
   .newsletter {
     padding: 3.5rem 2.5rem;
   }
-  
+
   /* Improve form elements for touch on tablets */
   input, 
   select, 
@@ -47,7 +53,7 @@
     font-size: 1rem;
     padding: 0.85rem 1.25rem;
   }
-  
+
   /* Optimize footer for tablets */
   footer {
     padding-top: 3.5rem;
@@ -64,40 +70,46 @@
     font-size: 18px;
     line-height: 1.7;
   }
-  
+
   h1 {
     font-size: 2.75rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   h3 {
     font-size: 1.75rem;
   }
-  
+
   /* Improve container width utilization */
   .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  
+
   /* Enhance card layouts */
   .featured-list {
     gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  
+
+  .featured-card {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
   /* Improve spacing in content areas */
   .mappa {
     padding: 3rem;
   }
-  
+
   /* Enhance visual hierarchy */
   .intro h1 {
     margin-bottom: 1.5rem;
   }
-  
+
   .intro p {
     margin-bottom: 2.5rem;
     max-width: 800px;
@@ -114,62 +126,76 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  
+
   /* Enhance typography for extra large screens */
   body {
     font-size: 19px;
     line-height: 1.75;
   }
-  
+
   h1 {
     font-size: 3rem;
   }
-  
+
   h2 {
     font-size: 2.25rem;
   }
-  
+
   h3 {
     font-size: 1.85rem;
   }
-  
+
   /* Improve spacing and layout */
   .intro {
     padding: 5rem 3rem;
   }
-  
+
   .featured {
     padding: 3rem;
   }
-  
+
   .newsletter {
     padding: 4rem 3rem;
   }
-  
+
   /* Enhance card layouts */
   .featured-list {
     gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  
+
+  .featured-card {
+    padding: 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .support-cards-container {
+    gap: 2.5rem;
+  }
+
+  .support-card {
+    padding: 2rem;
+  }
+
   /* Optimize content width for readability */
   .intro p {
     max-width: 900px;
     font-size: 1.4rem;
   }
-  
+
   /* Improve visual hierarchy with larger decorative elements */
   .featured h2::after,
   .mappa h3::after {
     width: 80px;
     height: 4px;
   }
-  
+
   /* Enhance footer for extra large screens */
   footer {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-  
+
   .footer-grid {
     gap: 3rem;
   }
@@ -185,7 +211,7 @@
     --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
     --shadow-lg: 0 8px 28px rgba(0,0,0,0.12);
   }
-  
+
   /* Improve border appearance */
   .featured-list li,
   .related-card,
@@ -193,7 +219,7 @@
   .finder {
     border-width: 0.5px;
   }
-  
+
   /* Enhance decorative elements */
   .featured h2::after,
   .mappa h3::after,
@@ -213,7 +239,7 @@
     background: #fff !important;
     color: #000 !important;
   }
-  
+
   /* Hide non-essential elements */
   header, 
   footer, 
@@ -223,7 +249,7 @@
   #menuToggle {
     display: none !important;
   }
-  
+
   /* Optimize container for print */
   .container {
     width: 100%;
@@ -231,38 +257,38 @@
     padding: 0;
     margin: 0;
   }
-  
+
   /* Ensure proper text color */
   h1, h2, h3, h4, p, li, a {
     color: #000 !important;
   }
-  
+
   /* Optimize links for print */
   a {
     text-decoration: underline;
   }
-  
+
   a::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     font-style: italic;
   }
-  
+
   /* Improve page breaks */
   h1, h2, h3, h4 {
     page-break-after: avoid;
     page-break-inside: avoid;
   }
-  
+
   p, li {
     page-break-inside: avoid;
   }
-  
+
   img {
     page-break-inside: avoid;
     max-width: 100% !important;
   }
-  
+
   /* Ensure proper background for cards */
   .featured, 
   .mappa, 
@@ -282,32 +308,32 @@
   header .container {
     padding-block: 0.75rem;
   }
-  
+
   /* Optimize intro section height */
   .intro {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
-  
+
   /* Adjust newsletter section */
   .newsletter {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
-  
+
   /* Improve menu overlay for landscape */
   .menu-overlay {
     overflow-y: auto;
   }
-  
+
   .menu-overlay ul {
     margin-top: 3rem;
   }
-  
+
   .menu-overlay li {
     margin-bottom: 0.75rem;
   }
-  
+
   .menu-overlay a {
     font-size: 1.25rem;
     padding: 0.5rem 1rem;
